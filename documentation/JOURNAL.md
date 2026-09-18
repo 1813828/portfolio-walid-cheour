@@ -88,6 +88,12 @@ Oui, j’ai utilisé l’IA pour trouver de nouvelles idées pour mon portfolio 
 - **Date :** 2026-09-16
 - **Prompt :** "peux-tu rendre tous mon menu nav responsive!
 
+- **Date :** 2026-09-18
+- **Prompt :** "tu vois ma carte que j'ai fais avec l'image de walid_power peux-tu faire en sorte que la carte sois moins haute que ca puis la mettre une deuxième fois en bas. fais en sorte que ca sois  responsive.
+
+peux-tu rendre la carte plus large aussi pour qu'on voit bien le contenu car là elle est trop petite.
+
+
 Qui va probablement regarder mon portfolio? Potentiellement, des futurs recruteurs, des clients et des employeurs.
 
 Qu'est-ce que cette personne cherche à voir en premier? Mes créations visuelles et auditifs. Tous mes projets que j’ai faits et qui lui serait utile.

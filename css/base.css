@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+
+* {
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+:root {
+	--marge-contenu: clamp(1.25rem, 8vw, 7rem);
+}
+
+
+

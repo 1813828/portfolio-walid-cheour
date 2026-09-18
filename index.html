@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./css/base.css" rel="stylesheet">
-    <link href="./css/components/carte-projets.css" rel="stylesheet">
+    <link href="./css/composants/carte-projets.css" rel="stylesheet">
     <link href="./css/composants/modale.css" rel="stylesheet">
     <link href="./css/composants/navigation.css" rel="stylesheet">
-    <link href="./css/composants/base.css" rel="stylesheet">
-    <link href="./css/composants/layout.css" rel="stylesheet">
+    <link href="./css/layout.css" rel="stylesheet">
+    <link href="./css/composants/accueil.css" rel="stylesheet">
 
 </head>
+
 <body>
     <nav class="navbar">
         <section class="navbar-container">
             <a href="#" class="logo">W/C.</a>
 
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"
+                aria-label="Ouvrir le menu">
                 <span class="nav-toggle__bar"></span>
                 <span class="nav-toggle__bar"></span>
                 <span class="nav-toggle__bar"></span>
@@ -32,9 +35,73 @@
         </section>
     </nav>
 
+    <main>
+        <section class="accueil" aria-labelledby="accueil-titre">
+            <header class="accueil__contenu">
+                <p class="accueil__sur-titre">Intégration multimédia — Portfolio 2026</p>
+                <h1 id="accueil-titre" class="accueil__titre">
+                    <span class="accueil__titre-ligne accueil__titre-ligne--noir">Walid</span>
+                    <span class="accueil__titre-ligne accueil__titre-ligne--vert">Cheour</span>
+                </h1>
+                <p class="accueil__description">Création immersion</p>
+            </header>
+
+            <figure class="accueil__portrait">
+                <img src="./assets/walid.png" alt="Walid Cheour vu de dos devant un mur graphique">
+            </figure>
+        </section>
+
+        <aside class="bandeau-metiers" aria-label="Métiers de Walid Cheour">
+            <p class="bandeau-metiers__contenu">
+                Intégrateur sonore <span aria-hidden="true">•</span> Vidéaste <span aria-hidden="true">•</span> Designer
+                <span aria-hidden="true">•</span> Monteur sonore <span aria-hidden="true">•</span>
+                Intégrateur sonore <span aria-hidden="true">•</span> Vidéaste <span aria-hidden="true">•</span> Designer
+                <span aria-hidden="true">•</span> Monteur sonore <span aria-hidden="true">•</span>
+            </p>
+        </aside>
+    </main>
+    <section class="projets" aria-labelledby="projets-titre">
+        <header class="entete">
+            <div>
+                <p class="sur-titre">Travaux sélectionnés</p>
+                <h2 id="projets-titre">Mes projets</h2>
+            </div>
+
+            <nav class="filtres" aria-label="Filtrer les projets">
+                <button class="filtre actif" type="button">Tout</button>
+                <button class="filtre" type="button">Vidéo</button>
+                <button class="filtre" type="button">Design</button>
+            </nav>
+        </header>
+
+        <div class="card-container">
+            <article class="card">
+                <img src="./assets/walid_power.png" alt="Composition numérique POWER">
+
+                <div class="card-content">
+                    <h3>POWER</h3>
+                    <p>Composition numérique avancée - photoshop, effets volumétriques et atmosphère post apocalyptique. Utilisation de la colorisation, du cutting et des options de fusions.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="./assets/walid_power.png" alt="Composition numérique POWER">
+
+                <div class="card-content">
+                    <h3>POWER</h3>
+                    <p>Composition numérique avancée - photoshop, effets volumétriques et atmosphère post apocalyptique. Utilisation de la colorisation, du cutting et des options de fusions.</p>
+                </div>
+            </article>
+            </div>
+
+    
+
+    </section>
+
+
+
     <script src="./Js/main.js"></script>
 
-
-
 </body>
+
 </html>

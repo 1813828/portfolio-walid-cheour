@@ -1,0 +1,139 @@
+.accueil {
+    min-height: calc(100vh - 50px);
+    padding: clamp(3rem, 6vw, 5.5rem) var(--marge-contenu) 7rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 29vw);
+    gap: clamp(2rem, 7vw, 8rem);
+    align-items: start;
+    background-color: #f2f0e9;
+    border-inline: 1px solid #d9d6cb;
+}
+
+.accueil__contenu {
+    padding-top: 0.45rem;
+}
+
+.accueil__sur-titre {
+    margin-bottom: 1.25rem;
+    color: #6c6b65;
+    font-size: clamp(0.55rem, 0.8vw, 0.7rem);
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.accueil__titre {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(5rem, 11vw, 9.5rem);
+    font-weight: 700;
+    line-height: 0.78;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.accueil__titre-ligne {
+    display: block;
+}
+
+.accueil__titre-ligne--noir {
+    color: #09090b;
+}
+
+.accueil__titre-ligne--vert {
+    color: #07966d;
+}
+
+.accueil__description {
+    margin-top: 1.45rem;
+    color: #777792;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2rem, 4.3vw, 4.6rem);
+    font-weight: 700;
+    line-height: 0.85;
+    text-transform: uppercase;
+}
+
+.accueil__portrait {
+    width: 100%;
+    aspect-ratio: 0.72;
+    margin: 0;
+    overflow: hidden;
+    background-color: #07966d;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.9rem rgba(0, 0, 0, 0.2);
+}
+
+.accueil__portrait img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.bandeau-metiers {
+    width: 100%;
+    overflow: hidden;
+    border-top: 2px solid #07966d;
+    background-color: #09090b;
+    color: #07966d;
+    white-space: nowrap;
+}
+
+.bandeau-metiers__contenu {
+    width: max-content;
+    padding: 0.7rem 0;
+    font-size: clamp(1.6rem, 3vw, 3rem);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    animation: defilement 24s linear infinite;
+}
+
+.bandeau-metiers__contenu span {
+    padding-inline: 0.8rem;
+    color: #f2f0e9;
+}
+
+
+
+
+@keyframes defilement {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 720px) {
+    .accueil {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 2.5rem var(--marge-contenu) 5rem;
+    }
+
+    .accueil__titre {
+        font-size: clamp(4.5rem, 22vw, 8rem);
+    }
+
+    .accueil__description {
+        font-size: clamp(2.2rem, 12vw, 4rem);
+    }
+
+    .accueil__portrait {
+        width: min(100%, 22rem);
+        justify-self: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bandeau-metiers__contenu {
+        animation: none;
+    }
+}
