@@ -86,18 +86,61 @@ Oui, j’ai utilisé l’IA pour trouver de nouvelles idées pour mon portfolio 
 - **Prompt :** "Je veux faire un design de portfolio pour mettre des projets de montage video, de graphisme design et de montage de sons voici à quoi s'attendre : 1. Quel type de poste ou de stage je vise en sortant du programme? Je recherche un poste permanent et à temps pleins dans le milieu vidéaste, gestion, création visuelle et identité visuelle. En résumé, un poste qui utilise mes compétences en montage sonore et vidéo, en gestion de projet ou en graphique désigne.
 
 - **Date :** 2026-09-16
-- **Prompt :** "peux-tu rendre tous mon menu nav responsive!
+- **Prompt :** "peux-tu rendre tous mon menu nav responsive! Utilisation de copilot.
+
 
 - **Date :** 2026-09-18
-- **Prompt :** "tu vois ma carte que j'ai fais avec l'image de walid_power peux-tu faire en sorte que la carte sois moins haute que ca puis la mettre une deuxième fois en bas. fais en sorte que ca sois  responsive.
+- **Prompt :** "tu vois ma carte que j'ai fais avec l'image de walid_power peux-tu faire en sorte que la carte sois moins haute que ca puis la mettre une deuxième fois en bas. fais en sorte que ca sois  responsive. Réponse :
+a carte est maintenant plus large, avec une largeur maximale de 49rem, tout en restant responsive sur mobile.
 
 peux-tu rendre la carte plus large aussi pour qu'on voit bien le contenu car là elle est trop petite.
 
-- **Date :** 2026-09-19
-- **Prompt :** "dans la section des compétences que j'ai créer sur html,j'ai créer une class catégorie qui contient tous les informations selon le type de groupe d'aptitudes. peux-tu faire en sorte que cette classe contient la couleur, ainsi que la disposition des informations que sur mon portfolio?
+Les deux cartes POWER sont empilées proprement et conservent la même taille. Vérifications effectuées : aucun erreur HTML/CSS et aucun débordement en affichage mobile.
+
+Utilisation de copilot.
+
+
+
+
+- **Date :** 2026-09-21
+- **Prompt :** "dans la section des compétences que j'ai créer sur html,j'ai créer une class catégorie qui contient tous les informations selon le type de groupe d'aptitudes. peux-tu faire en sorte que cette classe contient la couleur, ainsi que la disposition des informations que sur mon portfolio fais en sorte aussi qu'elle soit responsif.
+
+réponse : La section « compétences » est maintenant stylée dans layout.css :
+
+fond crème et typographie alignés avec la maquette ;
+grille de 4 cartes.
+cartes blanches et listes compactes ;
+responsive en 2 colonnes puis 1 colonne sur mobile.
+Vérification effectuée : aucune erreur CSS détectée. 
+Utilisation de copilot.
+
+
+- **Date :** 2026-09-22
+- **Prompt :**
 j'ai terminé de faire la section à propos. Peux tu rendre cette section responsive et rajouter un block vert avec les lettrage en dessous de la photos ? 
 
+réponse :La section « À propos » est maintenant responsive.
 
+Modifications :
+
+ajout du bloc vert WC sous la photo ;
+empilement des colonnes sur mobile ;
+texte et titre adaptés aux petits écrans ;
+informations affichées sur une seule colonne mobile ;
+espacement amélioré entre les éléments.
+
+pour le footer peux-tu l'arranger un peu pour afin qu'il ressemble à ma maquette. fais en sorte de mettre les éléments espacés à l'extrémité: 
+
+réponse :Le footer a été corrigé dans base.css :
+
+bandeau vert pleine largeur ;
+WALID à gauche ;
+copyright à droite ;
+espacement naturel sans gap: 1500px ;
+affichage en colonne sur mobile.
+Aucune erreur CSS détectée.`
+
+utilisation de copilot.
 
 
 
