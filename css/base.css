@@ -10,3 +10,42 @@
 
 
 
+.footer {
+	padding: 16px var(--marge-contenu);
+	background-color: #118f68;
+	color: #09090b;
+}
+
+.footer__bloc {
+	width: 100%;
+	margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+	gap: 24px;
+}
+
+
+
+.footer__nom {
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0.12em;
+}
+
+.footer__multimedia {
+	color: #d5eee5;
+	font-size: 11px;
+}
+
+@media (max-width: 500px) {
+	.footer {
+		padding: 16px 24px;
+	}
+
+	.footer__bloc {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 8px;
+	}
+}
+

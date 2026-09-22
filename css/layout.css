@@ -1,0 +1,279 @@
+:root {
+    --marge-contenu: 40px;
+}
+
+.skills-section {
+    padding: 60px var(--marge-contenu);
+    background-color: #f2f0e9;
+}
+
+.skills-marks {
+    color: #aaa79e;
+}
+
+.skills-eyebrow {
+    margin: 10px 0;
+    color: #77746d;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.skills-title {
+    margin: 0 0 30px;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.carte-competences {
+    position: relative;
+    min-height: 120px;
+    padding: 18px;
+    background-color: white;
+}
+
+.categorie {
+    margin-bottom: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.carte-competences ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.carte-competences li {
+    margin-bottom: 5px;
+    color: #60605c;
+    font-size: 12px;
+}
+
+/* la grosse boîte qui contient tout */
+.apropos-section {
+    padding: 60px var(--marge-contenu);
+    background-color: #181818;
+    display: flex;
+    gap: 40px;
+}
+
+/* colonne de gauche avec le texte */
+.colonne-texte {
+    width: 50%;
+}
+
+/* colonne de droite avec la photo */
+.colonne-image {
+    position: relative;
+    width: 50%;
+}
+
+.apropos-eyebrow {
+    color: #77746d;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.apropos-title {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.apropos-texte {
+    color: #b0b0b0;
+    font-size: 25px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* boîte qui contient les 4 petites infos en bas */
+.infos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+/* chaque petite info (ex: Disponibilité / Immédiate) */
+.info-bloc {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+
+.info-titre {
+    color: #77746d;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.info-reponse {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ma-photo {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.photo-signature {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    padding: 12px 0;
+    background-color: #07966d;
+    color: #09090b;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 3;
+    text-align: center;
+}
+
+
+.contact__infos {
+    display: flex;
+    margin-top: 24px;
+}
+
+.contact__bloc {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.contact__lien_hotmail {
+    display: inline-block;
+    padding: 12px;
+    color: #000000;
+    background-color: #07966d;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact__lien_linkedIn {
+    display: inline-block;
+    padding: 12px ;
+    border: 1px solid #dedbd2;
+    color: #000000;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact {
+    padding: 60px var(--marge-contenu);
+    background-color: #f2f0e9;
+}
+
+.contact__texte {
+    max-width: 720px;
+}
+
+.contact__eyebrow {
+    margin: 0 0 12px;
+    color: #77746d;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.contact__titre {
+    margin: 0 0 18px;
+    color: #09090b;
+    font-size: 48px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.contact__description {
+    margin: 0;
+    color: #60605c;
+    font-size: 14px;
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+    :root {
+        --marge-contenu: 24px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .skills-section {
+        padding: 40px var(--marge-contenu);
+    }
+
+    .skills-title {
+        font-size: 36px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .apropos-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .colonne-texte,
+    .colonne-image {
+        width: 100%;
+    }
+
+    .apropos-title {
+        font-size: 36px;
+    }
+
+    .apropos-texte {
+        font-size: 18px;
+    }
+
+    .infos {
+        margin-top: 50px;
+    }
+
+    .info-bloc {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 40px var(--marge-contenu);
+    }
+
+    .contact__titre {
+        font-size: 36px;
+    }
+
+    .contact__bloc {
+        width: 100%;
+    }
+
+    .contact__lien_hotmail,
+    .contact__lien_linkedIn {
+        text-align: center;
+    }
+}

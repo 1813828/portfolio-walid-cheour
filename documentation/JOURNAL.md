@@ -93,6 +93,17 @@ Oui, j’ai utilisé l’IA pour trouver de nouvelles idées pour mon portfolio 
 
 peux-tu rendre la carte plus large aussi pour qu'on voit bien le contenu car là elle est trop petite.
 
+- **Date :** 2026-09-19
+- **Prompt :** "dans la section des compétences que j'ai créer sur html,j'ai créer une class catégorie qui contient tous les informations selon le type de groupe d'aptitudes. peux-tu faire en sorte que cette classe contient la couleur, ainsi que la disposition des informations que sur mon portfolio?
+j'ai terminé de faire la section à propos. Peux tu rendre cette section responsive et rajouter un block vert avec les lettrage en dessous de la photos ? 
+
+
+
+
+
+
+
+
 
 Qui va probablement regarder mon portfolio? Potentiellement, des futurs recruteurs, des clients et des employeurs.
 
