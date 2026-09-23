@@ -1,10 +1,13 @@
 :root {
     --marge-contenu: 40px;
+    --couleur-titre-carte: #856084;
+    --couleur-verte: #07966d;
 }
 
 .skills-section {
-    padding: 60px var(--marge-contenu);
+    padding: 80px var(--marge-contenu) 100px;
     background-color: #f2f0e9;
+    min-height: 620px;
 }
 
 .skills-marks {
@@ -14,26 +17,29 @@
 .skills-eyebrow {
     margin: 10px 0;
     color: #77746d;
-    font-size: 12px;
+    font-size: 20px;
     text-transform: uppercase;
+    
 }
 
 .skills-title {
     margin: 0 0 30px;
     font-size: 48px;
     text-transform: uppercase;
+    
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
+    
 }
 
 .carte-competences {
     position: relative;
-    min-height: 120px;
-    padding: 18px;
+    min-height: 190px;
+    padding: 22px 18px;
     background-color: white;
 }
 
@@ -41,42 +47,56 @@
     margin-bottom: 12px;
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 28px;
 }
 
 .carte-competences ul {
     margin: 0;
-    padding-left: 16px;
+    padding-left: 18px;
 }
 
 .carte-competences li {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     color: #60605c;
-    font-size: 12px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.carte-competences li::marker {
+    color: var(--couleur-verte);
 }
 
 /* la grosse boîte qui contient tout */
 .apropos-section {
-    padding: 60px var(--marge-contenu);
+    padding: 34px var(--marge-contenu) 24px;
     background-color: #181818;
     display: flex;
-    gap: 40px;
+    align-items: center;
+    gap: 28px;
 }
 
 /* colonne de gauche avec le texte */
 .colonne-texte {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* colonne de droite avec la photo */
 .colonne-image {
     position: relative;
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .apropos-eyebrow {
     color: #77746d;
-    font-size: 12px;
+    font-size: 20px;
     text-transform: uppercase;
+    margin-bottom: 40px;
 }
 
 .apropos-title {
@@ -88,16 +108,16 @@
 
 .apropos-texte {
     color: #b0b0b0;
-    font-size: 25px;
-    line-height: 1.7;
-    margin-bottom: 20px;
+    font-size: 23px;
+    line-height: 1.45;
+    margin-bottom: 14px;
 }
 
 /* boîte qui contient les 4 petites infos en bas */
 .infos {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 36px;
 }
 
 /* chaque petite info (ex: Disponibilité / Immédiate) */
@@ -156,21 +176,21 @@
 
 .contact__lien_hotmail {
     display: inline-block;
-    padding: 12px;
+    padding: 14px 18px;
     color: #000000;
     background-color: #07966d;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     text-decoration: none;
 }
 
 .contact__lien_linkedIn {
     display: inline-block;
-    padding: 12px ;
+    padding: 14px 18px;
     border: 1px solid #dedbd2;
     color: #000000;
     background-color: transparent;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -190,6 +210,7 @@
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+    font-size: 18px;
 }
 
 .contact__titre {
@@ -203,7 +224,8 @@
 .contact__description {
     margin: 0;
     color: #60605c;
-    font-size: 14px;
+    font-size: 20px;
+
 }
 
 
@@ -275,5 +297,7 @@
     .contact__lien_hotmail,
     .contact__lien_linkedIn {
         text-align: center;
+        font-size: 18px;
+
     }
 }

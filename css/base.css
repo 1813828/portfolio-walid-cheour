@@ -11,9 +11,11 @@
 
 
 .footer {
-	padding: 16px var(--marge-contenu);
+	padding: 30px var(--marge-contenu);
 	background-color: #118f68;
 	color: #09090b;
+	
+	
 }
 
 .footer__bloc {
@@ -22,19 +24,20 @@
     display: flex;
     justify-content: space-between;
 	gap: 24px;
+	
 }
 
 
 
 .footer__nom {
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 0.12em;
 }
 
 .footer__multimedia {
 	color: #d5eee5;
-	font-size: 11px;
+	font-size: 18px;
 }
 
 @media (max-width: 500px) {
