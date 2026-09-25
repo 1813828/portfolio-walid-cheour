@@ -80,6 +80,43 @@ Mon prochain objectif est de terminer et de personnaliser mon design sur Figma.
 **Réponse :**  
 Oui, j’ai utilisé l’IA pour trouver de nouvelles idées pour mon portfolio et pour m’aider à générer différentes idées de design.
 
+
+
+# Bilan de progression 2
+
+**Date :** 2026-09-24
+
+## Question 1 : Qu’est-ce que j’ai accompli depuis le dernier bloc ?
+
+**Réponse :**
+
+J’ai commencé à créer le design de mon portfolio et à intégrer mes différents projets en utilisant le code HTML et CSS.
+
+## Question 2 : Quelle est ma principale difficulté et comment l’ai-je surmontée ?
+
+**Réponse :**
+
+Ma principale difficulté a été de bien gérer mon temps et de comprendre la structure du HTML et du CSS. J’ai surmonté cette difficulté en faisant des recherches, en expérimentant différentes méthodes et en utilisant des outils d’aide pour mieux comprendre le code.
+
+## Question 3 : Qu’est-ce que j’ai appris que je ne savais pas avant ?
+
+**Réponse :**
+
+J’ai appris à utiliser de nouvelles balises HTML que je ne connaissais pas auparavant. Elles permettent notamment de mieux structurer une page, comme la balise `<section>`. J’ai également appris à utiliser GitHub Copilot pour m’aider dans mon développement et dans la compréhension du code.
+
+## Question 4 : Quelle est ma prochaine étape ?
+
+**Réponse :**
+
+Ma prochaine étape est de commencer à intégrer le code JavaScript à mon portfolio et de modifier certaines sections en CSS afin d’améliorer leur apparence et leur mise en page.
+
+## Question 5 : Est-ce que j’ai utilisé l’IA ?
+
+**Réponse :**
+
+Oui, j’ai utilisé l’intelligence artificielle, notamment GitHub Copilot, pour m’aider à structurer et à concevoir certains éléments de mon portfolio. Je l’ai également utilisée comme outil d’aide pour mieux comprendre et améliorer mon code.
+
+
 # Utilisation de l'IA
 
 - **Date :** 2026-09-07
