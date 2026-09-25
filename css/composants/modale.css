@@ -1,0 +1,119 @@
+.processus-power {
+	padding: clamp(3rem, 8vw, 6rem) var(--marge-contenu);
+	background: #09090b;
+	color: #f2f0e9;
+}
+
+.processus-power__contenu {
+	width: min(100%, 1100px);
+	margin: 0 auto;
+}
+
+.processus-power__entete {
+	text-align: center;
+}
+
+.processus-power__etiquette,
+.processus-power__categorie {
+	margin: 0;
+	color: #53d0a3;
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+.processus-power__entete h2 {
+	margin: 0.55rem 0 clamp(2rem, 5vw, 4rem);
+	color: #53d0a3;
+	font-size: clamp(2.2rem, 5vw, 4rem);
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.processus-power__visuel {
+	width: min(100%, 920px);
+	margin: 0 auto;
+	border: 1px solid rgba(213, 238, 229, 0.15);
+	background: #15191a;
+	box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.28);
+}
+
+.processus-power__visuel img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.processus-power__details {
+	width: min(100%, 920px);
+	margin: clamp(2rem, 5vw, 4rem) auto 0;
+}
+
+.processus-power__details h3 {
+	margin: 0.5rem 0 1rem;
+	font-size: clamp(2rem, 4vw, 3.2rem);
+	line-height: 1;
+}
+
+.processus-power__description {
+	max-width: 680px;
+	margin: 0;
+	color: #c4cfca;
+	font-size: 1.05rem;
+	line-height: 1.6;
+}
+
+.processus-power__etapes {
+	margin-top: clamp(2rem, 5vw, 4rem);
+	padding-top: 1.5rem;
+	border-top: 1px solid rgba(213, 238, 229, 0.18);
+}
+
+.processus-power__etapes h4 {
+	margin: 0 0 1.25rem;
+	font-size: 1.3rem;
+}
+
+.processus-power__etapes ol {
+	display: grid;
+	gap: 0.9rem;
+	margin: 0;
+	padding-left: 1.4rem;
+	color: #c4cfca;
+	line-height: 1.45;
+}
+
+.processus-power__etapes li::marker {
+	color: #a979a5;
+	font-weight: 700;
+}
+
+.processus-power__galerie {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	width: min(100%, 920px);
+	margin: clamp(2rem, 5vw, 4rem) auto 0;
+}
+
+.processus-power__galerie figure {
+	aspect-ratio: 16 / 9;
+	margin: 0;
+	overflow: hidden;
+	border: 1px solid rgba(213, 238, 229, 0.12);
+	background: #202728;
+}
+
+.processus-power__galerie img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 600px) {
+	.processus-power__galerie {
+		grid-template-columns: 1fr;
+	}
+}
