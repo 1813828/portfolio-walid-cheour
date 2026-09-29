@@ -1,0 +1,92 @@
+[
+  {
+    "id": "projet graphique walid",
+    "title": "POWER",
+    "description": "Composition numérique avancée - Photoshop, effets volumétriques et atmosphère post-apocalyptique.  Utilisation de la colorisation, du découpage et des options de fusion.",
+    "category": "Graphisme",
+    "year": "2025",
+    "image": "assets/walid_power.png"
+    
+
+  },
+
+
+  {
+    "id": "MBH_Stars",
+    "title": "Stars",
+    "description": "Filmé par moi-même — utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. Projet  de video clip pour l’artsite M.B.H. Un rappeur de montréal. Projet Perosneelle.",
+    "category": "Production vidéo",
+    "year": "2025",
+    "image": "assets/star.png",
+    
+    "link": "https://www.youtube.com/watch?v=c0bYvQd4vpM"
+  },
+
+
+  {
+    "id": "MBH_Cuban",
+    "title": "Cuban",
+    "description": "Filmé par moi-même — utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. vidéo clip fait pour le rapeur mbh. un artiste de montréal. projet personnelle.",
+    "category": "Production vidéo",
+    "year": "2025",
+    "image": "assets/cuban.png",
+    "link": "https://www.youtube.com/watch?v=p83jTAAV39M"
+  },
+
+{
+    "id": "kronix_Addiction",
+    "title": "Addiction",
+    "description": "Montage video/sonore pour l'artiste KRØNIX. Visualiser de la musique addiction.",
+    "category": "montage vidéo",
+    "year": "2025",
+    "image": "assets/addiction.png",
+    "link": "https://www.tiktok.com/@therealkronixtv/video/7540819975909428485"
+  },
+
+
+  {
+    "id": "kronix_Forget all",
+    "title": "Forget all",
+    "description": "Montage video/sonore pour l'artiste KRØNIX. Visualiser de la musique forget all.",
+    "category": "montage vidéo",
+    "year": "2025",
+    "image": "assets/memories.png",
+    "link": "https://www.tiktok.com/@therealkronixtv/video/7541197617351511352"
+  },
+
+
+  {
+    "id": "kronix_No new friends",
+    "title": "No new friends",
+    "description": "Visualiser réalisé pour un artiste de musique électronique — synchronisation des visuels sur les drops, transitions rythmées et ambiance visuelle immersive propre à l'univers G-House. projet  personelle.",
+    "category": "montage vidéo",
+    "year": "2025",
+    "image": "assets/nonewfriends.png",
+    "link": "https://www.tiktok.com/@therealkronixtv/video/7540091220329057542"
+  },
+
+    {
+    "id": "kronix_Sleppover",
+    "title": "Sleppover",
+    "description": "Montage video/sonore pour deux artistes en collaboration sur TikTok.",
+    "category": "montage vidéo",
+    "year": "2025",
+    "image": "assets/collab.png",
+    "link": "https://www.instagram.com/p/DTWETvTCf9G/?hl=fr"
+  }
+
+
+
+  
+
+
+
+
+
+
+
+
+]
+
+
+

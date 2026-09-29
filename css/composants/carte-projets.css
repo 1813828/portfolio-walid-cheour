@@ -93,10 +93,46 @@
   line-height: 1.1;
 }
 
+.card-category {
+  box-sizing: border-box;
+  display: block;
+  width: fit-content;
+  margin: 0 0 0.75rem 0;
+  margin-left: -0.4rem;
+  border: 1px solid #118f68;
+  padding: 0.35rem 0.6rem;
+  color: #118f68;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .card-content p,
 .card-content .info p {
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+.card-year {
+  display: block;
+  margin-top: 1rem;
+  color: #f2f0e9;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.card-content a {
+  color: #118f68;
+  text-decoration: underline;
+  text-decoration-color: #118f68;
+  text-underline-offset: 0.2em;
+}
+
+.card-content a:hover {
+  color: #f2f0e9;
 }
 
 .card-container-small {

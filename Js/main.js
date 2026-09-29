@@ -26,3 +26,69 @@ if (navToggle && navLinks) {
 		}
 	});
 }
+
+function createProjectCard(project) {
+	const article = document.createElement('article');
+	article.className = 'card';
+
+	const image = document.createElement('img');
+	image.src = project.image;
+	image.alt = `Projet ${project.title}`;
+
+	const content = document.createElement('div');
+	content.className = 'card-content';
+
+	const title = document.createElement('h3');
+	title.textContent = project.title;
+
+	const category = document.createElement('span');
+	category.className = 'card-category';
+	category.textContent = project.category;
+
+	const description = document.createElement('p');
+	description.textContent = project.description;
+
+	const year = document.createElement('span');
+	year.className = 'card-year';
+	year.textContent = project.year;
+
+	content.append(category, title, description, year);
+
+	if (project.link) {
+		const link = document.createElement('a');
+		link.href = project.link;
+		link.textContent = 'Voir le projet';
+		link.target = '_blank';
+		link.rel = 'noopener noreferrer';
+		content.append(link);
+	}
+
+	article.append(image, content);
+	return article;
+}
+
+async function displayProjects() {
+	const mainContainer = document.querySelector('.card-container');
+	const smallContainer = document.querySelector('.card-container-small');
+
+	if (!mainContainer || !smallContainer) {
+		return;
+	}
+
+	try {
+		const projects = await loadProjects();
+		mainContainer.replaceChildren();
+		smallContainer.replaceChildren();
+
+		projects.forEach((project, index) => {
+			const card = createProjectCard(project);
+			const container = index < 3 ? mainContainer : smallContainer;
+			container.append(card);
+		});
+	} catch (error) {
+		console.error(error);
+		mainContainer.textContent = 'Les projets ne peuvent pas être chargés.';
+	}
+}
+
+displayProjects();
