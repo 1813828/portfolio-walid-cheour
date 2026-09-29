@@ -97,6 +97,8 @@ function renderProjects(projects, filter) {
 		const container = index < 3 ? mainContainer : smallContainer;
 		container.append(card);
 	});
+
+	animerCartes();
 }
 
 async function displayProjects() {
@@ -131,3 +133,135 @@ async function displayProjects() {
 }
 
 displayProjects();
+
+gsap.registerPlugin(ScrollTrigger);
+
+const title = document.querySelector('#competences .skills-title');
+
+gsap.fromTo(
+  title,
+  { x: 150, opacity: 0 },   // départ : décalé à droite, invisible
+  {
+    x: 0,                   // arrivée : position normale
+    opacity: 1,
+    duration: 0.8,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: title,
+      start: 'top 90%',
+      once: true
+    }
+  }
+);
+
+gsap.registerPlugin(ScrollTrigger);
+
+const title2 = document.querySelector('#competences .skills-eyebrow');
+
+gsap.fromTo(
+  title2,
+  { x: 150, opacity: 0 },   // départ : décalé à droite, invisible
+  {
+    x: 0,                   // arrivée : position normale
+    opacity: 1,
+    duration: 0.8,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: title2,
+      start: 'top 90%',
+      once: true
+    }
+  }
+);
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const listedecompetence = document.querySelector('#competences .skills-grid');
+
+gsap.fromTo(
+  listedecompetence,
+  { y: 150, opacity: 0 },   // départ : décalé à droite, invisible
+  {
+    y: 0,                   // arrivée : position normale
+    opacity: 1,
+    duration: 0.8,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: listedecompetence,
+      start: 'top 90%',
+      once: true
+    }
+  }
+);
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const walidapropos = document.querySelector('#apropos .ma-photo');
+
+gsap.fromTo(
+  walidapropos,
+  { x:250, opacity: 0 },   // départ : décalé à droite, invisible
+  {
+    x: 0,                   // arrivée : position normale
+    opacity: 1,
+    duration: 0.8,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: walidapropos,
+      start: 'top 97%',
+      once: true
+    }
+  }
+);
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const walidaproposdescription = document.querySelector('#apropos .colonne-texte');
+
+gsap.fromTo(
+  walidaproposdescription,
+  { x:-250, opacity: 0 },   // départ : décalé à droite, invisible
+  {
+    x: 0,                   // arrivée : position normale
+    opacity: 1,
+    duration: 0.8,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: walidaproposdescription,
+      start: 'top 97%',
+      once: true
+    }
+  }
+);
+
+gsap.registerPlugin(ScrollTrigger);
+
+const walidcontact = document.querySelector('#contact .contact__texte');
+
+gsap.fromTo(
+  walidcontact,
+  { y:250, opacity: 0 },   // départ : décalé à droite, invisible
+  {
+    y: 0,                   // arrivée : position normale
+    opacity: 1,
+    duration: 0.8,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: walidcontact,
+      start: 'top 97%',
+      once: true
+    }
+  }
+);
+
+
+
+
+
+
+

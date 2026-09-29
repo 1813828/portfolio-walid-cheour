@@ -180,6 +180,22 @@ Aucune erreur CSS détectée.`
 utilisation de copilot.
 
 
+- **Date :** 2026-09-28
+- **Prompt :**
+J'ai créer une fiche sur chacun de mes projets qui sont basés sur ma base de données Json pour les réutiliser plus tard.Peux-tu m'aider à utiliser la fonction async function loadProjects() sur data.js? Je dois les chercher pour arriver à les afficher.
+
+réponse: Les cartes sont maintenant créées automatiquement par main.js à partir de projects.json. C’est justement la méthode demandée pour ne plus répéter manuellement chaque projet dans le HTML.
+
+utilisation de copilot.
+
+
+
+- **Date :** 2026-09-29
+- **Prompt :**
+
+
+
+
 
 
 
