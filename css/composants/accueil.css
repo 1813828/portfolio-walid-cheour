@@ -1,3 +1,77 @@
+@keyframes couleurWalid {
+    0%, 30% {
+        color: var(--couleur-noir);
+    }
+
+    35%, 63% {
+        color: var(--couleur-verte);
+    }
+
+    68%, 96% {
+        color: var(--couleur-titre-carte);
+    }
+
+    100% {
+        color: var(--couleur-noir);
+    }
+}
+
+@keyframes couleurCheour {
+    0%, 30% {
+        color: var(--couleur-verte);
+    }
+
+    35%, 63% {
+        color: var(--couleur-titre-carte);
+    }
+
+    68%, 96% {
+        color: var(--couleur-noir);
+    }
+
+    100% {
+        color: var(--couleur-verte);
+    }
+}
+
+@keyframes couleurDescription {
+    0%, 30% {
+        color: var(--couleur-titre-carte);
+    }
+
+    35%, 63% {
+        color: var(--couleur-noir);
+    }
+
+    68%, 96% {
+        color: var(--couleur-verte);
+    }
+
+    100% {
+        color: var(--couleur-titre-carte);
+    }
+}
+
+
+@keyframes photosdewalidheader {
+    0%, 100% {
+        transform: scale(1);
+        
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes right-to-left-walid { 
+  from { transform: translateX(100%) } 
+  to { transform: translateX(0%) }  
+}
+
+
+
+
 .accueil {
     min-height: calc(100vh - 50px);
     padding: clamp(3rem, 6vw, 5.5rem) var(--marge-contenu) 7rem;
@@ -5,7 +79,7 @@
     grid-template-columns: minmax(0, 1fr) minmax(18rem, 29vw);
     gap: clamp(2rem, 7vw, 8rem);
     align-items: start;
-    background-color: #f2f0e9;
+    background-color: var(--couleur-fond-clair);
     border-inline: 1px solid #d9d6cb;
 }
 
@@ -15,7 +89,7 @@
 
 .accueil__sur-titre {
     margin-bottom: 1.25rem;
-    color: #6c6b65;
+    color: var(--couleur-gris);
     font-size: clamp(0.55rem, 0.8vw, 0.7rem);
     font-weight: 600;
     letter-spacing: 0.22em;
@@ -38,21 +112,22 @@
 }
 
 .accueil__titre-ligne--noir {
-    color: #09090b;
+    animation: couleurWalid 4s steps(1) infinite;
 }
 
 .accueil__titre-ligne--vert {
-    color: #07966d;
+    animation: couleurCheour 4s steps(1) infinite;
 }
 
 .accueil__description {
     margin-top: 1.45rem;
-    color: #777792;
+    color: var(--couleur-titre-carte);
     font-family: 'Barlow Condensed', sans-serif;
     font-size: clamp(2rem, 4.3vw, 4.6rem);
     font-weight: 700;
     line-height: 0.85;
     text-transform: uppercase;
+    animation: couleurDescription 4s steps(1) infinite;
 }
 
 .accueil__portrait {
@@ -60,10 +135,13 @@
     aspect-ratio: 0.72;
     margin: 0;
     overflow: hidden;
-    background-color: #07966d;
+    background-color: var(--couleur-verte);
     border-radius: 1rem;
     box-shadow: 0 0 0.9rem rgba(0, 0, 0, 0.2);
-}
+    animation: photosdewalidheader 3s ease-in-out infinite;
+    
+    
+}   
 
 .accueil__portrait img {
     width: 100%;
@@ -71,14 +149,17 @@
     display: block;
     object-fit: cover;
     object-position: center center;
+    
+    
+   
 }
 
 .bandeau-metiers {
     width: 100%;
     overflow: hidden;
-    border-top: 2px solid #07966d;
-    background-color: #09090b;
-    color: #07966d;
+    border-top: 2px solid var(--couleur-verte);
+    background-color: var(--couleur-noir);
+    color: var(--couleur-verte);
     white-space: nowrap;
 }
 
@@ -89,12 +170,12 @@
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
-    animation: defilement 24s linear infinite;
+    animation: defilement 35s linear infinite;
 }
 
 .bandeau-metiers__contenu span {
     padding-inline: 0.8rem;
-    color: #f2f0e9;
+    color: var(--couleur-fond-clair);
 }
 
 

@@ -67,7 +67,7 @@ function createProjectCard(project) {
 	return article;
 }
 
-async function displayProjects() {
+function renderProjects(projects, filter) {
 	const mainContainer = document.querySelector('.card-container');
 	const smallContainer = document.querySelector('.card-container-small');
 
@@ -75,15 +75,54 @@ async function displayProjects() {
 		return;
 	}
 
+	let filteredProjects = projects;
+
+	if (filter === 'video') {
+		filteredProjects = projects.filter((project) =>
+			project.category.toLowerCase().includes('vidéo')
+		);
+	}
+
+	if (filter === 'design') {
+		filteredProjects = projects.filter((project) =>
+			project.category.toLowerCase().includes('graphisme')
+		);
+	}
+
+	mainContainer.replaceChildren();
+	smallContainer.replaceChildren();
+
+	filteredProjects.forEach((project, index) => {
+		const card = createProjectCard(project);
+		const container = index < 3 ? mainContainer : smallContainer;
+		container.append(card);
+	});
+}
+
+async function displayProjects() {
+	const mainContainer = document.querySelector('.card-container');
+	const filterButtons = document.querySelectorAll('.filtre');
+
+	if (!mainContainer) {
+		return;
+	}
+
 	try {
 		const projects = await loadProjects();
-		mainContainer.replaceChildren();
-		smallContainer.replaceChildren();
+		renderProjects(projects);
 
-		projects.forEach((project, index) => {
-			const card = createProjectCard(project);
-			const container = index < 3 ? mainContainer : smallContainer;
-			container.append(card);
+		filterButtons.forEach((button) => {
+			button.addEventListener('click', () => {
+				const selectedFilter = button.dataset.filtre;
+
+				filterButtons.forEach((filterButton) => {
+					const isActive = filterButton === button;
+					filterButton.classList.toggle('actif', isActive);
+					filterButton.setAttribute('aria-pressed', String(isActive));
+				});
+
+				renderProjects(projects, selectedFilter);
+			});
 		});
 	} catch (error) {
 		console.error(error);

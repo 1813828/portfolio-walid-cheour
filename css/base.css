@@ -12,8 +12,8 @@
 
 .footer {
 	padding: 30px var(--marge-contenu);
-	background-color: #118f68;
-	color: #09090b;
+	background-color: var(--couleur-verte);
+	color: var(--couleur-noir);
 	
 	
 }
@@ -36,7 +36,7 @@
 }
 
 .footer__multimedia {
-	color: #d5eee5;
+	color: var(--couleur-fond-clair);
 	font-size: 18px;
 }
 

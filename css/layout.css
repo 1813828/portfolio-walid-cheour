@@ -2,21 +2,29 @@
     --marge-contenu: 40px;
     --couleur-titre-carte: #856084;
     --couleur-verte: #07966d;
+    --couleur-fond-clair: #f2f0e9;
+    --couleur-noir: #09090b;
+    --couleur-blanc: #ffffff;
+    --couleur-gris-clair: #aaa79e;
+    --couleur-gris: #77746d;
+    --couleur-texte-gris: #60605c;
+    --couleur-fond-sombre: #181818;
+    --couleur-texte-clair: #b0b0b0;
 }
 
 .skills-section {
     padding: 80px var(--marge-contenu) 100px;
-    background-color: #f2f0e9;
+    background-color: var(--couleur-fond-clair);
     min-height: 620px;
 }
 
 .skills-marks {
-    color: #aaa79e;
+    color: var(--couleur-gris-clair);
 }
 
 .skills-eyebrow {
     margin: 10px 0;
-    color: #77746d;
+    color: var(--couleur-gris);
     font-size: 20px;
     text-transform: uppercase;
     
@@ -40,7 +48,7 @@
     position: relative;
     min-height: 190px;
     padding: 22px 18px;
-    background-color: white;
+    background-color: var(--couleur-blanc);
 }
 
 .categorie {
@@ -57,7 +65,7 @@
 
 .carte-competences li {
     margin-bottom: 6px;
-    color: #60605c;
+    color: var(--couleur-texte-gris);
     font-size: 20px;
     line-height: 1.5;
 }
@@ -69,7 +77,7 @@
 /* la grosse boîte qui contient tout */
 .apropos-section {
     padding: 34px var(--marge-contenu) 24px;
-    background-color: #181818;
+    background-color: var(--couleur-fond-sombre);
     display: flex;
     align-items: center;
     gap: 28px;
@@ -93,7 +101,7 @@
 }
 
 .apropos-eyebrow {
-    color: #77746d;
+    color: var(--couleur-gris);
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -102,12 +110,12 @@
 .apropos-title {
     font-size: 48px;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--couleur-blanc);
     margin-bottom: 30px;
 }
 
 .apropos-texte {
-    color: #b0b0b0;
+    color: var(--couleur-texte-clair);
     font-size: 23px;
     line-height: 1.45;
     margin-bottom: 14px;
@@ -128,14 +136,14 @@
 
 
 .info-titre {
-    color: #77746d;
+    color: var(--couleur-gris);
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
 .info-reponse {
-    color: #fff;
+    color: var(--couleur-blanc);
     font-size: 20px;
     font-weight: bold;
 }
@@ -154,8 +162,8 @@
     width: 100px;
     height: 100px;
     padding: 12px 0;
-    background-color: #07966d;
-    color: #09090b;
+    background-color: var(--couleur-verte);
+    color: var(--couleur-noir);
     font-size: 30px;
     font-weight: bold;
     line-height: 3;
@@ -177,8 +185,8 @@
 .contact__lien_hotmail {
     display: inline-block;
     padding: 14px 18px;
-    color: #000000;
-    background-color: #07966d;
+    color: var(--couleur-noir);
+    background-color: var(--couleur-verte);
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
@@ -188,7 +196,7 @@
     display: inline-block;
     padding: 14px 18px;
     border: 1px solid #dedbd2;
-    color: #000000;
+    color: var(--couleur-noir);
     background-color: transparent;
     font-size: 14px;
     font-weight: bold;
@@ -197,7 +205,7 @@
 
 .contact {
     padding: 60px var(--marge-contenu);
-    background-color: #f2f0e9;
+    background-color: var(--couleur-fond-clair);
 }
 
 .contact__texte {
@@ -206,7 +214,7 @@
 
 .contact__eyebrow {
     margin: 0 0 12px;
-    color: #77746d;
+    color: var(--couleur-gris);
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -215,7 +223,7 @@
 
 .contact__titre {
     margin: 0 0 18px;
-    color: #09090b;
+    color: var(--couleur-noir);
     font-size: 48px;
     line-height: 1;
     text-transform: uppercase;
@@ -223,7 +231,7 @@
 
 .contact__description {
     margin: 0;
-    color: #60605c;
+    color: var(--couleur-texte-gris);
     font-size: 20px;
 
 }

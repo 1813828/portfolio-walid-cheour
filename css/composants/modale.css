@@ -1,7 +1,7 @@
 .processus-power {
 	padding: clamp(3rem, 8vw, 6rem) var(--marge-contenu);
-	background: #09090b;
-	color: #f2f0e9;
+	background: var(--couleur-noir);
+	color: var(--couleur-fond-clair);
 }
 
 .processus-power__contenu {
@@ -16,7 +16,7 @@
 .processus-power__etiquette,
 .processus-power__categorie {
 	margin: 0;
-	color: #53d0a3;
+	color: var(--couleur-verte);
 	font-size: 0.8rem;
 	font-weight: 700;
 	letter-spacing: 0.15em;
@@ -25,7 +25,7 @@
 
 .processus-power__entete h2 {
 	margin: 0.55rem 0 clamp(2rem, 5vw, 4rem);
-	color: #53d0a3;
+	color: var(--couleur-verte);
 	font-size: clamp(2.2rem, 5vw, 4rem);
 	line-height: 1;
 	text-transform: uppercase;
@@ -35,7 +35,7 @@
 	width: min(100%, 920px);
 	margin: 0 auto;
 	border: 1px solid rgba(213, 238, 229, 0.15);
-	background: #15191a;
+	background: var(--couleur-fond-sombre);
 	box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.28);
 }
 
@@ -59,7 +59,7 @@
 .processus-power__description {
 	max-width: 680px;
 	margin: 0;
-	color: #c4cfca;
+	color: var(--couleur-texte-clair);
 	font-size: 1.05rem;
 	line-height: 1.6;
 }
@@ -80,12 +80,12 @@
 	gap: 0.9rem;
 	margin: 0;
 	padding-left: 1.4rem;
-	color: #c4cfca;
+	color: var(--couleur-texte-clair);
 	line-height: 1.45;
 }
 
 .processus-power__etapes li::marker {
-	color: #a979a5;
+	color: var(--couleur-titre-carte);
 	font-weight: 700;
 }
 
@@ -102,7 +102,7 @@
 	margin: 0;
 	overflow: hidden;
 	border: 1px solid rgba(213, 238, 229, 0.12);
-	background: #202728;
+	background: var(--couleur-fond-sombre);
 }
 
 .processus-power__galerie img {

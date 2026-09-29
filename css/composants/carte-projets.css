@@ -1,7 +1,7 @@
 .projets {
   padding: clamp(3.5rem, 7vw, 6rem) var(--marge-contenu) clamp(4rem, 8vw, 7rem);
-  background-color: #118f68;
-  color: #09090b;
+  background-color: var(--couleur-verte);
+  color: var(--couleur-noir);
 }
 
 .entete {
@@ -36,8 +36,8 @@
 .filtre {
   border: 0;
   padding: 0.5rem 0.85rem;
-  background-color: #09090b;
-  color: #f2f0e9;
+  background-color: var(--couleur-noir);
+  color: var(--couleur-fond-clair);
   cursor: pointer;
   font: inherit;
   font-size: 1rem;
@@ -48,8 +48,8 @@
 
 .filtre:hover,
 .filtre.actif {
-  background-color: #f2f0e9;
-  color: #09090b;
+  background-color: var(--couleur-fond-clair);
+  color: var(--couleur-noir);
 }
 
 .card-container {
@@ -67,7 +67,7 @@
   width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
-  background-color: #09090b;
+  background-color: var(--couleur-noir);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
@@ -80,8 +80,8 @@
 }
 
 .card-content {
-  background-color: #09090b;
-  color: white;
+  background-color: var(--couleur-noir);
+  color: var(--couleur-blanc);
   padding: 1.5rem;
   flex: 1;
 }
@@ -99,9 +99,9 @@
   width: fit-content;
   margin: 0 0 0.75rem 0;
   margin-left: -0.4rem;
-  border: 1px solid #118f68;
+  border: 1px solid var(--couleur-verte);
   padding: 0.35rem 0.6rem;
-  color: #118f68;
+  color: var(--couleur-verte);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -118,21 +118,21 @@
 .card-year {
   display: block;
   margin-top: 1rem;
-  color: #f2f0e9;
+  color: var(--couleur-fond-clair);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
 
 .card-content a {
-  color: #118f68;
+  color: var(--couleur-verte);
   text-decoration: underline;
-  text-decoration-color: #118f68;
+  text-decoration-color: var(--couleur-verte);
   text-underline-offset: 0.2em;
 }
 
 .card-content a:hover {
-  color: #f2f0e9;
+  color: var(--couleur-fond-clair);
 }
 
 .card-container-small {

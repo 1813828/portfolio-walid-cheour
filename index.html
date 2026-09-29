@@ -27,10 +27,10 @@
             </button>
 
             <ul id="menu-principal" class="nav-links">
-                <li><a href="#">PROJETS</a></li>
-                <li><a href="#">COMPÉTENCES</a></li>
-                <li><a href="#">À PROPOS</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="#projets">PROJETS</a></li>
+                <li><a href="#competences">COMPÉTENCES</a></li>
+                <li><a href="#apropos">À PROPOS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </section>
     </nav>
@@ -60,7 +60,7 @@
             </p>
         </aside>
     </main>
-    <section class="projets" aria-labelledby="projets-titre">
+    <section id="projets" class="projets" aria-labelledby="projets-titre">
         <header class="entete">
             <div>
                 <p class="sur-titre">Travaux sélectionnés</p>
@@ -68,9 +68,9 @@
             </div>
 
             <nav class="filtres" aria-label="Filtrer les projets">
-                <button class="filtre actif" type="button">Tout</button>
-                <button class="filtre" type="button">Vidéo</button>
-                <button class="filtre" type="button">Design</button>
+                <button class="filtre actif" type="button" data-filtre="tout" aria-pressed="true">Tout</button>
+                <button class="filtre" type="button" data-filtre="video" aria-pressed="false">Vidéo</button>
+                <button class="filtre" type="button" data-filtre="design" aria-pressed="false">Design</button>
             </nav>
         </header>
 
@@ -150,7 +150,7 @@
 
     </section>
 
-    <section class="skills-section">
+    <section id="competences" class="skills-section">
         <div class="skills-marks">+ +</div>
         <div class="skills-eyebrow">Ce que je maîtrise</div>
         <h2 class="skills-title">COMPÉTENCES</h2>
@@ -202,7 +202,7 @@
 
     </section>
 
-    <section class="apropos-section">
+    <section id="apropos" class="apropos-section">
         <div class="colonne-texte">
             <p class="apropos-eyebrow">+ qui suis-je?</p>
             <h2 class="apropos-title">À PROPOS</h2>
@@ -249,7 +249,7 @@
 
 
 
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="contact__texte">
             <p class="contact__eyebrow">+ TRAVAILLONS ENSEMBLE</p>
             <h2 class="contact__titre">CONTACT</h2>
@@ -278,7 +278,7 @@
         </div>
     </div>
 
-    <section class="processus-power" aria-labelledby="processus-power-titre">
+   <!-- <section class="processus-power" aria-labelledby="processus-power-titre">
         <article class="processus-power__contenu">
             <figure class="processus-power__visuel">
                 <img src="./assets/walid_power.png" alt="Composition numérique POWER terminée">
@@ -311,7 +311,7 @@
                 <figure><img src="./assets/lueurexterne.png" alt="Réglage de lumière externe"></figure>
             </section>
         </article>
-    </section>
+    </section>-->
 
 
     <script src="./Js/data.js"></script>
