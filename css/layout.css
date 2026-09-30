@@ -1,3 +1,4 @@
+/* Couleurs et marge partagees par les sections principales. */
 :root {
     --marge-contenu: 40px;
     --couleur-titre-carte: #856084;
@@ -12,16 +13,19 @@
     --couleur-texte-clair: #b0b0b0;
 }
 
+/* Section qui presente les competences de Walid. */
 .skills-section {
     padding: 80px var(--marge-contenu) 100px;
     background-color: var(--couleur-fond-clair);
     min-height: 620px;
 }
 
+/* Petits signes decoratifs de la section competences. */
 .skills-marks {
     color: var(--couleur-gris-clair);
 }
 
+/* Texte court affiche au-dessus du titre des competences. */
 .skills-eyebrow {
     margin: 10px 0;
     color: var(--couleur-gris);
@@ -30,6 +34,7 @@
     
 }
 
+/* Grand titre de la section competences. */
 .skills-title {
     margin: 0 0 30px;
     font-size: 48px;
@@ -37,6 +42,7 @@
     
 }
 
+/* Grille qui aligne les differentes categories de competences. */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -44,6 +50,7 @@
     
 }
 
+/* Carte contenant une categorie et sa liste de competences. */
 .carte-competences {
     position: relative;
     min-height: 190px;
@@ -51,6 +58,7 @@
     background-color: var(--couleur-blanc);
 }
 
+/* Nom de la categorie : video, design, audio ou gestion. */
 .categorie {
     margin-bottom: 12px;
     font-weight: bold;
@@ -75,6 +83,7 @@
 }
 
 /* la grosse boîte qui contient tout */
+/* Section de presentation personnelle avec texte et photo. */
 .apropos-section {
     padding: 34px var(--marge-contenu) 24px;
     background-color: var(--couleur-fond-sombre);
@@ -100,6 +109,7 @@
     justify-content: center;
 }
 
+/* Petit texte d'introduction de la section a propos. */
 .apropos-eyebrow {
     color: var(--couleur-gris);
     font-size: 20px;
@@ -107,6 +117,7 @@
     margin-bottom: 40px;
 }
 
+/* Titre principal de la section a propos. */
 .apropos-title {
     font-size: 48px;
     text-transform: uppercase;
@@ -114,6 +125,7 @@
     margin-bottom: 30px;
 }
 
+/* Paragraphes qui presentent le parcours de Walid. */
 .apropos-texte {
     color: var(--couleur-texte-clair);
     font-size: 23px;
@@ -135,6 +147,7 @@
 }
 
 
+/* Libelle d'une information personnelle. */
 .info-titre {
     color: var(--couleur-gris);
     font-size: 20px;
@@ -142,12 +155,14 @@
     margin-bottom: 10px;
 }
 
+/* Valeur associee au libelle d'une information. */
 .info-reponse {
     color: var(--couleur-blanc);
     font-size: 20px;
     font-weight: bold;
 }
 
+/* Photo utilisee dans la section a propos. */
 .ma-photo {
     display: block;
     width: 100%;
@@ -155,6 +170,7 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Bloc colore superpose a la photo. */
 .photo-signature {
     position: absolute;
     bottom: 0;
@@ -171,17 +187,20 @@
 }
 
 
+/* Zone qui contient les liens de contact. */
 .contact__infos {
     display: flex;
     margin-top: 24px;
 }
 
+/* Organisation des boutons de contact. */
 .contact__bloc {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
 }
 
+/* Bouton de contact par courriel. */
 .contact__lien_hotmail {
     display: inline-block;
     padding: 14px 18px;
@@ -192,6 +211,7 @@
     text-decoration: none;
 }
 
+/* Bouton qui dirige vers le profil LinkedIn. */
 .contact__lien_linkedIn {
     display: inline-block;
     padding: 14px 18px;
@@ -203,15 +223,18 @@
     text-decoration: none;
 }
 
+/* Section finale reservee aux informations de contact. */
 .contact {
     padding: 60px var(--marge-contenu);
     background-color: var(--couleur-fond-clair);
 }
 
+/* Conteneur du contenu textuel de la section contact. */
 .contact__texte {
     max-width: 720px;
 }
 
+/* Petit texte situe au-dessus du titre contact. */
 .contact__eyebrow {
     margin: 0 0 12px;
     color: var(--couleur-gris);
@@ -221,6 +244,7 @@
     font-size: 18px;
 }
 
+/* Grand titre de la section contact. */
 .contact__titre {
     margin: 0 0 18px;
     color: var(--couleur-noir);
@@ -229,6 +253,7 @@
     text-transform: uppercase;
 }
 
+/* Description et invitation a prendre contact. */
 .contact__description {
     margin: 0;
     color: var(--couleur-texte-gris);
@@ -241,6 +266,7 @@
 
 
 
+/* Ajustements pour les ecrans de taille moyenne. */
 @media (max-width: 800px) {
     :root {
         --marge-contenu: 24px;
@@ -251,6 +277,7 @@
     }
 }
 
+/* Mise en page en une colonne sur les petits ecrans. */
 @media (max-width: 500px) {
     .skills-section {
         padding: 40px var(--marge-contenu);

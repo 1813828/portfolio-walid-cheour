@@ -1,15 +1,19 @@
+/* Charge la police principale utilisée dans le portfolio. */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap');
 
+/* Applique la police du portfolio à tous les éléments. */
 * {
 	font-family: 'Barlow Condensed', sans-serif;
 }
 
+/* Variable commune pour les marges horizontales du contenu. */
 :root {
 	--marge-contenu: clamp(1.25rem, 8vw, 7rem);
 }
 
 
 
+/* Pied de page avec le nom et les informations complémentaires. */
 .footer {
 	padding: 30px var(--marge-contenu);
 	background-color: var(--couleur-verte);
@@ -18,6 +22,7 @@
 	
 }
 
+/* Organise les éléments du pied de page sur une même ligne. */
 .footer__bloc {
 	width: 100%;
 	margin: 0 auto;
@@ -29,17 +34,20 @@
 
 
 
+/* Nom affiché dans le pied de page. Walid */
 .footer__nom {
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 0.12em;
 }
 
+/* Texte complémentaire sur l'activité multimédia. */
 .footer__multimedia {
 	color: var(--couleur-fond-clair);
 	font-size: 18px;
 }
 
+/* Empile les éléments du pied de page sur les petits écrans. */
 @media (max-width: 500px) {
 	.footer {
 		padding: 16px 24px;

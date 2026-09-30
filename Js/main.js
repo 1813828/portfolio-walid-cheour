@@ -1,6 +1,8 @@
+// Recupere les elements necessaires au menu mobile.
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
+// Ouvre, ferme et reinitialise le menu de navigation responsive.
 if (navToggle && navLinks) {
 	navToggle.addEventListener('click', () => {
 		const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
@@ -27,6 +29,7 @@ if (navToggle && navLinks) {
 	});
 }
 
+// Construit une carte HTML a partir des donnees d'un projet.
 function createProjectCard(project) {
 	const article = document.createElement('article');
 	article.className = 'card';
@@ -67,6 +70,7 @@ function createProjectCard(project) {
 	return article;
 }
 
+// Filtre les projets puis les repartit dans les deux conteneurs de cartes.
 function renderProjects(projects, filter) {
 	const mainContainer = document.querySelector('.card-container');
 	const smallContainer = document.querySelector('.card-container-small');
@@ -101,6 +105,7 @@ function renderProjects(projects, filter) {
 	animerCartes();
 }
 
+// Charge les projets et active les boutons de filtrage.
 async function displayProjects() {
 	const mainContainer = document.querySelector('.card-container');
 	const filterButtons = document.querySelectorAll('.filtre');
@@ -132,10 +137,13 @@ async function displayProjects() {
 	}
 }
 
+// Lance l'affichage initial des projets.
 displayProjects();
 
+// Active le plugin qui declenche les animations au defilement.
 gsap.registerPlugin(ScrollTrigger);
 
+// Anime le titre principal de la section competences.
 const title = document.querySelector('#competences .skills-title');
 
 gsap.fromTo(
@@ -154,8 +162,7 @@ gsap.fromTo(
   }
 );
 
-gsap.registerPlugin(ScrollTrigger);
-
+// Anime le petit texte situe au-dessus du titre competences.
 const title2 = document.querySelector('#competences .skills-eyebrow');
 
 gsap.fromTo(
@@ -175,8 +182,7 @@ gsap.fromTo(
 );
 
 
-gsap.registerPlugin(ScrollTrigger);
-
+// Anime la grille qui contient les cartes de competences.
 const listedecompetence = document.querySelector('#competences .skills-grid');
 
 gsap.fromTo(
@@ -197,8 +203,7 @@ gsap.fromTo(
 
 
 
-gsap.registerPlugin(ScrollTrigger);
-
+// Anime la photo de la section a propos depuis la droite.
 const walidapropos = document.querySelector('#apropos .ma-photo');
 
 gsap.fromTo(
@@ -219,8 +224,7 @@ gsap.fromTo(
 
 
 
-gsap.registerPlugin(ScrollTrigger);
-
+// Anime le texte de la section a propos depuis la gauche.
 const walidaproposdescription = document.querySelector('#apropos .colonne-texte');
 
 gsap.fromTo(
@@ -241,6 +245,7 @@ gsap.fromTo(
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Anime le contenu de la section contact depuis le bas.
 const walidcontact = document.querySelector('#contact .contact__texte');
 
 gsap.fromTo(

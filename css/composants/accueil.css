@@ -1,3 +1,4 @@
+/* Animation de la couleur du prénom « Walid » dans l'acceuil du header. */
 @keyframes couleurWalid {
     0%, 30% {
         color: var(--couleur-noir);
@@ -16,6 +17,7 @@
     }
 }
 
+/* Animation de la couleur du nom « Cheour » dans l'acceuil du header. */
 @keyframes couleurCheour {
     0%, 30% {
         color: var(--couleur-verte);
@@ -34,6 +36,7 @@
     }
 }
 
+/* Animation de la couleur de la phrase de présentation dans l'acceuil du header. Création immersion */
 @keyframes couleurDescription {
     0%, 30% {
         color: var(--couleur-titre-carte);
@@ -53,6 +56,7 @@
 }
 
 
+/* Léger agrandissement continu de la photo du portrait. walid de dos */
 @keyframes photosdewalidheader {
     0%, 100% {
         transform: scale(1);
@@ -64,14 +68,25 @@
     }
 }
 
+/* Fait entrer un élément depuis le côté droit de l'écran. walid de dos  */
 @keyframes right-to-left-walid { 
   from { transform: translateX(100%) } 
   to { transform: translateX(0%) }  
 }
 
+/* Défilement horizontal du contenu du bandeau. */
+@keyframes defilement {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 
-
+/* Mise en page principale de la section d'accueil. */
 .accueil {
     min-height: calc(100vh - 50px);
     padding: clamp(3rem, 6vw, 5.5rem) var(--marge-contenu) 7rem;
@@ -87,6 +102,7 @@
     padding-top: 0.45rem;
 }
 
+/* Petit texte affiché au-dessus du titre principal. Intégration multimédia — Portfolio 2026 */
 .accueil__sur-titre {
     margin-bottom: 1.25rem;
     color: var(--couleur-gris);
@@ -96,6 +112,7 @@
     text-transform: uppercase;
 }
 
+/* Grand titre contenant le prénom et le nom.  Walid Cheour*/
 .accueil__titre {
     display: flex;
     flex-direction: column;
@@ -107,18 +124,22 @@
     text-transform: uppercase;
 }
 
+/* Une ligne du titre, par exemple « WALID » ou « CHEOUR ». */
 .accueil__titre-ligne {
     display: block;
 }
 
+/* Variante de couleur animée pour la première ligne du titre. */
 .accueil__titre-ligne--noir {
     animation: couleurWalid 4s steps(1) infinite;
 }
 
+/* Variante de couleur animée pour la deuxième ligne du titre. */
 .accueil__titre-ligne--vert {
     animation: couleurCheour 4s steps(1) infinite;
 }
 
+/* Phrase qui présente le domaine ou le métier de Walid. Cération Immersion */
 .accueil__description {
     margin-top: 1.45rem;
     color: var(--couleur-titre-carte);
@@ -130,6 +151,7 @@
     animation: couleurDescription 4s steps(1) infinite;
 }
 
+/* Cadre de la photo située à droite de la section d'accueil.Walid de dos */
 .accueil__portrait {
     width: 100%;
     aspect-ratio: 0.72;
@@ -143,6 +165,7 @@
     
 }   
 
+/* Image du portrait : elle remplit le cadre sans être déformée. */
 .accueil__portrait img {
     width: 100%;
     height: 100%;
@@ -154,6 +177,7 @@
    
 }
 
+/* Bandeau défilant qui annonce les métiers ou compétences. */
 .bandeau-metiers {
     width: 100%;
     overflow: hidden;
@@ -163,6 +187,7 @@
     white-space: nowrap;
 }
 
+/* Ligne animée contenant les différents métiers. */
 .bandeau-metiers__contenu {
     width: max-content;
     padding: 0.7rem 0;
@@ -173,6 +198,7 @@
     animation: defilement 35s linear infinite;
 }
 
+/* Espacement et couleur des séparateurs entre les métiers. */
 .bandeau-metiers__contenu span {
     padding-inline: 0.8rem;
     color: var(--couleur-fond-clair);
@@ -180,17 +206,7 @@
 
 
 
-
-@keyframes defilement {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
+/* Adaptation de l'accueil aux écrans étroits. */
 @media (max-width: 720px) {
     .accueil {
         min-height: auto;
@@ -213,6 +229,7 @@
     }
 }
 
+/* Désactive le mouvement si l'utilisateur préfère limiter les animations. */
 @media (prefers-reduced-motion: reduce) {
     .bandeau-metiers__contenu {
         animation: none;
