@@ -1,3 +1,6 @@
+
+//Pour le menu mobile, on recupere les elements necessaires et on ajoute les evenements pour ouvrir et fermer le menu.
+
 // Recupere les elements necessaires au menu mobile.
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -29,45 +32,30 @@ if (navToggle && navLinks) {
 	});
 }
 
-// Construit une carte HTML a partir des donnees d'un projet.
-function createProjectCard(project) {
-	const article = document.createElement('article');
-	article.className = 'card';
 
-	const image = document.createElement('img');
-	image.src = project.image;
-	image.alt = `Projet ${project.title}`;
 
-	const content = document.createElement('div');
-	content.className = 'card-content';
+function createProjectCard(project) {		/*Cette fonction retourne le html nécessaire pour les cartes du projets */
+	return !project.link ? `<article class="card">
+		<img src="${project.image}" alt="Projet ${project.title}">
+		<div class="card-content">
+			<h3>${project.title}</h3>
+			<span class="card-category">${project.category}</span>
+			<p>${project.description}</p>
+			<span class="card-year">${project.year}</span>
+			${project.processus ? `<button class="card-detail-button" type="button" data-project-id="${project.id}">Voir le processus</button>` : ''}
+		</div>
+	</article>` : `<article class="card">
+		<img src="${project.image}" alt="Projet ${project.title}">
+		<div class="card-content">
+			<h3>${project.title}</h3>
+			<span class="card-category">${project.category}</span>
+			<p>${project.description}</p>
+			<span class="card-year">${project.year}</span>
+			<a href="${project.link}" target="_blank">Voir le projet</a>
+			${project.processus ? `<button class="card-detail-button" type="button" data-project-id="${project.id}">Voir le processus</button>` : ''}
+		</div>
+	</article>`;
 
-	const title = document.createElement('h3');
-	title.textContent = project.title;
-
-	const category = document.createElement('span');
-	category.className = 'card-category';
-	category.textContent = project.category;
-
-	const description = document.createElement('p');
-	description.textContent = project.description;
-
-	const year = document.createElement('span');
-	year.className = 'card-year';
-	year.textContent = project.year;
-
-	content.append(category, title, description, year);
-
-	if (project.link) {
-		const link = document.createElement('a');
-		link.href = project.link;
-		link.textContent = 'Voir le projet';
-		link.target = '_blank';
-		link.rel = 'noopener noreferrer';
-		content.append(link);
-	}
-
-	article.append(image, content);
-	return article;
 }
 
 // Filtre les projets puis les repartit dans les deux conteneurs de cartes.
@@ -99,7 +87,7 @@ function renderProjects(projects, filter) {
 	filteredProjects.forEach((project, index) => {
 		const card = createProjectCard(project);
 		const container = index < 3 ? mainContainer : smallContainer;
-		container.append(card);
+		container.insertAdjacentHTML('beforeend', card);       /*insère le html fournit la fonction createProjectCard dans le container correspondant (mainContainer ou smallContainer) */
 	});
 
 	animerCartes();
@@ -116,6 +104,7 @@ async function displayProjects() {
 
 	try {
 		const projects = await loadProjects();
+		initialiserModale(projects);
 		renderProjects(projects);
 
 		filterButtons.forEach((button) => {

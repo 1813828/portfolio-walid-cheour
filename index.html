@@ -295,42 +295,35 @@
     </div>
 
 
-<!-- section pour le modal à remettre  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-    <!-- <section class="processus-power" aria-labelledby="processus-power-titre">
+
+<!-- section processus de création du projet Power en graphisme ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+    <dialog class="processus-power" id="modale-processus" aria-labelledby="processus-titre">
+        <button class="processus-power__fermer" type="button" aria-label="Fermer le processus du projet">&times;</button>
         <article class="processus-power__contenu">
             <figure class="processus-power__visuel">
-                <img src="./assets/walid_power.png" alt="Composition numérique POWER terminée">
+                <img id="processus-image" src="./assets/walid_power.png" alt="Composition numérique POWER terminée">
             </figure>
 
             <header class="processus-power__entete">
                 <p class="processus-power__etiquette">Projet en détail</p>
-                <h2 id="processus-power-titre">Mes projets</h2>
+                <h2 id="processus-titre"></h2>
             </header>
 
             <section class="processus-power__details">
-                <p class="processus-power__categorie">Design numérique</p>
-                <h3>POWER</h3>
-                <p class="processus-power__description">Une composition numérique construite autour d’un portrait, de contrastes lumineux et d’une atmosphère post-apocalyptique. J’ai travaillé la colorisation, les effets de lumière et l’intégration des éléments pour créer une image intense et cohérente.</p>
+                <p class="processus-power__categorie" id="processus-categorie"></p>
+                <h3 id="processus-nom"></h3>
+                <p class="processus-power__description" id="processus-description"></p>
 
                 <section class="processus-power__etapes" aria-labelledby="etapes-power-titre">
                     <h4 id="etapes-power-titre">Les étapes</h4>
-                    <ol>
-                        <li>Préparer les photos et choisir la pose principale.</li>
-                        <li>Créer le décor et détacher le sujet de l’arrière-plan.</li>
-                        <li>Ajouter les effets de lumière, les couleurs et les textures.</li>
-                        <li>Finaliser les détails puis exporter le projet en haute qualité.</li>
-                    </ol>
+                    <ol id="processus-etapes"></ol>
                 </section>
             </section>
 
-            <section class="processus-power__galerie" aria-label="Images du processus">
-                <figure><img src="./assets/beta.jpg" alt="Photo utilisée pour la composition"></figure>
-                <figure><img src="./assets/options.png" alt="Réglages utilisés pour les effets"></figure>
-                <figure><img src="./assets/lueurexterne.png" alt="Réglage de lumière externe"></figure>
-            </section>
+            <section class="processus-power__galerie" id="processus-galerie" aria-label="Images du processus"></section>
         </article>
-    </section>-->
+    </dialog>
 
 
     <!-- scripts de javascipt   ------------------------------------------------------------------------------------------------------------------------------------------>
@@ -339,6 +332,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/CustomEase.min.js"></script>
     <script src="./Js/data.js"></script>
     <script src="./Js/composants/carte-projet.js"></script>
+    <script src="./Js/composants/modale.js"></script>
     <script src="./Js/main.js"></script>
 
 </body>

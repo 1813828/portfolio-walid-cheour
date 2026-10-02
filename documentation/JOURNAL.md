@@ -90,31 +90,31 @@ Oui, j’ai utilisé l’IA pour trouver de nouvelles idées pour mon portfolio 
 
 **Réponse :**
 
-J’ai commencé à créer le design de mon portfolio et à intégrer mes différents projets en utilisant le code HTML et CSS.
+J’ai commencé à créer le design de mon portfolio et à intégrer mes différents projets en utilisant le code HTM, CSS et Javascript.
 
 ## Question 2 : Quelle est ma principale difficulté et comment l’ai-je surmontée ?
 
 **Réponse :**
 
-Ma principale difficulté a été de bien gérer mon temps et de comprendre la structure du HTML et du CSS. J’ai surmonté cette difficulté en faisant des recherches, en expérimentant différentes méthodes et en utilisant des outils d’aide pour mieux comprendre le code.
+Ma principale difficulté a été de bien gérer mon temps et de comprendre la structure du HTML et du CSS. J’ai surmonté cette difficulté en faisant des recherches, en expérimentant différentes méthodes et en utilisant des outils d’aide pour mieux comprendre le code.Je dirai que la notion avec fetch de javascipt était aussi quelque chose de difficile.
 
 ## Question 3 : Qu’est-ce que j’ai appris que je ne savais pas avant ?
 
 **Réponse :**
 
-J’ai appris à utiliser de nouvelles balises HTML que je ne connaissais pas auparavant. Elles permettent notamment de mieux structurer une page, comme la balise `<section>`. J’ai également appris à utiliser GitHub Copilot pour m’aider dans mon développement et dans la compréhension du code.
+J’ai appris à utiliser des nouvelles balises HTML que je ne connaissais pas auparavant. Elles permettent notamment de mieux structurer une page, comme la balise `<section>`. J’ai également appris à utiliser GitHub Copilot pour m’aider dans mon développement et dans la compréhension du code. J'ai appris aussi sur le javascript avec la notion fetch.
 
 ## Question 4 : Quelle est ma prochaine étape ?
 
 **Réponse :**
 
-Ma prochaine étape est de commencer à intégrer le code JavaScript à mon portfolio et de modifier certaines sections en CSS afin d’améliorer leur apparence et leur mise en page.
+Ma prochaine étape est de revérifier tout mon code. Essayer de mieux rendre le code plus simple
 
 ## Question 5 : Est-ce que j’ai utilisé l’IA ?
 
 **Réponse :**
 
-Oui, j’ai utilisé l’intelligence artificielle, notamment GitHub Copilot, pour m’aider à structurer et à concevoir certains éléments de mon portfolio. Je l’ai également utilisée comme outil d’aide pour mieux comprendre et améliorer mon code.
+Oui, j’ai utilisé l’intelligence artificielle, notamment GitHub Copilot, pour m’aider à structurer et à concevoir certains éléments de mon portfolio en html et css. Je l’ai également utilisée comme outil d’aide pour mieux comprendre et améliorer mon code.Je l'ai utilisé aussi pour du Javascipt.
 
 
 # Utilisation de l'IA
@@ -123,12 +123,16 @@ Oui, j’ai utilisé l’intelligence artificielle, notamment GitHub Copilot, po
 - **Prompt :** "Je veux faire un design de portfolio pour mettre des projets de montage video, de graphisme design et de montage de sons voici à quoi s'attendre : 1. Quel type de poste ou de stage je vise en sortant du programme? Je recherche un poste permanent et à temps pleins dans le milieu vidéaste, gestion, création visuelle et identité visuelle. En résumé, un poste qui utilise mes compétences en montage sonore et vidéo, en gestion de projet ou en graphique désigne.
 
 - **Date :** 2026-09-16
-- **Prompt :** "peux-tu rendre tous mon menu nav responsive! Utilisation de copilot.
+- **Prompt :** "peux-tu rendre tous mon menu nav responsive! 
+Utilisation de copilot.
+réponse : Alignement de la navigation avec l’image de Walid 
+Liens du menu vers les sections 
+Correction du débordement horizontal de la navigation.
 
 
 - **Date :** 2026-09-18
 - **Prompt :** "tu vois ma carte que j'ai fais avec l'image de walid_power peux-tu faire en sorte que la carte sois moins haute que ca puis la mettre une deuxième fois en bas. fais en sorte que ca sois  responsive. Réponse :
-a carte est maintenant plus large, avec une largeur maximale de 49rem, tout en restant responsive sur mobile.
+la carte est maintenant plus large, avec une largeur maximale de 49rem, tout en restant responsive sur mobile.
 
 peux-tu rendre la carte plus large aussi pour qu'on voit bien le contenu car là elle est trop petite.
 
@@ -179,6 +183,19 @@ Aucune erreur CSS détectée.`
 
 utilisation de copilot.
 
+- **Date :** 2026-09-26
+- **Prompt :**
+À partir du menu de la bare nav que j'ai fais en haut. Peux-tu me montrer comment faire en sorte que lorsque je clique sur un des choix, ca m'ammene à la section que je veux en bas de la page.
+
+réponse: Oui. Il faut relier chaque lien du menu à un id placé sur la section correspondante.
+Dans index.html, remplace les liens de navigation :C’est fait.
+
+Les liens du menu dirigent maintenant vers les sections correspondantes dans index.html:30-33, et les sections possèdent leurs identifiants dans index.html:63, index.html:153, index.html:205 et index.html:252.
+
+Le défilement fluide a aussi été ajouté dans base.css:1-3. Aucune erreur détectée.
+
+utilisation de copilot.
+
 
 - **Date :** 2026-09-28
 - **Prompt :**
@@ -190,13 +207,12 @@ utilisation de copilot.
 
 
 
-- **Date :** 2026-09-29
-- **Prompt :**
+- **Date :** 2026-09-30
+- **Prompt :**peux-tu faire en sorte que le processur du projet power soit un modal et qu'il y a un bouton dans la carte du projet qui permet de l'ouvrir.
 
+réponde : Le modal POWER est maintenant relié de bout en bout : les données viennent du JSON, le bouton n’apparaît que sur la carte qui possède steps, et le contenu est injecté dans le <dialog> à l’ouverture. Je vérifie maintenant les erreurs de syntaxe et les références HTML/JavaScript des fichiers touchés.
 
-
-
-
+utilisation de copilot.
 
 
 

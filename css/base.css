@@ -6,13 +6,8 @@
 	font-family: 'Barlow Condensed', sans-serif;
 }
 
-/* Variable commune pour les marges horizontales du contenu. */
-:root {
-	--marge-contenu: clamp(1.25rem, 8vw, 7rem);
-}
 
-
-
+/*Section Footer du portfolio ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/	
 /* Pied de page avec le nom et les informations complémentaires. */
 .footer {
 	padding: 30px var(--marge-contenu);
@@ -47,7 +42,7 @@
 	font-size: 18px;
 }
 
-/* Empile les éléments du pied de page sur les petits écrans. */
+/* Empile les éléments du pied de page sur les petits écrans. C'est pour avoir l'optmisation en écran mobile */
 @media (max-width: 500px) {
 	.footer {
 		padding: 16px 24px;

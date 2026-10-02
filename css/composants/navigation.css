@@ -1,3 +1,5 @@
+
+
 /* Active le défilement fluide pour la navigation et empêche la page de dépasser horizontalement. */
 html {
     scroll-behavior: smooth;
@@ -28,6 +30,8 @@ main {
     width: 100%;
     max-width: 100%;
 }
+
+/*- -section de la navigation principale.---------------------------------------------------------------------------------------------- */
 
 /* Barre de navigation principale en haut de la page avec tous mes menus. */
 .navbar {

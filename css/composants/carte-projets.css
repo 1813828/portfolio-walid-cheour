@@ -1,9 +1,11 @@
+/* Section principale qui contient la liste des projets. */
 .projets {
   padding: clamp(3.5rem, 7vw, 6rem) var(--marge-contenu) clamp(4rem, 8vw, 7rem);
   background-color: var(--couleur-verte);
   color: var(--couleur-noir);
 }
 
+/* En-tête de la section : titre et boutons de filtrage. */
 .entete {
   width: min(100%, 49rem);
   margin: 0 auto 2.5rem;
@@ -13,6 +15,7 @@
   gap: 2rem;
 }
 
+/* Petit libellé placé au-dessus du titre de la section. */
 .sur-titre {
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -21,6 +24,7 @@
   text-transform: uppercase;
 }
 
+/* Titre principal de la section des projets. */
 .projets h2 {
   font-size: clamp(2.7rem, 5vw, 4.5rem);
   font-weight: 700;
@@ -28,11 +32,13 @@
   text-transform: uppercase;
 }
 
+/* Groupe des boutons qui permettent de filtrer les projets. */
 .filtres {
   display: flex;
   gap: 0.3rem;
 }
 
+/* Bouton de filtre dans son état normal et actif au survol. */
 .filtre {
   border: 0;
   padding: 0.5rem 0.85rem;
@@ -46,12 +52,13 @@
   text-transform: uppercase;
 }
 
-.filtre:hover,
+.filtre:hover, 
 .filtre.actif {
   background-color: var(--couleur-fond-clair);
   color: var(--couleur-noir);
 }
 
+/* Grille principale qui accueille la grande carte de projet. */
 .card-container {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -61,6 +68,7 @@
   gap: 1.5rem;
 }
 
+/* Carte individuelle d'un projet. */
 .card {
   display: flex;
   flex-direction: column;
@@ -79,6 +87,7 @@
     0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
+/* Image d'aperçu du projet, conservée dans un format stable. */
 .card img {
   display: block;
   width: 100%;
@@ -86,6 +95,7 @@
   object-fit: cover;
 }
 
+/* Zone textuelle de la carte : titre, description et actions. */
 .card-content {
   background-color: var(--couleur-noir);
   color: var(--couleur-blanc);
@@ -93,6 +103,7 @@
   flex: 1;
 }
 
+/* Nom du projet affiché dans la carte. */
 .card-content h3 {
   margin: 0 0 0.5rem;
   color: var(--couleur-titre-carte);
@@ -100,6 +111,7 @@
   line-height: 1.1;
 }
 
+/* Catégorie ou type du projet. */
 .card-category {
   box-sizing: border-box;
   display: block;
@@ -116,12 +128,14 @@
   text-transform: uppercase;
 }
 
+/* Texte descriptif de la carte. */
 .card-content p,
 .card-content .info p {
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
+/* Année de réalisation du projet. */
 .card-year {
   display: block;
   margin-top: 1rem;
@@ -131,6 +145,7 @@
   letter-spacing: 0.08em;
 }
 
+/* Liens présents dans la description du projet. */
 .card-content a {
   color: var(--couleur-verte);
   text-decoration: underline;
@@ -142,6 +157,26 @@
   color: var(--couleur-fond-clair);
 }
 
+/* Bouton qui ouvre les détails du projet. */
+.card-detail-button {
+  display: block;
+  width: fit-content;
+  margin-top: 1rem;
+  border: 1px solid var(--couleur-verte);
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  color: var(--couleur-verte);
+  cursor: pointer;
+  font: inherit;
+}
+
+.card-detail-button:hover,
+.card-detail-button:focus-visible {
+  background: var(--couleur-verte);
+  color: var(--couleur-noir);
+}
+
+/* Petite grille utilisée pour les cartes de projets secondaires. */
 .card-container-small {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -150,6 +185,7 @@
   gap: 1.5rem;
 }
 
+/* Adaptation de la grille et des cartes aux écrans étroits. */
 @media (max-width: 600px) {
   .card-container .card-container-small {
     gap: 1rem;

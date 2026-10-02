@@ -13,6 +13,8 @@
     --couleur-texte-clair: #b0b0b0;
 }
 
+/*SECION COMPETENCES CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 /* Section qui presente les competences de Walid. */
 .skills-section {
     padding: 80px var(--marge-contenu) 100px;
@@ -25,7 +27,7 @@
     color: var(--couleur-gris-clair);
 }
 
-/* Texte court affiche au-dessus du titre des competences. */
+/* Texte court affiche au-dessus du titre des competences. Ce que je maîtrise */
 .skills-eyebrow {
     margin: 10px 0;
     color: var(--couleur-gris);
@@ -66,11 +68,13 @@
     font-size: 28px;
 }
 
+/* point verts de la liste des competences. */
 .carte-competences ul {
     margin: 0;
     padding-left: 18px;
 }
 
+/* Éléments de la liste des competences li, son design. */
 .carte-competences li {
     margin-bottom: 6px;
     color: var(--couleur-texte-gris);
@@ -78,9 +82,15 @@
     line-height: 1.5;
 }
 
+/* application du style aux puces de la liste avec la cvouleur verte. */
 .carte-competences li::marker {
     color: var(--couleur-verte);
 }
+
+
+
+
+/*Section à propos CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* la grosse boîte qui contient tout */
 /* Section de presentation personnelle avec texte et photo. */
@@ -155,14 +165,14 @@
     margin-bottom: 10px;
 }
 
-/* Valeur associee au libelle d'une information. */
+/* Réponse de l'information personnelle. */
 .info-reponse {
     color: var(--couleur-blanc);
     font-size: 20px;
     font-weight: bold;
 }
 
-/* Photo utilisee dans la section a propos. */
+/* Photo de Walid utilisée dans la section a propos. */
 .ma-photo {
     display: block;
     width: 100%;
@@ -186,7 +196,7 @@
     text-align: center;
 }
 
-
+/*Section contact CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* Zone qui contient les liens de contact. */
 .contact__infos {
     display: flex;
@@ -234,7 +244,7 @@
     max-width: 720px;
 }
 
-/* Petit texte situe au-dessus du titre contact. */
+/* Petit texte situe au-dessus du titre contact. TRAVAILLONS ENSEMBLE */
 .contact__eyebrow {
     margin: 0 0 12px;
     color: var(--couleur-gris);
@@ -244,7 +254,7 @@
     font-size: 18px;
 }
 
-/* Grand titre de la section contact. */
+/* Grand titre de la section contact. "CONTACT" */
 .contact__titre {
     margin: 0 0 18px;
     color: var(--couleur-noir);
@@ -263,7 +273,7 @@
 
 
 
-
+/* Ajustements pour les ecrans-----------------------------------------------------------------------------------------------------. */
 
 
 /* Ajustements pour les ecrans de taille moyenne. */

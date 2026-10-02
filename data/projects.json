@@ -5,7 +5,30 @@
     "description": "Composition numérique avancée - Photoshop, effets volumétriques et atmosphère post-apocalyptique.  Utilisation de la colorisation, du découpage et des options de fusion.",
     "category": "Graphisme",
     "year": "2025",
-    "image": "assets/walid_power.png"
+    "image": "assets/walid_power.png",
+    "processus": {
+      "description": "Une composition numérique construite autour d’un portrait, de contrastes lumineux et d’une atmosphère post-apocalyptique. J’ai travaillé la colorisation, les effets de lumière et l’intégration des éléments pour créer une image intense et cohérente.",
+      "steps": [
+        "Préparer les photos et choisir la pose principale.",
+        "Créer le décor et détacher le sujet de l’arrière-plan.",
+        "Ajouter les effets de lumière, les couleurs et les textures.",
+        "Finaliser les détails puis exporter le projet en haute qualité."
+      ],
+      "gallery": [
+        {
+          "image": "assets/beta.jpg",
+          "alt": "Photo utilisée pour la composition"
+        },
+        {
+          "image": "assets/options.png",
+          "alt": "Réglages utilisés pour les effets"
+        },
+        {
+          "image": "assets/lueurexterne.png",
+          "alt": "Réglage de lumière externe"
+        }
+      ]
+    }
     
 
   },

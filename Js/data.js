@@ -7,3 +7,5 @@ async function loadProjects() {
 
   return await response.json();
 }
+
+/*cette fuction permet de récupérer tous les informations misent sur Json et de les afficher sur la page web*/
