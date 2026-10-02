@@ -1,17 +1,4 @@
-/* Couleurs et marge partagees par les sections principales. */
-:root {
-    --marge-contenu: 40px;
-    --couleur-titre-carte: #856084;
-    --couleur-verte: #07966d;
-    --couleur-fond-clair: #f2f0e9;
-    --couleur-noir: #09090b;
-    --couleur-blanc: #ffffff;
-    --couleur-gris-clair: #aaa79e;
-    --couleur-gris: #77746d;
-    --couleur-texte-gris: #60605c;
-    --couleur-fond-sombre: #181818;
-    --couleur-texte-clair: #b0b0b0;
-}
+
 
 /*SECION COMPETENCES CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 

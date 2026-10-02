@@ -5,7 +5,7 @@
     "description": "Composition numérique avancée - Photoshop, effets volumétriques et atmosphère post-apocalyptique.  Utilisation de la colorisation, du découpage et des options de fusion.",
     "category": "Graphisme",
     "year": "2025",
-    "image": "assets/walid_power.png",
+    "image": "assets/images/walid_power.png",
     "processus": {
       "description": "Une composition numérique construite autour d’un portrait, de contrastes lumineux et d’une atmosphère post-apocalyptique. J’ai travaillé la colorisation, les effets de lumière et l’intégration des éléments pour créer une image intense et cohérente.",
       "steps": [
@@ -16,15 +16,15 @@
       ],
       "gallery": [
         {
-          "image": "assets/beta.jpg",
+          "image": "assets/images/beta.jpg",
           "alt": "Photo utilisée pour la composition"
         },
         {
-          "image": "assets/options.png",
+          "image": "assets/images/options.png",
           "alt": "Réglages utilisés pour les effets"
         },
         {
-          "image": "assets/lueurexterne.png",
+          "image": "assets/images/lueurexterne.png",
           "alt": "Réglage de lumière externe"
         }
       ]
@@ -40,7 +40,7 @@
     "description": "Filmé par moi-même — utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. Projet  de video clip pour l’artsite M.B.H. Un rappeur de montréal. Projet Perosneelle.",
     "category": "Production vidéo",
     "year": "2025",
-    "image": "assets/star.png",
+    "image": "assets/images/star.png",
     
     "link": "https://www.youtube.com/watch?v=c0bYvQd4vpM"
   },
@@ -52,7 +52,7 @@
     "description": "Filmé par moi-même — utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. vidéo clip fait pour le rapeur mbh. un artiste de montréal. projet personnelle.",
     "category": "Production vidéo",
     "year": "2025",
-    "image": "assets/cuban.png",
+    "image": "assets/images/cuban.png",
     "link": "https://www.youtube.com/watch?v=p83jTAAV39M"
   },
 
@@ -62,7 +62,7 @@
     "description": "Montage video/sonore pour l'artiste KRØNIX. Visualiser de la musique addiction.",
     "category": "montage vidéo",
     "year": "2025",
-    "image": "assets/addiction.png",
+    "image": "assets/images/addiction.png",
     "link": "https://www.tiktok.com/@therealkronixtv/video/7540819975909428485"
   },
 
@@ -73,7 +73,7 @@
     "description": "Montage video/sonore pour l'artiste KRØNIX. Visualiser de la musique forget all.",
     "category": "montage vidéo",
     "year": "2025",
-    "image": "assets/memories.png",
+    "image": "assets/images/memories.png",
     "link": "https://www.tiktok.com/@therealkronixtv/video/7541197617351511352"
   },
 
@@ -84,7 +84,7 @@
     "description": "Visualiser réalisé pour un artiste de musique électronique — synchronisation des visuels sur les drops, transitions rythmées et ambiance visuelle immersive propre à l'univers G-House. projet  personelle.",
     "category": "montage vidéo",
     "year": "2025",
-    "image": "assets/nonewfriends.png",
+    "image": "assets/images/nonewfriends.png",
     "link": "https://www.tiktok.com/@therealkronixtv/video/7540091220329057542"
   },
 
@@ -94,7 +94,7 @@
     "description": "Montage video/sonore pour deux artistes en collaboration sur TikTok.",
     "category": "montage vidéo",
     "year": "2025",
-    "image": "assets/collab.png",
+    "image": "assets/images/collab.png",
     "link": "https://www.instagram.com/p/DTWETvTCf9G/?hl=fr"
   }
 
