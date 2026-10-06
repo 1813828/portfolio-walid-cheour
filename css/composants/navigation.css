@@ -44,14 +44,17 @@ main {
 
 /* Logo affiché à gauche de la barre de navigation. */
 .logo {
+    display: inline-flex;
+    align-items: center;
     color: var(--couleur-verte);
-    font-size: 15px;
-    font-weight: 700;
+    text-decoration: none;
+}
 
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    font-family: 'Barlow Condensed', sans-serif;
-     text-decoration: none;
+/* Image du logo dans la barre de navigation. */
+.logo__image {
+    display: block;
+    width: auto;
+    height: 28px;
 }
 
 /* Aligne le logo, le bouton mobile et les liens de navigation. */
