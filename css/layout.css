@@ -11,13 +11,13 @@
 
 /* Petits signes decoratifs de la section competences. */
 .skills-marks {
-    color: var(--couleur-gris-clair);
+    color: var(--couleur-noir);
 }
 
 /* Texte court affiche au-dessus du titre des competences. Ce que je maîtrise */
 .skills-eyebrow {
     margin: 10px 0;
-    color: var(--couleur-gris);
+    color: var(--couleur-noir);
     font-size: 20px;
     text-transform: uppercase;
     
@@ -64,7 +64,7 @@
 /* Éléments de la liste des competences li, son design. */
 .carte-competences li {
     margin-bottom: 6px;
-    color: var(--couleur-texte-gris);
+    color: var(--couleur-texte-noir);
     font-size: 20px;
     line-height: 1.5;
 }
@@ -108,7 +108,7 @@
 
 /* Petit texte d'introduction de la section a propos. */
 .apropos-eyebrow {
-    color: var(--couleur-gris);
+    color: var(--couleur-blanc);
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -118,13 +118,13 @@
 .apropos-title {
     font-size: 48px;
     text-transform: uppercase;
-    color: var(--couleur-blanc);
+    color: var(--couleur-verte);
     margin-bottom: 30px;
 }
 
 /* Paragraphes qui presentent le parcours de Walid. */
 .apropos-texte {
-    color: var(--couleur-texte-clair);
+    color: var(--couleur-blanc);
     font-size: 23px;
     line-height: 1.45;
     margin-bottom: 14px;
@@ -146,7 +146,7 @@
 
 /* Libelle d'une information personnelle. */
 .info-titre {
-    color: var(--couleur-gris);
+    color: var(--couleur-verte);
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -212,9 +212,9 @@
 .contact__lien_linkedIn {
     display: inline-block;
     padding: 14px 18px;
-    border: 1px solid #dedbd2;
-    color: var(--couleur-noir);
-    background-color: transparent;
+    border: 1px solid var(--couleur-titre-carte);
+    color: var(--couleur-blanc);
+    background-color: var(--couleur-titre-carte);
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
@@ -234,7 +234,7 @@
 /* Petit texte situe au-dessus du titre contact. TRAVAILLONS ENSEMBLE */
 .contact__eyebrow {
     margin: 0 0 12px;
-    color: var(--couleur-gris);
+    color: var(--couleur noire);
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -253,7 +253,7 @@
 /* Description et invitation a prendre contact. */
 .contact__description {
     margin: 0;
-    color: var(--couleur-texte-gris);
+    color: var(--couleur-noir);
     font-size: 20px;
 
 }

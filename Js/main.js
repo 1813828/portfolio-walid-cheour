@@ -106,6 +106,8 @@ async function displayProjects() {
 		const projects = await loadProjects();
 		initialiserModale(projects);
 		renderProjects(projects);
+		initialiserAnimationsSections();
+		requestAnimationFrame(() => ScrollTrigger.refresh());
 
 		filterButtons.forEach((button) => {
 			button.addEventListener('click', () => {
@@ -132,126 +134,133 @@ displayProjects();
 // Active le plugin qui declenche les animations au defilement.
 gsap.registerPlugin(ScrollTrigger);
 
-// Anime le titre principal de la section competences.
-const title = document.querySelector('#competences .skills-title');
+function initialiserAnimationsSections() {
+	// Anime le titre principal de la section competences.
+	const title = document.querySelector('#competences .skills-title');
 
-gsap.fromTo(
-  title,
-  { x: 150, opacity: 0 },   // départ : décalé à droite, invisible
-  {
-    x: 0,                   // arrivée : position normale
-    opacity: 1,
-    duration: 0.8,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: title,
-      start: 'top 90%',
-      once: true
-    }
-  }
-);
+	if (title) {
+		gsap.fromTo(
+			title,
+			{ x: 150, opacity: 0 },
+			{
+				x: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: title,
+					start: 'top 90%',
+					once: true
+				}
+			}
+		);
+	}
 
-// Anime le petit texte situe au-dessus du titre competences.
-const title2 = document.querySelector('#competences .skills-eyebrow');
+	// Anime le petit texte situe au-dessus du titre competences.
+	const title2 = document.querySelector('#competences .skills-eyebrow');
 
-gsap.fromTo(
-  title2,
-  { x: 150, opacity: 0 },   // départ : décalé à droite, invisible
-  {
-    x: 0,                   // arrivée : position normale
-    opacity: 1,
-    duration: 0.8,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: title2,
-      start: 'top 90%',
-      once: true
-    }
-  }
-);
+	if (title2) {
+		gsap.fromTo(
+			title2,
+			{ x: 150, opacity: 0 },
+			{
+				x: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: title2,
+					start: 'top 90%',
+					once: true
+				}
+			}
+		);
+	}
 
+	// Anime la grille qui contient les cartes de competences.
+	const listedecompetence = document.querySelector('#competences .skills-grid');
 
-// Anime la grille qui contient les cartes de competences.
-const listedecompetence = document.querySelector('#competences .skills-grid');
+	if (listedecompetence) {
+		gsap.fromTo(
+			listedecompetence,
+			{ y: 150, opacity: 0 },
+			{
+				y: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: listedecompetence,
+					start: 'top 90%',
+					once: true
+				}
+			}
+		);
+	}
 
-gsap.fromTo(
-  listedecompetence,
-  { y: 150, opacity: 0 },   // départ : décalé à droite, invisible
-  {
-    y: 0,                   // arrivée : position normale
-    opacity: 1,
-    duration: 0.8,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: listedecompetence,
-      start: 'top 90%',
-      once: true
-    }
-  }
-);
+	// Anime la photo de la section a propos depuis la droite.
+	const walidapropos = document.querySelector('#apropos .ma-photo');
 
+	if (walidapropos) {
+		gsap.fromTo(
+			walidapropos,
+			{ x: 250, opacity: 0 },
+			{
+				x: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: walidapropos,
+					start: 'top 97%',
+					once: true
+				}
+			}
+		);
+	}
 
+	// Anime le texte de la section a propos depuis la gauche.
+	const walidaproposdescription = document.querySelector('#apropos .colonne-texte');
 
-// Anime la photo de la section a propos depuis la droite.
-const walidapropos = document.querySelector('#apropos .ma-photo');
+	if (walidaproposdescription) {
+		gsap.fromTo(
+			walidaproposdescription,
+			{ x: -250, opacity: 0 },
+			{
+				x: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: walidaproposdescription,
+					start: 'top 97%',
+					once: true
+				}
+			}
+		);
+	}
 
-gsap.fromTo(
-  walidapropos,
-  { x:250, opacity: 0 },   // départ : décalé à droite, invisible
-  {
-    x: 0,                   // arrivée : position normale
-    opacity: 1,
-    duration: 0.8,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: walidapropos,
-      start: 'top 97%',
-      once: true
-    }
-  }
-);
+	// Anime le contenu de la section contact depuis le bas.
+	const walidcontact = document.querySelector('#contact .contact__texte');
 
-
-
-// Anime le texte de la section a propos depuis la gauche.
-const walidaproposdescription = document.querySelector('#apropos .colonne-texte');
-
-gsap.fromTo(
-  walidaproposdescription,
-  { x:-250, opacity: 0 },   // départ : décalé à droite, invisible
-  {
-    x: 0,                   // arrivée : position normale
-    opacity: 1,
-    duration: 0.8,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: walidaproposdescription,
-      start: 'top 97%',
-      once: true
-    }
-  }
-);
-
-gsap.registerPlugin(ScrollTrigger);
-
-// Anime le contenu de la section contact depuis le bas.
-const walidcontact = document.querySelector('#contact .contact__texte');
-
-gsap.fromTo(
-  walidcontact,
-  { y:250, opacity: 0 },   // départ : décalé à droite, invisible
-  {
-    y: 0,                   // arrivée : position normale
-    opacity: 1,
-    duration: 0.8,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: walidcontact,
-      start: 'top 97%',
-      once: true
-    }
-  }
-);
+	if (walidcontact) {
+		gsap.fromTo(
+			walidcontact,
+			{ y: 250, opacity: 0 },
+			{
+				y: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: walidcontact,
+					start: 'top 97%',
+					once: true
+				}
+			}
+		);
+	}
+}
 
 
 
