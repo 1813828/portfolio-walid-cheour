@@ -36,7 +36,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
-    
+    list-style: none;
 }
 
 /* Carte contenant une categorie et sa liste de competences. */
@@ -45,6 +45,7 @@
     min-height: 190px;
     padding: 22px 18px;
     background-color: var(--couleur-blanc);
+    list-style: none;
 }
 
 /* Nom de la categorie : video, design, audio ou gestion. */
@@ -135,12 +136,14 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 36px;
+    list-style: none;
 }
 
 /* chaque petite info (ex: Disponibilité / Immédiate) */
 .info-bloc {
     width: 50%;
     margin-bottom: 20px;
+    list-style: none;
 }
 
 

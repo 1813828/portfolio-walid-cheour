@@ -14,6 +14,14 @@
         "Ajouter les effets de lumière, les couleurs et les textures.",
         "Finaliser les détails puis exporter le projet en haute qualité."
       ],
+      "settings": [
+        "Utilisation de l’ombre interne pour donner du volume au sujet.",
+        "Lueur externe pour accentuer la silhouette et créer du relief.",
+        "Lueur interne pour dynamiser le portrait et enrichir les contrastes.",
+        "Ombre interne pour renforcer les contours et les formes.",
+        "Incrustation de couleur pour réchauffer et harmoniser la composition.",
+        "Incrustation de dégradé pour fondre les éléments et améliorer l’atmosphère."
+      ],
       "gallery": [
         {
           "image": "assets/images/beta.jpg",

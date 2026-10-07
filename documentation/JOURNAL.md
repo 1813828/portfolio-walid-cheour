@@ -225,6 +225,30 @@ utilisation de copilot.
 
 
 
+- **Date :** 2026-10-06
+- **Prompt :** je veux parcourir le portfolio avec les touches de claviers comme celui de tab.Peux-tu faire en sorte que ca marche ?
+
+réponse: J’ai ajouté les points qui manquaient pour que le parcours au clavier soit plus propre :
+
+les images de la galerie peuvent maintenant être focusées avec Tab
+la touche Entrée ou Espace les ouvre
+les éléments interactifs ont un focus visible plus lisible
+la fermeture de la lightbox reste accessible au clavier.
+
+peux-tu  faire aussi en sorte qu'on peut voir mieux les images des étapes de conceptions en cliquant dessus ?
+
+réponse: Tu peux maintenant cliquer sur n’importe quelle image de la galerie du modal pour la voir en grand, avec :
+
+un overlay sombre
+une image plus lisible
+fermeture via le bouton ×
+fermeture aussi en cliquant en dehors ou en appuyant sur Échap
+
+utilisation de copilot.
+
+
+
+
 
 
 

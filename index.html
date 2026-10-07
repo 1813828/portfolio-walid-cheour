@@ -72,10 +72,10 @@
       <!-- section menu des projets à voir ----------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <section id="projets" class="projets" aria-labelledby="projets-titre">
         <header class="entete">
-            <div>
+            <header>
                 <p class="sur-titre">Travaux sélectionnés</p>
                 <h2 id="projets-titre">Mes projets</h2>
-            </div>
+            </header>
 
             <nav class="filtres" aria-label="Filtrer les projets">
                 <button class="filtre actif" type="button" data-filtre="tout" aria-pressed="true">Tout</button>
@@ -84,8 +84,8 @@
             </nav>
         </header>
 
-        <div class="card-container"></div>
-        <div class="card-container-small"></div>
+        <section class="card-container" aria-label="Liste principale des projets"></section>
+        <section class="card-container-small" aria-label="Liste secondaire des projets"></section>
 
  <!-- cartes d'images section fais à la main avec html  -------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -166,59 +166,59 @@
 
      <!-- section compétences  ----------------------------------------------------------------------------------------------------------------------------------->
 
-    <section id="competences" class="skills-section">
-        <div class="skills-marks">+ +</div>
-        <div class="skills-eyebrow">Ce que je maîtrise</div>
-        <h2 class="skills-title">COMPÉTENCES / LOGICIELSTECHNIQUES</h2>
+    <section id="competences" class="skills-section" aria-labelledby="competences-titre">
+        <p class="skills-marks">+ +</p>
+        <p class="skills-eyebrow">Ce que je maîtrise</p>
+        <h2 id="competences-titre" class="skills-title">COMPÉTENCES / LOGICIELSTECHNIQUES</h2>
 
-        <div class="skills-grid">
+        <ul class="skills-grid">
 
-            <div class="carte-competences">
+            <li class="carte-competences">
                 <div class="categorie">Vidéo</div>
                 <ul>
                     <li>Cap cut</li>
                     <li>After Effects</li>
                     <li>DaVinci Resolve</li>
                 </ul>
-            </div>
+            </li>
 
-            <div class="carte-competences">
+            <li class="carte-competences">
                 <div class="categorie">Design</div>
                 <ul>
                     <li>Adobe Illustrator</li>
                     <li>Photoshop</li>
                     <li>Figma</li>
                 </ul>
-            </div>
+            </li>
 
-            <div class="carte-competences">
+            <li class="carte-competences">
                 <div class="categorie">Audio</div>
                 <ul>
                     <li>FL Studio</li>
                     <li>Logic Pro</li>
                     <li>Reaper</li>
                 </ul>
-            </div>
+            </li>
 
-            <div class="carte-competences">
+            <li class="carte-competences">
                 <div class="categorie">Programmation</div>
                 <ul>
                     <li>Visual Studio Code</li>
                     <li>WordPress</li>
                 </ul>
-            </div>
+            </li>
 
-            <div class="carte-competences">
+            <li class="carte-competences">
                 <div class="categorie">Vidéo</div>
                 <ul>
-                    <li>tournage &  cadrage</li>
+                    <li>tournage &amp; cadrage</li>
                     <li>montage vidéo</li>
                     <li>Réalisation vidéo</li>
                     <li>direction artistique</li>
                 </ul>
-            </div>
+            </li>
 
-             <div class="carte-competences">
+            <li class="carte-competences">
                 <div class="categorie">Design</div>
                 <ul>
                     <li>Création de logos et identités visuelles</li>
@@ -226,9 +226,9 @@
                     <li>Design pour les réseaux sociaux</li>
                     <li>Retouche et manipulation d’images</li>
                 </ul>
-            </div>
+            </li>
 
-                <div class="carte-competences">
+            <li class="carte-competences">
                 <div class="categorie">Audio</div>
                 <ul>
                     <li>Enregistrement audio</li>
@@ -237,9 +237,9 @@
                     <li>Mastering audio</li>
                     <li>Création d’effets sonores</li>
                 </ul>
-            </div>
+            </li>
 
-              <div class="carte-competences">
+            <li class="carte-competences">
                 <div class="categorie">Gestion</div>
                 <ul>
                     <li>Gestion de projets</li>
@@ -247,18 +247,18 @@
                     <li>Communication Visuelle</li>
                     <li>Coordination d'équipe</li>
                 </ul>
-            </div>
-        </div>
+            </li>
+        </ul>
 
 
     </section>
 
      <!-- section à propos  ----------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-    <section id="apropos" class="apropos-section">
-        <div class="colonne-texte">
+    <section id="apropos" class="apropos-section" aria-labelledby="apropos-titre">
+        <article class="colonne-texte">
             <p class="apropos-eyebrow">+ qui suis-je?</p>
-            <h2 class="apropos-title">À PROPOS</h2>
+            <h2 id="apropos-titre" class="apropos-title">À PROPOS</h2>
 
             <p class="apropos-texte">
                 Je suis <strong>Walid Cheour</strong>, étudiant en intégration multimédia avec une passion pour la
@@ -271,42 +271,42 @@
                 audiovisuelle.
             </p>
 
-            <div class="infos">
-                <div class="info-bloc">
+            <ul class="infos">
+                <li class="info-bloc">
                     <p class="info-titre">Disponibilité</p>
                     <p class="info-reponse">Immédiate</p>
-                </div>
+                </li>
 
-                <div class="info-bloc">
+                <li class="info-bloc">
                     <p class="info-titre">Localisation</p>
                     <p class="info-reponse">Québec, Canada</p>
-                </div>
+                </li>
 
-                <div class="info-bloc">
+                <li class="info-bloc">
                     <p class="info-titre">Type de poste</p>
                     <p class="info-reponse">Temps plein</p>
-                </div>
+                </li>
 
-                <div class="info-bloc">
+                <li class="info-bloc">
                     <p class="info-titre">Programme</p>
                     <p class="info-reponse">Intégration multimédia</p>
-                </div>
-            </div>
-        </div>
+                </li>
+            </ul>
+        </article>
 
-        <div class="colonne-image">
+        <figure class="colonne-image">
             <img src="assets/images/walidblancnoir.png" alt="Photo de moi" class="ma-photo">
-            <div class="photo-signature">WC</div>
-        </div>
+            <figcaption class="photo-signature">WC</figcaption>
+        </figure>
     </section>
 
 
 <!-- section contact  ----------------------------------------------------------------------------------------------------------------------------------------------------->
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" aria-labelledby="contact-titre">
         <div class="contact__texte">
             <p class="contact__eyebrow">+ TRAVAILLONS ENSEMBLE</p>
-            <h2 class="contact__titre">CONTACT</h2>
+            <h2 id="contact-titre" class="contact__titre">CONTACT</h2>
 
             <p class="contact__description">
                 Vous avez un projet, une offre ou une question ? Je suis disponible et prêt à collaborer.
@@ -326,12 +326,12 @@
     </section>
 
 <!-- section footer  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-    <div class="footer">
+    <footer class="footer">
         <div class="footer__bloc">
             <p class="footer__nom">WALID</p>
             <p class="footer__multimedia">© 2026 Walid Cheour — Intégration multimédia</p>
         </div>
-    </div>
+    </footer>
 
 
 
@@ -358,10 +358,21 @@
                     <h4 id="etapes-power-titre">Les étapes</h4>
                     <ol id="processus-etapes"></ol>
                 </section>
-            </section>
 
+                <section class="processus-power__etapes" aria-labelledby="parametres-power-titre">
+                    <h4 id="parametres-power-titre">Paramètres de configuration</h4>
+                    <ol id="processus-parametres"></ol>
+                </section>
+  
+            </section>
+                    
             <section class="processus-power__galerie" id="processus-galerie" aria-label="Images du processus"></section>
         </article>
+
+        <div class="processus-power__lightbox" aria-hidden="true">
+            <button class="processus-power__lightbox-fermer" type="button" aria-label="Fermer l'image agrandie">&times;</button>
+            <img class="processus-power__lightbox-image" src="" alt="Image du projet agrandie">
+        </div>
     </dialog>
 
 
