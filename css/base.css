@@ -1,5 +1,11 @@
-/* Charge la police principale utilisée dans le portfolio. */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap');
+/* Charge la police principale utilisée dans le portfolio depuis le dossier assets. */
+@font-face {
+	font-family: 'Barlow Condensed';
+	src: url('../assets/fonts/BarlowCondensed-ExtraBold.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 800;
+	font-display: swap;
+}
 
 /* Applique la police du portfolio à tous les éléments. */
 * {
