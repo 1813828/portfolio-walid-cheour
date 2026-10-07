@@ -54,7 +54,7 @@
 	margin: 0;
 	color: var(--couleur-verte);
 	font-size: 0.8rem;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: 0.15em;
 	text-transform: uppercase;
 }
@@ -64,6 +64,7 @@
 	margin: 0.55rem 0 clamp(2rem, 5vw, 4rem);
 	color: var(--couleur-verte);
 	font-size: clamp(2.2rem, 5vw, 4rem);
+	font-weight: 600;
 	line-height: 1;
 	text-transform: uppercase;
 }
@@ -94,6 +95,7 @@
 .processus-power__details h3 {
 	margin: 0.5rem 0 1rem;
 	font-size: clamp(2rem, 4vw, 3.2rem);
+	font-weight: 600;
 	line-height: 1;
 }
 
@@ -117,6 +119,7 @@
 .processus-power__etapes h4 {
 	margin: 0 0 1.25rem;
 	font-size: 1.3rem;
+	font-weight: 600;
 }
 
 /* Liste numérotée des étapes de réalisation. */
@@ -132,7 +135,7 @@
 /* Couleur et graisse des numéros de la liste. */
 .processus-power__etapes li::marker {
 	color: var(--couleur-titre-carte);
-	font-weight: 700;
+	font-weight: 600;
 }
 
 /* Galerie des images qui illustrent le processus. */

@@ -1,15 +1,10 @@
-/* Charge la police principale utilisée dans le portfolio depuis le dossier assets. */
-@font-face {
-	font-family: 'Barlow Condensed';
-	src: url('../assets/fonts/BarlowCondensed-ExtraBold.woff2') format('woff2');
-	font-style: normal;
-	font-weight: 800;
-	font-display: swap;
-}
+/* Charge la police principale utilisée dans le portfolio avec ses différentes graisses. */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap');
 
-/* Applique la police du portfolio à tous les éléments. */
-* {
+/* Applique la police du portfolio au texte de base. */
+body {
 	font-family: 'Barlow Condensed', sans-serif;
+	font-weight: 400;
 }
 
 
@@ -38,7 +33,7 @@
 /* Nom affiché dans le pied de page. Walid */
 .footer__nom {
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 600;
 	letter-spacing: 0.12em;
 }
 
@@ -46,6 +41,7 @@
 .footer__multimedia {
 	color: var(--couleur-fond-clair);
 	font-size: 18px;
+	font-weight: 400;
 }
 
 /* Empile les éléments du pied de page sur les petits écrans. C'est pour avoir l'optmisation en écran mobile */
