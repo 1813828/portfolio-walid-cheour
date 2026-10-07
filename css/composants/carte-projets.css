@@ -27,9 +27,10 @@
 /* Titre principal de la section des projets. */
 .projets h2 {
   font-size: clamp(2.7rem, 5vw, 4.5rem);
-  font-weight: 600;
+  font-weight: 900;
   line-height: 0.85;
   text-transform: uppercase;
+  
 }
 
 /* Groupe des boutons qui permettent de filtrer les projets. */

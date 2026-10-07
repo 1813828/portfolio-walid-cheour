@@ -27,7 +27,7 @@
 .skills-title {
     margin: 0 0 30px;
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     
 }
@@ -60,20 +60,31 @@
 /* point verts de la liste des competences. */
 .carte-competences ul {
     margin: 0;
-    padding-left: 18px;
+    padding-left: 0;
+    list-style: none;
 }
 
 /* Éléments de la liste des competences li, son design. */
 .carte-competences li {
+    position: relative;
     margin-bottom: 6px;
+    padding-left: 1rem;
     color: var(--couleur-texte-noir);
     font-size: 20px;
     line-height: 1.5;
 }
 
-/* application du style aux puces de la liste avec la cvouleur verte. */
-.carte-competences li::marker {
-    color: var(--couleur-verte);
+/* point vert personnalisé pour chaque compétence. */
+.carte-competences li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 50%;
+    background-color: var(--couleur-verte);
 }
 
 
@@ -119,7 +130,7 @@
 /* Titre principal de la section a propos. */
 .apropos-title {
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
     color: var(--couleur-verte);
     margin-bottom: 30px;
@@ -252,7 +263,7 @@
     margin: 0 0 18px;
     color: var(--couleur-noir);
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 1;
     text-transform: uppercase;
 }
