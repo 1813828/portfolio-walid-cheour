@@ -1,57 +1,137 @@
-/* Charge la police principale utilisée dans le portfolio. */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+/* La police est déjà dans assets : aucun service externe à charger. */
+@font-face {
+    font-family: "Barlow Condensed";
+    src: url("../assets/fonts/BarlowCondensed-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    /* Affiche une police de secours pendant le chargement de Barlow. */
+    font-display: swap;
+}
 
-/* Applique la police du portfolio à tous les éléments. */
+/* * sélectionne tous les éléments. Les bordures et le padding comptent dans leur largeur. */
 * {
-	font-family: 'Barlow Condensed', sans-serif;
+    box-sizing: border-box;
 }
 
-
-/*Section Footer du portfolio ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/	
-/* Pied de page avec le nom et les informations complémentaires. */
-.footer {
-	padding: 30px var(--marge-contenu);
-	background-color: var(--couleur-verte);
-	color: var(--couleur-noir);
-	
-	
+/* Les liens comme #projets font défiler la page doucement jusqu'à leur section. */
+html {
+    scroll-behavior: smooth;
 }
 
-/* Organise les éléments du pied de page sur une même ligne. */
-.footer__bloc {
-	width: 100%;
-	margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-	gap: 24px;
-	
+/* Styles communs à toute la page. var() lit les couleurs de variables.css. */
+body {
+    margin: 0;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: Arial, sans-serif;
+    /* Espace les lignes de texte pour faciliter la lecture. */
+    line-height: 1.6;
 }
 
-
-
-/* Nom affiché dans le pied de page. Walid */
-.footer__nom {
-	font-size: 18px;
-	font-weight: bold;
-	letter-spacing: 0.12em;
+/* Les images ne dépassent pas leur conteneur et conservent leurs proportions. */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-/* Texte complémentaire sur l'activité multimédia. */
-.footer__multimedia {
-	color: var(--couleur-fond-clair);
-	font-size: 18px;
+/* Supprime les marges par défaut pour gérer les espacements nous-mêmes. */
+h1, h2, h3, p, figure {
+    margin: 0;
 }
 
-/* Empile les éléments du pied de page sur les petits écrans. C'est pour avoir l'optmisation en écran mobile */
-@media (max-width: 500px) {
-	.footer {
-		padding: 16px 24px;
-	}
-
-	.footer__bloc {
-		align-items: flex-start;
-		flex-direction: column;
-		gap: 8px;
-	}
+/* Les titres partagent la même police et s'affichent en majuscules. */
+h1, h2, h3 {
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
 }
 
+h2 {
+    /* Taille minimum, taille liée à l'écran (5vw), puis taille maximum. */
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+/* Permet de colorer en vert une partie d'un titre placée dans un span. */
+h2 span {
+    color: var(--vert);
+}
+
+/* Les liens reprennent la couleur de leur parent ; leur soulignement est décalé. */
+a {
+    color: inherit;
+    text-underline-offset: 5px;
+}
+
+/* Le bouton reprend la police du texte et affiche une main au survol. */
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Le contour permet de repérer le lien ou le bouton sélectionné avec Tab. */
+:focus-visible {
+    outline: 3px solid var(--vert);
+    outline-offset: 5px;
+}
+
+/* Petit texte en majuscules placé au-dessus des titres de section. */
+.surtitre {
+    margin-bottom: 18px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Cette classe donne à un lien l'apparence d'un bouton. */
+.bouton {
+    display: inline-flex;
+    align-items: center;
+    gap: 32px;
+    padding: 14px 22px;
+    border: 1px solid var(--vert);
+    background: var(--vert);
+    color: var(--texte);
+    text-decoration: none;
+    /* Rend le changement de couleur progressif au survol. */
+    transition: background 0.2s;
+}
+
+/* :hover s'applique quand la souris passe sur l'élément. */
+.bouton:hover {
+    background: var(--texte);
+    color: var(--blanc);
+}
+
+/* Ce raccourci apparaît seulement lorsqu'on navigue au clavier. */
+.lien-rapide {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    /* Place le raccourci au-dessus du reste de la page. */
+    z-index: 10;
+    padding: 12px;
+    background: var(--blanc);
+    transform: translateY(-150%);
+}
+
+/* Le raccourci revient dans l'écran lorsqu'il reçoit le focus. */
+.lien-rapide:focus {
+    transform: translateY(0);
+}
+
+/* Respecte le réglage de l'utilisateur qui souhaite réduire les animations. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .bouton {
+        transition: none;
+    }
+}

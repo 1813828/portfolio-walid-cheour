@@ -1,187 +1,62 @@
-
-
-/* Active le défilement fluide pour la navigation et empêche la page de dépasser horizontalement. */
-html {
-    scroll-behavior: smooth;
-    width: 100%;
-    overflow-x: hidden;
+/* Le fond noir s'étend sur toute la largeur de la page. */
+.navigation {
+    background: var(--texte);
+    color: var(--vert);
 }
 
-/* Harmonise les dimensions et les marges de tous les éléments. */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-
-/* Définit la largeur et la couleur de fond générale de la page. */
-body {
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;
-    background-color: var(--couleur-blanc);
-}
-
-/* Le contenu principal reste limite a la largeur de la fenetre. */
-main {
-    width: 100%;
-    max-width: 100%;
-}
-
-/*- -section de la navigation principale.---------------------------------------------------------------------------------------------- */
-
-/* Barre de navigation principale en haut de la page avec tous mes menus. */
-.navbar {
-    width: 100%;
-    min-height: 50px;
-    background-color: var(--couleur-noir);
-    font-family: 'Barlow Condensed', sans-serif;
-}
-
-
-/* Logo affiché à gauche de la barre de navigation. */
-.logo {
-    color: var(--couleur-verte);
-    font-size: 15px;
-    font-weight: 700;
-
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    font-family: 'Barlow Condensed', sans-serif;
-     text-decoration: none;
-}
-
-/* Aligne le logo, le bouton mobile et les liens de navigation. */
-.navbar-container {
-    width: calc(100% - (2 * var(--marge-contenu)));
-    min-height: 50px;
-    margin: 0 auto;
-
+/* Le conteneur centre le contenu ; Flex sépare le logo et les liens. */
+.navigation .conteneur {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 2px;
+    gap: 24px;
+    min-height: 58px;
+    padding-block: 12px;
 }
 
-/* Liste horizontale des liens du menu. */
-.nav-links {
+/* Empêche Flex de réduire le logo pour faire de la place aux liens. */
+.logo {
+    flex-shrink: 0;
+}
+
+/* La hauteur est fixe ; la largeur automatique conserve la forme du logo. */
+.logo img {
+    width: auto;
+    height: 28px;
+}
+
+.navigation nav {
     display: flex;
-    gap: 27px;
-    list-style: none;
+    /* Les liens peuvent passer à la ligne si l'espace manque. */
+    flex-wrap: wrap;
+    gap: 8px 28px;
 }
 
-
-/* Apparence de chaque lien de navigation. */
-.nav-links a {
-    color: var(--couleur-verte);
-    text-decoration: none;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    letter-spacing: 0.7px;
+.navigation nav a {
+    padding-block: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
     text-transform: uppercase;
-    font-family: 'Barlow Condensed', sans-serif;
+    text-decoration: none;
 }
 
-/* Change la couleur du lien lorsque la souris passe dessus. */
-.nav-links a:hover {
-    color: var(--couleur-blanc);
-    transition: all 0.2s ease-in-out;
-    
+/* Les liens restent verts et deviennent blancs au survol. */
+.navigation nav a:hover {
+    color: var(--blanc);
+    text-decoration: underline;
 }
 
-/* Bouton qui ouvre le menu sur les petits écrans. */
-.nav-toggle {
-    display: none;
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(0, 139, 112, 0.6);
-    border-radius: 8px;
-    background: transparent;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-/* Trois barres qui composent l'icône du bouton mobile. */
-.nav-toggle__bar {
-    width: 18px;
-    height: 2px;
-    background-color: var(--couleur-verte);
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-/* Réduit les espacements sur les écrans moyens. */
-@media (max-width: 900px) {
-    .navbar-container {
-        width: calc(100% - (2 * var(--marge-contenu)));
-    }
-
-    .nav-links {
-        gap: 16px;
-    }
-
-    .nav-links a {
-        font-size: 13px;
-    }
-}
-
-/* Transforme les liens en menu déroulant sur mobile. */
-@media (max-width: 720px) {
-    .navbar {
-        position: relative;
-    }
-
-    .navbar-container {
-        width: calc(100% - (2 * var(--marge-contenu)));
-        padding: 8px 0;
-        flex-wrap: wrap;
-    }
-
-    .nav-toggle {
-        display: inline-flex;
-    }
-
-    .nav-links {
-        width: 100%;
-        display: none;
+/* Un seul menu pour tous les écrans : aucun lien à dupliquer. */
+@media (max-width: 600px) {
+    .navigation .conteneur {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 12px;
-        margin-top: 10px;
-        border: 1px solid rgba(0, 139, 112, 0.35);
-        border-radius: 10px;
-        background-color: var(--couleur-noir);
+        align-items: start;
+        gap: 14px;
     }
 
-    /* Affiche le menu lorsque le bouton mobile est activé. */
-    .nav-links.is-open {
-        display: flex;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-        letter-spacing: 0.6px;
-    }
-
-    /* Transforme les barres en croix lorsque le menu est ouvert. */
-    .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
+    .navigation nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 6px 12px;
     }
 }

@@ -1,335 +1,218 @@
-
-
-/*SECION COMPETENCES CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/* Section qui presente les competences de Walid. */
-.skills-section {
-    padding: 80px var(--marge-contenu) 100px;
-    background-color: var(--couleur-fond-clair);
-    min-height: 620px;
+/* Une largeur commune aligne toutes les sections, avec une marge sur mobile. */
+.conteneur {
+    /* Choisit la plus petite largeur : 1200px ou 90% du parent. */
+    width: min(1200px, 90%);
+    /* Les marges automatiques à gauche et à droite centrent le contenu. */
+    margin-inline: auto;
 }
 
-/* Petits signes decoratifs de la section competences. */
-.skills-marks {
-    color: var(--couleur-gris-clair);
+/* padding-block ajoute de l'espace en haut et en bas de chaque section. */
+.section {
+    padding-block: 90px;
 }
 
-/* Texte court affiche au-dessus du titre des competences. Ce que je maîtrise */
-.skills-eyebrow {
-    margin: 10px 0;
-    color: var(--couleur-gris);
-    font-size: 20px;
-    text-transform: uppercase;
-    
-}
-
-/* Grand titre de la section competences. */
-.skills-title {
-    margin: 0 0 30px;
-    font-size: 48px;
-    text-transform: uppercase;
-    
-}
-
-/* Grille qui aligne les differentes categories de competences. */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    
-}
-
-/* Carte contenant une categorie et sa liste de competences. */
-.carte-competences {
-    position: relative;
-    min-height: 190px;
-    padding: 22px 18px;
-    background-color: var(--couleur-blanc);
-}
-
-/* Nom de la categorie : video, design, audio ou gestion. */
-.categorie {
-    margin-bottom: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 28px;
-}
-
-/* point verts de la liste des competences. */
-.carte-competences ul {
-    margin: 0;
-    padding-left: 18px;
-}
-
-/* Éléments de la liste des competences li, son design. */
-.carte-competences li {
-    margin-bottom: 6px;
-    color: var(--couleur-texte-gris);
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-/* application du style aux puces de la liste avec la cvouleur verte. */
-.carte-competences li::marker {
-    color: var(--couleur-verte);
-}
-
-
-
-
-/*Section à propos CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/* la grosse boîte qui contient tout */
-/* Section de presentation personnelle avec texte et photo. */
-.apropos-section {
-    padding: 34px var(--marge-contenu) 24px;
-    background-color: var(--couleur-fond-sombre);
+/* Flex aligne les éléments de l'en-tête et laisse de l'espace entre eux. */
+.entete-section {
     display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-/* colonne de gauche avec le texte */
-.colonne-texte {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* colonne de droite avec la photo */
-.colonne-image {
-    position: relative;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Petit texte d'introduction de la section a propos. */
-.apropos-eyebrow {
-    color: var(--couleur-gris);
-    font-size: 20px;
-    text-transform: uppercase;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
     margin-bottom: 40px;
 }
 
-/* Titre principal de la section a propos. */
-.apropos-title {
-    font-size: 48px;
-    text-transform: uppercase;
-    color: var(--couleur-blanc);
-    margin-bottom: 30px;
+/* > sélectionne seulement les paragraphes directement dans l'en-tête. */
+.entete-section > p {
+    color: var(--gris);
 }
 
-/* Paragraphes qui presentent le parcours de Walid. */
-.apropos-texte {
-    color: var(--couleur-texte-clair);
-    font-size: 23px;
-    line-height: 1.45;
-    margin-bottom: 14px;
+.competences {
+    background: var(--fond);
 }
 
-/* boîte qui contient les 4 petites infos en bas */
-.infos {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 36px;
+/* Grid répartit les compétences sur quatre colonnes de même largeur. */
+.grille-competences {
+    display: grid;
+    /* repeat(4, 1fr) crée quatre colonnes qui partagent l'espace disponible. */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
 }
 
-/* chaque petite info (ex: Disponibilité / Immédiate) */
-.info-bloc {
-    width: 50%;
-    margin-bottom: 20px;
+/* Chaque article devient une carte blanche avec de l'espace autour du texte. */
+.grille-competences article {
+    padding: 24px 20px;
+    background: var(--blanc);
 }
 
-
-/* Libelle d'une information personnelle. */
-.info-titre {
-    color: var(--couleur-gris);
-    font-size: 20px;
-    text-transform: uppercase;
+.grille-competences .surtitre {
     margin-bottom: 10px;
+    color: var(--vert);
 }
 
-/* Réponse de l'information personnelle. */
-.info-reponse {
-    color: var(--couleur-blanc);
-    font-size: 20px;
-    font-weight: bold;
+/* Le padding à gauche laisse de la place pour les puces de la liste. */
+.grille-competences ul {
+    padding-left: 18px;
+    color: var(--gris);
+    font-size: 0.9rem;
 }
 
-/* Photo de Walid utilisée dans la section a propos. */
-.ma-photo {
-    display: block;
+.grille-competences li {
+    margin-bottom: 6px;
+}
+
+/* Fond sombre et texte à gauche, comme dans la version originale. */
+.apropos {
+    background: var(--sombre);
+    color: var(--blanc);
+}
+
+/* Deux colonnes égales : le texte d'un côté et la photo de l'autre. */
+.apropos-contenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.apropos img {
     width: 100%;
+    aspect-ratio: 4 / 5;
+    /* Remplit le cadre sans déformer la photo ; ses bords peuvent être recadrés. */
+    object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Bloc colore superpose a la photo. */
-.photo-signature {
+/* Sert de repère au bloc WC placé en position absolute. */
+.apropos figure {
+    position: relative;
+}
+
+/* Place la signature dans le coin inférieur droit de la photo. */
+.apropos figcaption {
     position: absolute;
-    bottom: 0;
     right: 0;
-    width: 100px;
-    height: 100px;
-    padding: 12px 0;
-    background-color: var(--couleur-verte);
-    color: var(--couleur-noir);
-    font-size: 30px;
+    bottom: 0;
+    padding: 22px 28px;
+    background: var(--vert);
+    color: var(--texte);
+    font-size: 2rem;
     font-weight: bold;
-    line-height: 3;
-    text-align: center;
 }
 
-/*Section contact CSS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* Zone qui contient les liens de contact. */
-.contact__infos {
-    display: flex;
+.apropos h2 {
+    margin-bottom: 24px;
+    color: var(--vert);
+}
+
+/* + vise un paragraphe placé juste après un autre paragraphe. */
+.apropos p + p {
+    margin-top: 16px;
+}
+
+/* Les informations personnelles se répartissent sur deux colonnes. */
+.infos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 32px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid #454545;
+}
+
+/* dt est le libellé, par exemple « Disponibilité ». */
+.infos dt {
+    color: var(--vert);
+    font-size: 0.8rem;
+}
+
+/* dd est sa valeur, par exemple « Immédiate ». */
+.infos dd {
+    margin: 4px 0 0;
+    font-weight: bold;
+}
+
+/* La section contact reprend le fond crème du site original. */
+.contact {
+    background: var(--fond);
+    color: var(--texte);
+}
+
+.contact h2 {
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+}
+
+.contact p {
+    margin-bottom: 24px;
+}
+
+.contact h2 + p {
     margin-top: 24px;
 }
 
-/* Organisation des boutons de contact. */
-.contact__bloc {
+.courriel {
+    display: inline-block;
+    margin: 16px 0 0 24px;
+    /* Autorise une coupure dans l'adresse si elle dépasse la largeur disponible. */
+    overflow-wrap: anywhere;
+}
+
+.pied-page {
+    background: var(--vert);
+}
+
+/* Aligne le nom, le copyright et le lien de retour en haut. */
+.pied-page .conteneur {
     display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    padding-block: 24px;
+    font-size: 0.8rem;
 }
 
-/* Bouton de contact par courriel. */
-.contact__lien_hotmail {
-    display: inline-block;
-    padding: 14px 18px;
-    color: var(--couleur-noir);
-    background-color: var(--couleur-verte);
-    font-size: 14px;
+.pied-page-nom {
     font-weight: bold;
-    text-decoration: none;
-}
-
-/* Bouton qui dirige vers le profil LinkedIn. */
-.contact__lien_linkedIn {
-    display: inline-block;
-    padding: 14px 18px;
-    border: 1px solid #dedbd2;
-    color: var(--couleur-noir);
-    background-color: transparent;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* Section finale reservee aux informations de contact. */
-.contact {
-    padding: 60px var(--marge-contenu);
-    background-color: var(--couleur-fond-clair);
-}
-
-/* Conteneur du contenu textuel de la section contact. */
-.contact__texte {
-    max-width: 720px;
-}
-
-/* Petit texte situe au-dessus du titre contact. TRAVAILLONS ENSEMBLE */
-.contact__eyebrow {
-    margin: 0 0 12px;
-    color: var(--couleur-gris);
-    font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-size: 18px;
 }
 
-/* Grand titre de la section contact. "CONTACT" */
-.contact__titre {
-    margin: 0 0 18px;
-    color: var(--couleur-noir);
-    font-size: 48px;
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-/* Description et invitation a prendre contact. */
-.contact__description {
-    margin: 0;
-    color: var(--couleur-texte-gris);
-    font-size: 20px;
-
-}
-
-
-
-/* Ajustements pour les ecrans-----------------------------------------------------------------------------------------------------. */
-
-
-/* Ajustements pour les ecrans de taille moyenne. */
-@media (max-width: 800px) {
-    :root {
-        --marge-contenu: 24px;
-    }
-
-    .skills-grid {
+/* Sur tablette, les quatre colonnes deviennent deux colonnes. */
+@media (max-width: 900px) {
+    .grille-competences {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .apropos-contenu {
+        gap: 32px;
+    }
 }
 
-/* Mise en page en une colonne sur les petits ecrans. */
-@media (max-width: 500px) {
-    .skills-section {
-        padding: 40px var(--marge-contenu);
+/* Sur mobile, les grandes sections s'empilent pour garder un texte lisible. */
+@media (max-width: 600px) {
+    .section {
+        padding-block: 56px;
     }
 
-    .skills-title {
-        font-size: 36px;
+    .entete-section, .pied-page .conteneur {
+        flex-direction: column;
+        align-items: start;
     }
 
-    .skills-grid {
+    .apropos-contenu {
         grid-template-columns: 1fr;
     }
 
-    .apropos-section {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .colonne-texte,
-    .colonne-image {
-        width: 100%;
-    }
-
-    .apropos-title {
-        font-size: 36px;
-    }
-
-    .apropos-texte {
-        font-size: 18px;
-    }
-
     .infos {
-        margin-top: 50px;
+        grid-template-columns: 1fr;
     }
 
-    .info-bloc {
-        width: 100%;
+    .courriel {
+        display: block;
+        margin-left: 0;
     }
+}
 
-    .contact {
-        padding: 40px var(--marge-contenu);
-    }
-
-    .contact__titre {
-        font-size: 36px;
-    }
-
-    .contact__bloc {
-        width: 100%;
-    }
-
-    .contact__lien_hotmail,
-    .contact__lien_linkedIn {
-        text-align: center;
-        font-size: 18px;
-
+/* Sur les écrans très étroits, chaque compétence occupe une ligne complète. */
+@media (max-width: 400px) {
+    .grille-competences {
+        grid-template-columns: 1fr;
     }
 }

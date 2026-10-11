@@ -1,13 +1,15 @@
+/* Palette du site original : crème, noir, vert et mauve. */
 :root {
-    --marge-contenu: 40px;
-    --couleur-titre-carte: #856084;
-    --couleur-verte: #07966d;
-    --couleur-fond-clair: #f2f0e9;
-    --couleur-noir: #09090b;
-    --couleur-blanc: #ffffff;
-    --couleur-gris-clair: #aaa79e;
-    --couleur-gris: #77746d;
-    --couleur-texte-gris: #60605c;
-    --couleur-fond-sombre: #181818;
-    --couleur-texte-clair: #b0b0b0;
+    /* :root rend ces variables disponibles dans toutes les feuilles CSS. */
+    /* On réutilise une couleur avec var(--fond), par exemple. */
+    --fond: #f2f0e9;
+    --texte: #09090b;
+    --vert: #07966d;
+    --mauve: #856084;
+    --gris: #60605c;
+    /* Fond et texte des sections sombres : à propos, cartes et modale. */
+    --sombre: #181818;
+    --texte-clair: #b0b0b0;
+    --bordure: #d9d6cb;
+    --blanc: #ffffff;
 }

@@ -1,175 +1,107 @@
-/* Fenêtre modale qui affiche le processus détaillé d'un projet. */
-.processus-power {
-	position: relative;
-	width: min(92vw, 1100px);
-	max-height: 90vh;
-	overflow-y: auto;
-	margin: auto;
-	padding: clamp(3rem, 8vw, 6rem) var(--marge-contenu);
-	border: 0;
-	background: var(--couleur-noir);
-	color: var(--couleur-fond-clair);
+/* La fenêtre native reste dans l'écran et son contenu défile si nécessaire. */
+.modale {
+    /* La fenêtre mesure au maximum 760px et laisse une marge sur petit écran. */
+    width: min(760px, 92%);
+    /* vh est lié à la hauteur de l'écran : la fenêtre ne l'occupe pas entièrement. */
+    max-height: 88vh;
+    padding: 32px;
+    border: 1px solid #454545;
+    border-radius: 12px;
+    background: var(--texte);
+    color: var(--fond);
 }
 
-/* Fond assombri affiché derrière la fenêtre modale. */
-.processus-power::backdrop {
-	background: rgba(0, 0, 0, 0.75);
+/* ::backdrop représente le fond derrière un dialog ouvert avec command="show-modal". */
+.modale::backdrop {
+    /* 80% rend le noir partiellement transparent. */
+    background: rgb(0 0 0 / 80%);
 }
 
-/* Zone interne qui contient le contenu de la modale. */
-.processus-power__contenu {
-	width: min(100%, 1100px);
-	margin: 0 auto;
+/* Apparence du bouton × ; sa commande HTML close ferme la fenêtre. */
+.fermer-modale {
+    display: block;
+    width: 44px;
+    height: 44px;
+    /* La marge automatique à gauche pousse le bouton vers la droite. */
+    margin: 0 0 12px auto;
+    border: 1px solid var(--vert);
+    border-radius: 6px;
+    background: var(--texte);
+    color: var(--vert);
+    font-size: 1.8rem;
+    line-height: 1;
 }
 
-/* Bouton qui ferme la fenêtre modale. */
-.processus-power__fermer {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-	width: 2.5rem;
-	height: 2.5rem;
-	border: 1px solid var(--couleur-verte);
-	background: var(--couleur-noir);
-	color: var(--couleur-verte);
-	cursor: pointer;
-	font-size: 1.5rem;
-	line-height: 1;
+/* Espace le bouton du bas de la galerie et l'aligne à droite. */
+.fermer-modale-bas {
+    display: flex;
+    margin: 24px 0 0 auto;
 }
 
-.processus-power__fermer:hover,
-.processus-power__fermer:focus-visible {
-	background: var(--couleur-verte);
-	color: var(--couleur-noir);
+.modale .surtitre {
+    color: var(--vert);
 }
 
-/* En-tête centré avec l'étiquette et le titre du projet. */
-.processus-power__entete {
-	text-align: center;
+.modale h2, .modale p {
+    margin-bottom: 20px;
 }
 
-/* Étiquette et catégorie affichées au-dessus des titres. */
-.processus-power__etiquette,
-.processus-power__categorie {
-	margin: 0;
-	color: var(--couleur-verte);
-	font-size: 0.8rem;
-	font-weight: 700;
-	letter-spacing: 0.15em;
-	text-transform: uppercase;
+.modale h3 {
+    margin-top: 28px;
 }
 
-/* Grand titre du projet dans l'en-tête de la modale. */
-.processus-power__entete h2 {
-	margin: 0.55rem 0 clamp(2rem, 5vw, 4rem);
-	color: var(--couleur-verte);
-	font-size: clamp(2.2rem, 5vw, 4rem);
-	line-height: 1;
-	text-transform: uppercase;
+/* Le visuel principal garde sa hauteur naturelle pour être entièrement visible. */
+.processus-image {
+    width: 100%;
+    margin-bottom: 24px;
 }
 
-/* Visuel principal du projet et son cadre. */
-.processus-power__visuel {
-	width: min(100%, 920px);
-	margin: 0 auto;
-	border: 1px solid rgba(213, 238, 229, 0.15);
-	background: var(--couleur-fond-sombre);
-	box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.28);
+/* La liste numérotée garde assez de place à gauche pour ses numéros. */
+.modale ol {
+    padding-left: 24px;
 }
 
-/* Image principale du projet. */
-.processus-power__visuel img {
-	display: block;
-	width: 100%;
-	height: auto;
+.modale li {
+    margin-bottom: 10px;
+    color: var(--texte-clair);
 }
 
-/* Bloc qui regroupe la catégorie, le nom, la description et les étapes. */
-.processus-power__details {
-	width: min(100%, 920px);
-	margin: clamp(2rem, 5vw, 4rem) auto 0;
+/* Les trois images du processus sont alignées sur trois colonnes. */
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
 
-/* Sous-titre qui reprend le nom du projet. */
-.processus-power__details h3 {
-	margin: 0.5rem 0 1rem;
-	font-size: clamp(2rem, 4vw, 3.2rem);
-	line-height: 1;
+/* Chaque image est à l'intérieur d'un lien vers sa version en grand. */
+.galerie a {
+    display: block;
+    padding: 8px;
+    border: 1px solid #454545;
+    border-radius: 6px;
+    background: var(--sombre);
 }
 
-/* Description détaillée du projet. */
-.processus-power__description {
-	max-width: 680px;
-	margin: 0;
-	color: var(--couleur-texte-clair);
-	font-size: 1.05rem;
-	line-height: 1.6;
+.galerie img {
+    width: 100%;
+    height: 150px;
+    /* contain montre l'image entière ; des espaces peuvent rester autour. */
+    object-fit: contain;
 }
 
-/* Section qui présente les différentes étapes du processus. */
-.processus-power__etapes {
-	margin-top: clamp(2rem, 5vw, 4rem);
-	padding-top: 1.5rem;
-	border-top: 1px solid rgba(213, 238, 229, 0.18);
+/* Évite que la page derrière la fenêtre défile pendant la consultation. */
+/* :has() vérifie si le body contient une modale avec l'attribut open. */
+body:has(.modale[open]) {
+    overflow: hidden;
 }
 
-/* Titre de la liste des étapes. */
-.processus-power__etapes h4 {
-	margin: 0 0 1.25rem;
-	font-size: 1.3rem;
-}
-
-/* Liste numérotée des étapes de réalisation. */
-.processus-power__etapes ol {
-	display: grid;
-	gap: 0.9rem;
-	margin: 0;
-	padding-left: 1.4rem;
-	color: var(--couleur-texte-clair);
-	line-height: 1.45;
-}
-
-/* Couleur et graisse des numéros de la liste. */
-.processus-power__etapes li::marker {
-	color: var(--couleur-titre-carte);
-	font-weight: 700;
-}
-
-/* Galerie des images qui illustrent le processus. */
-.processus-power__galerie {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 1rem;
-	width: min(100%, 920px);
-	margin: clamp(2rem, 5vw, 4rem) auto 0;
-}
-
-/* Cadre de chaque image de la galerie. */
-.processus-power__galerie figure {
-	aspect-ratio: 16 / 9;
-	margin: 0;
-	overflow: hidden;
-	border: 1px solid rgba(213, 238, 229, 0.12);
-	background: var(--couleur-fond-sombre);
-}
-
-/* Image de la galerie, recadrée pour remplir son cadre. */
-.processus-power__galerie img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-/* Bloque le défilement de la page derrière la modale ouverte. */
-html:has(.processus-power[open]),
-body:has(.processus-power[open]) {
-	overflow: hidden;
-}
-
-/* Affichage en une seule colonne sur les écrans étroits. */
+/* Sur mobile, la galerie passe à une colonne et les marges intérieures diminuent. */
 @media (max-width: 600px) {
-	.processus-power__galerie {
-		grid-template-columns: 1fr;
-	}
+    .modale {
+        padding: 20px;
+    }
+
+    .galerie {
+        grid-template-columns: 1fr;
+    }
 }

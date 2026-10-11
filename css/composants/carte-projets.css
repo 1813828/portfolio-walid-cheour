@@ -1,222 +1,121 @@
-/* Section principale qui contient la liste des projets. */
+/* Le fond vert couvre toute la section ; le conteneur HTML centre les cartes. */
 .projets {
-  padding: clamp(3.5rem, 7vw, 6rem) var(--marge-contenu) clamp(4rem, 8vw, 7rem);
-  background-color: var(--couleur-verte);
-  color: var(--couleur-noir);
+    background: var(--vert);
 }
 
-/* En-tête de la section : titre et boutons de filtrage. */
-.entete {
-  width: min(100%, 49rem);
-  margin: 0 auto 2.5rem;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 2rem;
+/* Les projets après le premier sont affichés sur deux colonnes. */
+.grille-projets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
 }
 
-/* Petit libellé placé au-dessus du titre de la section. */
-.sur-titre {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-/* Titre principal de la section des projets. */
-.projets h2 {
-  font-size: clamp(2.7rem, 5vw, 4.5rem);
-  font-weight: 700;
-  line-height: 0.85;
-  text-transform: uppercase;
-}
-
-/* Groupe des boutons qui permettent de filtrer les projets. */
-.filtres {
-  display: flex;
-  gap: 0.3rem;
-}
-
-/* Bouton de filtre dans son état normal et actif au survol. */
-.filtre {
-  border: 0;
-  padding: 0.5rem 0.85rem;
-  background-color: var(--couleur-noir);
-  color: var(--couleur-fond-clair);
-  cursor: pointer;
-  font: inherit;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.filtre:hover, 
-.filtre.actif {
-  background-color: var(--couleur-fond-clair);
-  color: var(--couleur-noir);
-}
-
-/* Grille principale qui accueille la grande carte de projet. */
-.card-container {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  width: min(100%, 90rem);
-  margin: 0 auto;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-/* Carte individuelle d'un projet. */
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background-color: var(--couleur-noir);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.card:hover,
-.card:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 0 1.2rem rgba(216, 119, 206, 0.85),
-    0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-
-/* Image d'aperçu du projet, conservée dans un format stable. */
-.card img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
-/* Zone textuelle de la carte : titre, description et actions. */
-.card-content {
-  background-color: var(--couleur-noir);
-  color: var(--couleur-blanc);
-  padding: 1.5rem;
-  flex: 1;
-}
-
-/* Nom du projet affiché dans la carte. */
-.card-content h3 {
-  margin: 0 0 0.5rem;
-  color: var(--couleur-titre-carte);
-  font-size: 1.25rem;
-  line-height: 1.1;
-}
-
-/* Catégorie ou type du projet. */
-.card-category {
-  box-sizing: border-box;
-  display: block;
-  width: fit-content;
-  margin: 0 0 0.75rem 0;
-  margin-left: -0.4rem;
-  border: 1px solid var(--couleur-verte);
-  padding: 0.35rem 0.6rem;
-  color: var(--couleur-verte);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-/* Texte descriptif de la carte. */
-.card-content p,
-.card-content .info p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* Année de réalisation du projet. */
-.card-year {
-  display: block;
-  margin-top: 1rem;
-  color: var(--couleur-fond-clair);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-/* Liens présents dans la description du projet. */
-.card-content a {
-  color: var(--couleur-verte);
-  text-decoration: underline;
-  text-decoration-color: var(--couleur-verte);
-  text-underline-offset: 0.2em;
-}
-
-.card-content a:hover {
-  color: var(--couleur-fond-clair);
-}
-
-/* Bouton qui ouvre les détails du projet. */
-.card-detail-button {
-  display: block;
-  width: fit-content;
-  margin-top: 1rem;
-  border: 1px solid var(--couleur-verte);
-  padding: 0.5rem 0.75rem;
-  background: transparent;
-  color: var(--couleur-verte);
-  cursor: pointer;
-  font: inherit;
-}
-
-.card-detail-button:hover,
-.card-detail-button:focus-visible {
-  background: var(--couleur-verte);
-  color: var(--couleur-noir);
-}
-
-/* Petite grille utilisée pour les cartes de projets secondaires. */
-.card-container-small {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: min(100%, 90rem);
-  margin: 1.5rem auto 0;
-  gap: 1.5rem;
-}
-
-/* Adaptation de la grille et des cartes aux écrans étroits. */
-@media (max-width: 600px) {
-  .card-container .card-container-small {
-    gap: 1rem;
-  }
-  
-  .card-container-small {
-    grid-template-columns: 1fr;
-  }
-  .card-content {
-    padding: 1.25rem;
-  }
-
-  .entete {
-    align-items: start;
+/* Flex empile l'image et le texte à l'intérieur de chaque carte. */
+.carte-projet {
+    display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-  }
+    /* Coupe les coins de l'image pour qu'ils suivent les arrondis de la carte. */
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--texte);
+    color: var(--blanc);
+    box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
-  .filtres {
+/* :focus-within applique aussi l'effet lorsqu'un lien de la carte reçoit le focus. */
+/* Le survol mauve rappelle les cartes originales et reste entièrement en CSS. */
+.carte-projet:hover, .carte-projet:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 0 16px var(--mauve);
+}
+
+/* Toutes les vignettes ont le même format, même si les images sources diffèrent. */
+.carte-image {
     width: 100%;
-  }
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
 
-  .filtre {
+.carte-contenu {
+    /* Étire le bloc de texte pour remplir la hauteur disponible dans la carte. */
     flex: 1;
-  }
+    padding: 24px;
+}
 
-  .image-wrapper {
-    aspect-ratio: 4 / 3;
-  }
+/* Le petit cadre affiche la catégorie et l'année provenant du JSON. */
+.carte-meta {
+    /* La largeur suit le texte au lieu d'occuper toute la carte. */
+    width: fit-content;
+    margin-bottom: 12px;
+    color: var(--vert);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid var(--vert);
+    padding: 5px 8px;
+}
 
-  .info p {
-    font-size: 0.68rem;
-  }
+.carte-titre {
+    margin-bottom: 12px;
+    font-size: 2.5rem;
+    color: var(--mauve);
+}
+
+.carte-description {
+    color: var(--texte-clair);
+    font-size: 0.9rem;
+}
+
+/* Styles communs au lien externe et au bouton qui ouvre le processus. */
+.carte-lien, .carte-bouton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 0 0 6px;
+    border: 0;
+    border-bottom: 1px solid var(--vert);
+    background: transparent;
+    color: var(--vert);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.carte-lien:hover, .carte-bouton:hover {
+    color: var(--blanc);
+    border-color: var(--blanc);
+}
+
+/* Le bouton du processus a un contour complet pour le distinguer du lien. */
+.carte-bouton {
+    border: 1px solid var(--vert);
+    padding: 8px 12px;
+}
+
+/* Une fois les projets chargés, le message vide ne prend plus de place. */
+#projets-message:empty {
+    display: none;
+}
+
+#projets-message {
+    margin-bottom: 24px;
+}
+
+/* Sur mobile, les cartes s'affichent les unes sous les autres. */
+@media (max-width: 600px) {
+    .grille-projets {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Supprime le déplacement des cartes si l'utilisateur préfère moins de mouvement. */
+@media (prefers-reduced-motion: reduce) {
+    .carte-projet {
+        transition: none;
+    }
+
+    .carte-projet:hover, .carte-projet:focus-within {
+        transform: none;
+    }
 }

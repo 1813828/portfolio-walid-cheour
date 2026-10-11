@@ -1,342 +1,262 @@
 <!DOCTYPE html>
 <html lang="fr">
- <!-- section importation du css  --------------------------------------------------------------------------------------------------------------------------------------------------->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Document</title>
-    <link href="./css/base.css" rel="stylesheet">
-    <link href="./css/composants/carte-projets.css" rel="stylesheet">
-    <link href="./css/composants/modale.css" rel="stylesheet">
-    <link href="./css/composants/navigation.css" rel="stylesheet">
-    <link href="./css/layout.css" rel="stylesheet">
-    <link href="./css/composants/accueil.css" rel="stylesheet">
-    <link href="./css/variables.css" rel="stylesheet">
-
+    <meta name="description" content="Portfolio de Walid Cheour, étudiant en intégration multimédia : vidéo, design graphique et création sonore.">
+    <title>Walid Cheour — Portfolio multimédia</title>
+    <!-- Les styles gardent la même organisation que le projet original. -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/composants/navigation.css">
+    <link rel="stylesheet" href="css/composants/accueil.css">
+    <link rel="stylesheet" href="css/composants/carte-projets.css">
+    <link rel="stylesheet" href="css/composants/modale.css">
 </head>
+<body id="haut">
+    <!-- #haut sert de destination au logo et au lien « Retour en haut ». -->
+    <a class="lien-rapide" href="#contenu">Aller au contenu</a>
 
-<body>
-    <!-- section de navigation  --------------------------------------------------------------------------------------------------------------------------------------------------->
-    <nav class="navbar">
-        <section class="navbar-container">
-            <a href="#" class="logo">W/C.</a>
+    <!-- Les liens restent visibles sur mobile pour éviter un menu en JavaScript. -->
+    <header class="navigation">
+        <div class="conteneur">
+            <a class="logo" href="#haut" aria-label="Walid Cheour, accueil">
+                <img src="assets/icones/logo.webp" alt="Logo de Walid Cheour">
+            </a>
+            <nav aria-label="Navigation principale">
+                <a href="#projets">Projets</a>
+                <a href="#competences">Compétences</a>
+                <a href="#apropos">À propos</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"
-                aria-label="Ouvrir le menu">
-                <span class="nav-toggle__bar"></span>
-                <span class="nav-toggle__bar"></span>
-                <span class="nav-toggle__bar"></span>
-            </button>
-
-            <ul id="menu-principal" class="nav-links">
-                <li><a href="#projets">PROJETS</a></li>
-                <li><a href="#competences">COMPÉTENCES</a></li>
-                <li><a href="#apropos">À PROPOS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </section>
-    </nav>
-
-    <!-- section d'acceuil / introduction / présentation  --------------------------------------------------------------------------------------------------------------------------------->
-    <main>
-        <section class="accueil">
-            <header class="accueil__contenu">
-                <p class="accueil__sur-titre">Intégration multimédia — Portfolio 2026</p>
-                <h1 id="accueil-titre" class="accueil__titre">
-                    <span class="accueil__titre-ligne accueil__titre-ligne--noir">Walid</span>
-                    <span class="accueil__titre-ligne accueil__titre-ligne--vert">Cheour</span>
-                </h1>
-                <p class="accueil__description">Création immersion</p>
-            </header>
-
-            <figure class="accueil__portrait">
-                <img src="./assets/images/walid.png" alt="Walid Cheour vu de dos devant un mur graphique">
+    <main id="contenu">
+        <!-- Accueil : le CSS place le texte et la photo côte à côte sur ordinateur. -->
+        <section class="accueil conteneur" aria-labelledby="accueil-titre">
+            <div>
+                <p class="surtitre">Intégration multimédia — Portfolio 2026</p>
+                <h1 id="accueil-titre">Walid<br><span>Cheour</span></h1>
+                <p class="accueil-description">Création immersion</p>
+            </div>
+            <figure class="accueil-portrait">
+                <img src="assets/images/walid.webp" alt="Walid devant un mur aux motifs verts et mauves" width="1122" height="1402">
             </figure>
         </section>
 
-        <!-- section de présentation des métiers ------------------------------------------------------------------------------------------------------------------------------------------------------>
+        <div class="bandeau" aria-label="Mes domaines de création">
+            <!-- aria-hidden masque les points décoratifs aux lecteurs d'écran. -->
+            <p>Intégrateur sonore <span aria-hidden="true">•</span> Vidéaste <span aria-hidden="true">•</span> Designer <span aria-hidden="true">•</span> Monteur sonore</p>
+        </div>
 
-        <aside class="bandeau-metiers" aria-label="Métiers de Walid Cheour">
-            <p class="bandeau-metiers__contenu">
-                Intégrateur sonore <span aria-hidden="true">•</span> Vidéaste <span aria-hidden="true">•</span> Designer
-                <span aria-hidden="true">•</span> Monteur sonore <span aria-hidden="true">•</span>
-                Intégrateur sonore <span aria-hidden="true">•</span> Vidéaste <span aria-hidden="true">•</span> Designer
-                <span aria-hidden="true">•</span> Monteur sonore <span aria-hidden="true">•</span>
-            </p>
-        </aside>
+        <!-- L'id relie cette section au lien href="#projets" de la navigation. -->
+        <!-- aria-labelledby indique quel titre décrit la section aux lecteurs d'écran. -->
+        <section id="projets" class="projets section" aria-labelledby="projets-titre">
+            <div class="conteneur">
+                <header class="entete-section">
+                    <div>
+                        <p class="surtitre">Travaux sélectionnés</p>
+                        <h2 id="projets-titre">Mes projets</h2>
+                    </div>
+                </header>
+                <!-- Le JavaScript copie le modèle ci-dessous pour chaque projet du JSON. -->
+                <p id="projets-message" role="status">Chargement des projets…</p>
+                <div id="projets-principaux" class="projet-principal"></div>
+                <div id="projets-secondaires" class="grille-projets"></div>
+                <noscript>Activez JavaScript pour afficher les projets du fichier projects.json.</noscript>
+            </div>
+        </section>
+
+        <!-- Chaque article présente une compétence ; ul et li forment sa liste d'outils ou de techniques. -->
+        <section id="competences" class="competences section" aria-labelledby="competences-titre">
+            <div class="conteneur">
+                <header class="entete-section">
+                    <div>
+                        <p class="surtitre">Ce que je maîtrise</p>
+                        <h2 id="competences-titre">Compétences / Logiciels et techniques</h2>
+                    </div>
+                </header>
+                <div class="grille-competences">
+                    <article>
+                        <p class="surtitre">Logiciels</p>
+                        <h3>Vidéo</h3>
+                        <ul>
+                            <li>CapCut</li>
+                            <li>After Effects</li>
+                            <li>DaVinci Resolve</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p class="surtitre">Logiciels</p>
+                        <h3>Design</h3>
+                        <ul>
+                            <li>Adobe Illustrator</li>
+                            <li>Photoshop</li>
+                            <li>Figma</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p class="surtitre">Logiciels</p>
+                        <h3>Audio</h3>
+                        <ul>
+                            <li>FL Studio</li>
+                            <li>Logic Pro</li>
+                            <li>Reaper</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p class="surtitre">Outils</p>
+                        <h3>Web</h3>
+                        <ul>
+                            <li>Visual Studio Code</li>
+                            <li>WordPress</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p class="surtitre">Techniques</p>
+                        <h3>Réalisation</h3>
+                        <ul>
+                            <li>Tournage et cadrage</li>
+                            <li>Montage vidéo</li>
+                            <li>Réalisation vidéo</li>
+                            <li>Direction artistique</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p class="surtitre">Techniques</p>
+                        <h3>Création visuelle</h3>
+                        <ul>
+                            <li>Logos et identités visuelles</li>
+                            <li>Illustration numérique</li>
+                            <li>Design pour les réseaux sociaux</li>
+                            <li>Retouche et manipulation d'images</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p class="surtitre">Techniques</p>
+                        <h3>Création sonore</h3>
+                        <ul>
+                            <li>Enregistrement et montage audio</li>
+                            <li>Mixage et mastering</li>
+                            <li>Création d'effets sonores</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p class="surtitre">Organisation</p>
+                        <h3>Gestion</h3>
+                        <ul>
+                            <li>Gestion de projets</li>
+                            <li>Direction créative</li>
+                            <li>Communication visuelle</li>
+                            <li>Coordination d'équipe</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Présentation personnelle. Le conteneur limite la largeur, le fond sombre couvre toute la section. -->
+        <section id="apropos" class="apropos section" aria-labelledby="apropos-titre">
+            <div class="apropos-contenu conteneur">
+                <div>
+                    <p class="surtitre">+ Qui suis-je ?</p>
+                    <h2 id="apropos-titre">À propos</h2>
+                    <p>Je suis <strong>Walid Cheour</strong>, étudiant en intégration multimédia avec une passion pour la création visuelle et sonore. Mon travail réunit le montage vidéo, le design graphique et la production audio.</p>
+                    <p>Je recherche un poste permanent à temps plein en création visuelle, identité de marque ou production audiovisuelle.</p>
+                    <!-- Une liste de définitions associe chaque information à sa valeur. -->
+                    <dl class="infos">
+                        <div>
+                            <dt>Disponibilité</dt>
+                            <dd>Immédiate</dd>
+                        </div>
+                        <div>
+                            <dt>Localisation</dt>
+                            <dd>Québec, Canada</dd>
+                        </div>
+                        <div>
+                            <dt>Type de poste</dt>
+                            <dd>Temps plein</dd>
+                        </div>
+                        <div>
+                            <dt>Programme</dt>
+                            <dd>Intégration multimédia</dd>
+                        </div>
+                    </dl>
+                </div>
+                <figure>
+                    <img src="assets/images/walidblancnoir.webp" alt="Portrait de Walid Cheour en noir et blanc" loading="lazy">
+                    <figcaption>WC</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Les liens mailto ouvrent l'application de courriel avec l'adresse du destinataire. -->
+        <section id="contact" class="contact section" aria-labelledby="contact-titre">
+            <div class="conteneur">
+                <p class="surtitre">+ Travaillons ensemble</p>
+                <h2 id="contact-titre">Contact</h2>
+                <p>Vous avez un projet, une offre ou une question ? Je suis disponible et prêt à collaborer.</p>
+                <a class="bouton" href="mailto:walid.cheour97@hotmail.com">Envoyer un courriel</a>
+                <a class="courriel" href="mailto:walid.cheour97@hotmail.com">walid.cheour97@hotmail.com</a>
+            </div>
+        </section>
     </main>
 
-      <!-- section menu des projets à voir ----------------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <section id="projets" class="projets" aria-labelledby="projets-titre">
-        <header class="entete">
-            <div>
-                <p class="sur-titre">Travaux sélectionnés</p>
-                <h2 id="projets-titre">Mes projets</h2>
-            </div>
-
-            <nav class="filtres" aria-label="Filtrer les projets">
-                <button class="filtre actif" type="button" data-filtre="tout" aria-pressed="true">Tout</button>
-                <button class="filtre" type="button" data-filtre="video" aria-pressed="false">Vidéo</button>
-                <button class="filtre" type="button" data-filtre="design" aria-pressed="false">Design</button>
-            </nav>
-        </header>
-
-        <div class="card-container"></div>
-        <div class="card-container-small"></div>
-
- <!-- cartes d'images section fais à la main avec html  -------------------------------------------------------------------------------------------------------------------------------------------------->
-
-        <!--<template id="anciennes-cartes">
-            <article class="card">
-                <img src="assets/images/walid_power.png" alt="Projet POWER">
-                <div class="card-content">
-                    <h3>POWER</h3>
-                    <p>Composition numérique avancée - Photoshop, effets volumétriques et atmosphère post-apocalyptique. Utilisation de la colorisation, du découpage et des options de fusion.</p>
-                    <p>Graphisme - 2025</p>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="assets/images/star.png" alt="Projet Stars">
-                <div class="card-content">
-                    <h3>Stars</h3>
-                    <p>Filmé par moi-même - utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. Projet de vidéoclip pour l’artiste M.B.H., un rappeur de Montréal. Projet personnel.</p>
-                    <p>Production vidéo - 2025</p>
-                    <a href="https://www.youtube.com/watch?v=c0bYvQd4vpM" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="assets/images/cuban.png" alt="Projet Cuban">
-                <div class="card-content">
-                    <h3>Cuban</h3>
-                    <p>Filmé par moi-même - utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. Vidéoclip réalisé pour le rappeur MBH, un artiste de Montréal. Projet personnel.</p>
-                    <p>Production vidéo - 2025</p>
-                    <a href="https://www.youtube.com/watch?v=p83jTAAV39M" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="assets/images/addiction.png" alt="Projet Addiction">
-                <div class="card-content">
-                    <h3>Addiction</h3>
-                    <p>Montage vidéo et sonore pour l’artiste KRØNIX. Visualiser la musique Addiction.</p>
-                    <p>Montage vidéo - 2025</p>
-                    <a href="https://www.tiktok.com/@therealkronixtv/video/7540819975909428485" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="assets/images/memories.png" alt="Projet Forget all">
-                <div class="card-content">
-                    <h3>Forget all</h3>
-                    <p>Montage vidéo et sonore pour l’artiste KRØNIX. Visualiser la musique Forget all.</p>
-                    <p>Montage vidéo - 2025</p>
-                    <a href="https://www.tiktok.com/@therealkronixtv/video/7541197617351511352" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="assets/images/nonewfriends.png" alt="Projet No new friends">
-                <div class="card-content">
-                    <h3>No new friends</h3>
-                    <p>Visualiser réalisé pour un artiste de musique électronique - synchronisation des visuels sur les drops, transitions rythmées et ambiance visuelle immersive propre à l’univers G-House. Projet personnel.</p>
-                    <p>Montage vidéo - 2025</p>
-                    <a href="https://www.tiktok.com/@therealkronixtv/video/7540091220329057542" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="assets/images/collab.png" alt="Projet Sleppover">
-                <div class="card-content">
-                    <h3>Sleppover</h3>
-                    <p>Montage vidéo et sonore pour deux artistes en collaboration sur TikTok.</p>
-                    <p>Montage vidéo - 2025</p>
-                    <a href="https://www.instagram.com/p/DTWETvTCf9G/?hl=fr" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-                </div>
-            </article>
-        </template>-->
-
-
-      
-    </section>
-
-     <!-- section compétences  ----------------------------------------------------------------------------------------------------------------------------------->
-
-    <section id="competences" class="skills-section">
-        <div class="skills-marks">+ +</div>
-        <div class="skills-eyebrow">Ce que je maîtrise</div>
-        <h2 class="skills-title">COMPÉTENCES</h2>
-
-        <div class="skills-grid">
-
-            <div class="carte-competences">
-                <div class="categorie">Vidéo</div>
-                <ul>
-                    <li>Cap cut</li>
-                    <li>After Effects</li>
-                    <li>DaVinci Resolve</li>
-                    <li>Tournage &amp; cadrage</li>
-                </ul>
-            </div>
-
-            <div class="carte-competences">
-                <div class="categorie">Design</div>
-                <ul>
-                    <li>Adobe Illustrator</li>
-                    <li>Photoshop</li>
-                    <li>Figma</li>
-                    <li>Identité visuelle</li>
-                </ul>
-            </div>
-
-            <div class="carte-competences">
-                <div class="categorie">Audio</div>
-                <ul>
-                    <li>Sound design</li>
-                    <li>Mixage &amp; mastering</li>
-                    <li>FL Studio</li>
-                    <li>Reaper</li>
-                </ul>
-            </div>
-
-            <div class="carte-competences">
-                <div class="categorie">Gestion</div>
-                <ul>
-                    <li>Gestion de projet</li>
-                    <li>Direction créative</li>
-                    <li>Communication visuelle</li>
-                    <li>Coordination</li>
-                </ul>
-            </div>
-
+    <!-- Le pied de page contient la signature, le copyright et le retour en haut. -->
+    <footer class="pied-page">
+        <div class="conteneur">
+            <p class="pied-page-nom">Walid</p>
+            <p>© 2026 Walid Cheour — Intégration multimédia</p>
+            <a href="#haut">Retour en haut <span aria-hidden="true">↑</span></a>
         </div>
+    </footer>
 
-
-    </section>
-
-     <!-- section à propos  ----------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-    <section id="apropos" class="apropos-section">
-        <div class="colonne-texte">
-            <p class="apropos-eyebrow">+ qui suis-je?</p>
-            <h2 class="apropos-title">À PROPOS</h2>
-
-            <p class="apropos-texte">
-                Je suis <strong>Walid Cheour</strong>, étudiant en intégration multimédia avec une passion pour la
-                création visuelle et sonore. Mon expertise couvre le montage vidéo, le design graphique et la production
-                audio.
-            </p>
-
-            <p class="apropos-texte">
-                Je recherche un poste permanent à temps plein en création visuelle, identité de marque ou production
-                audiovisuelle.
-            </p>
-
-            <div class="infos">
-                <div class="info-bloc">
-                    <p class="info-titre">Disponibilité</p>
-                    <p class="info-reponse">Immédiate</p>
-                </div>
-
-                <div class="info-bloc">
-                    <p class="info-titre">Localisation</p>
-                    <p class="info-reponse">Québec, Canada</p>
-                </div>
-
-                <div class="info-bloc">
-                    <p class="info-titre">Type de poste</p>
-                    <p class="info-reponse">Temps plein</p>
-                </div>
-
-                <div class="info-bloc">
-                    <p class="info-titre">Programme</p>
-                    <p class="info-reponse">Intégration multimédia</p>
-                </div>
+    <!-- Un modèle commun évite de répéter les sept cartes dans le HTML. -->
+    <!-- template n'est pas affiché directement : carte-projet.js en crée une copie pour chaque projet. -->
+    <template id="modele-carte-projet">
+        <article class="carte-projet">
+            <img class="carte-image" alt="" loading="lazy">
+            <div class="carte-contenu">
+                <p class="carte-meta"><span class="carte-categorie"></span> / <span class="carte-annee"></span></p>
+                <h3 class="carte-titre"></h3>
+                <p class="carte-description"></p>
+                <a class="carte-lien" target="_blank" rel="noopener noreferrer">Voir le projet <span aria-hidden="true">↗</span></a>
+                <!-- commandfor désigne la fenêtre ; show-modal l'ouvre directement en HTML. -->
+                <button class="carte-bouton" type="button" commandfor="modale-processus" command="show-modal">Voir le processus <span aria-hidden="true">↗</span></button>
             </div>
-        </div>
-
-        <div class="colonne-image">
-            <img src="assets/images/walidblancnoir.png" alt="Photo de moi" class="ma-photo">
-            <div class="photo-signature">WC</div>
-        </div>
-    </section>
-
-
-<!-- section contact  ----------------------------------------------------------------------------------------------------------------------------------------------------->
-
-    <section id="contact" class="contact">
-        <div class="contact__texte">
-            <p class="contact__eyebrow">+ TRAVAILLONS ENSEMBLE</p>
-            <h2 class="contact__titre">CONTACT</h2>
-
-            <p class="contact__description">
-                Vous avez un projet, une offre ou une question ? Je suis disponible et prêt à collaborer.
-            </p>
-
-            <div class="contact__infos">
-                <div class="contact__bloc">
-                    <a href="mailto:walid.cheour97@hotmail.com" class="contact__lien_hotmail">
-                        ENVOYER UN EMAIL
-                    </a>
-                    <a href="mailto:walid.cheour97@hotmail.com" class="contact__lien_linkedIn">
-                        LINKEDIN
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- section footer  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-    <div class="footer">
-        <div class="footer__bloc">
-            <p class="footer__nom">WALID</p>
-            <p class="footer__multimedia">© 2026 Walid Cheour — Intégration multimédia</p>
-        </div>
-    </div>
-
-
-
-
-<!-- section processus de création du projet Power en graphisme ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-    <dialog class="processus-power" id="modale-processus" aria-labelledby="processus-titre">
-        <button class="processus-power__fermer" type="button" aria-label="Fermer le processus du projet">&times;</button>
-        <article class="processus-power__contenu">
-            <figure class="processus-power__visuel">
-                <img id="processus-image" src="./assets/images/walid_power.png" alt="Composition numérique POWER terminée">
-            </figure>
-
-            <header class="processus-power__entete">
-                <p class="processus-power__etiquette">Projet en détail</p>
-                <h2 id="processus-titre"></h2>
-            </header>
-
-            <section class="processus-power__details">
-                <p class="processus-power__categorie" id="processus-categorie"></p>
-                <h3 id="processus-nom"></h3>
-                <p class="processus-power__description" id="processus-description"></p>
-
-                <section class="processus-power__etapes" aria-labelledby="etapes-power-titre">
-                    <h4 id="etapes-power-titre">Les étapes</h4>
-                    <ol id="processus-etapes"></ol>
-                </section>
-            </section>
-
-            <section class="processus-power__galerie" id="processus-galerie" aria-label="Images du processus"></section>
         </article>
+    </template>
+
+    <!-- Les commandes HTML ouvrent et ferment le dialog. Le navigateur gère le focus et Échap. -->
+    <!-- remplirModale() prépare le contenu POWER à partir du JSON pendant le chargement des projets. -->
+    <dialog id="modale-processus" class="modale" aria-labelledby="processus-titre">
+        <!-- autofocus sélectionne ce bouton à l'ouverture de la fenêtre. -->
+        <!-- close ferme la fenêtre indiquée par commandfor, sans événement JavaScript. -->
+        <button id="fermer-modale" class="fermer-modale" type="button" commandfor="modale-processus" command="close" aria-label="Fermer le processus" autofocus>×</button>
+        <p id="processus-categorie" class="surtitre"></p>
+        <h2 id="processus-titre"></h2>
+        <img id="processus-image" class="processus-image" alt="">
+        <p id="processus-description"></p>
+        <h3>Les étapes</h3>
+        <ol id="processus-etapes"></ol>
+        <h3>Les réglages</h3>
+        <ol id="processus-parametres"></ol>
+        <p>Cliquer sur une image pour l'ouvrir en grand dans un nouvel onglet.</p>
+        <div id="processus-galerie" class="galerie"></div>
+        <!-- Deuxième bouton de fermeture, accessible après les images, sans JavaScript. -->
+        <button class="bouton fermer-modale-bas" type="button" commandfor="modale-processus" command="close">Fermer</button>
     </dialog>
 
-
-    <!-- scripts de javascipt   ------------------------------------------------------------------------------------------------------------------------------------------>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/CustomEase.min.js"></script>
-    <script src="./Js/data.js"></script>
-    <script src="./Js/composants/carte-projet.js"></script>
-    <script src="./Js/composants/modale.js"></script>
-    <script src="./Js/main.js"></script>
-
+    <!-- defer attend que le HTML soit prêt et conserve l'ordre des scripts. -->
+    <!-- GSAP anime les éléments ; ScrollTrigger déclenche les effets au défilement. -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="Js/animations.js" defer></script>
+    <script src="Js/data.js" defer></script>
+    <script src="Js/composants/carte-projet.js" defer></script>
+    <script src="Js/composants/modale.js" defer></script>
+    <script src="Js/main.js" defer></script>
 </body>
-
 </html>
