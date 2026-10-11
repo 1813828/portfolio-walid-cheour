@@ -134,4 +134,8 @@ button {
     .bouton {
         transition: none;
     }
+
+    .bandeau__piste {
+        animation: none;
+    }
 }

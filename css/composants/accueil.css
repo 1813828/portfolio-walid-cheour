@@ -43,26 +43,52 @@
     box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
 }
 
-/* Le bandeau retrouve ses couleurs d'origine, sans script de défilement. */
+/* Le bandeau masque la piste qui sort de l'écran. */
 .bandeau {
+    overflow: hidden;
     padding: 16px 5%;
     border-top: 2px solid var(--vert);
     background: var(--texte);
     color: var(--vert);
-    text-align: center;
 }
 
-.bandeau p {
+.bandeau__fenetre {
+    overflow: hidden;
+}
+
+/* La piste contient deux copies pour faire revenir les mots par la droite. */
+.bandeau__piste {
+    display: flex;
+    width: max-content;
+    animation: defilement-domaines 22s linear infinite;
+}
+
+.bandeau__piste p {
+    flex: 0 0 auto;
+    min-width: 100vw;
+    padding-right: 5vw;
     font-family: "Barlow Condensed", Arial, sans-serif;
     font-size: clamp(1.3rem, 3vw, 2.5rem);
     font-weight: 800;
+    text-align: center;
     text-transform: uppercase;
 }
 
 /* Les span du bandeau sont les points qui séparent les métiers. */
-.bandeau span {
+.bandeau__piste span {
     margin-inline: 24px;
     color: var(--fond);
+}
+
+/* La deuxième copie prend la place de la première après son défilement. */
+@keyframes defilement-domaines {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 /* À 720px ou moins, le portrait passe sous le texte. */
@@ -84,7 +110,7 @@
         justify-self: center;
     }
 
-    .bandeau span {
+    .bandeau__piste span {
         margin-inline: 8px;
     }
 }

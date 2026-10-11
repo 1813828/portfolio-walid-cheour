@@ -47,8 +47,13 @@
         </section>
 
         <div class="bandeau" aria-label="Mes domaines de création">
-            <!-- aria-hidden masque les points décoratifs aux lecteurs d'écran. -->
-            <p>Intégrateur sonore <span aria-hidden="true">•</span> Vidéaste <span aria-hidden="true">•</span> Designer <span aria-hidden="true">•</span> Monteur sonore</p>
+            <!-- Deux séquences identiques assurent une boucle continue sans saut visible. -->
+            <div class="bandeau__fenetre">
+                <div class="bandeau__piste">
+                    <p aria-hidden="true">Intégrateur sonore <span aria-hidden="true">•</span> Vidéaste <span aria-hidden="true">•</span> Designer <span aria-hidden="true">•</span> Monteur sonore</p>
+                    <p aria-hidden="true">Intégrateur sonore <span aria-hidden="true">•</span> Vidéaste <span aria-hidden="true">•</span> Designer <span aria-hidden="true">•</span> Monteur sonore</p>
+                </div>
+            </div>
         </div>
 
         <!-- L'id relie cette section au lien href="#projets" de la navigation. -->
