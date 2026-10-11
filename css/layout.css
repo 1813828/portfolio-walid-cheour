@@ -11,6 +11,35 @@
     padding-block: 90px;
 }
 
+/* La vidéo reste légère et s'adapte à la largeur de son conteneur. */
+.demo-reel {
+    background: var(--fond);
+}
+
+.demo-reel__surtitre {
+    color: var(--vert);
+}
+
+.demo-reel__video {
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    margin-inline: auto;
+    border-radius: 16px;
+    background: var(--sombre);
+    object-fit: contain;
+}
+
+#demo-reel-titre{
+    color: var(--noir);
+    margin-bottom: 24px;
+}
+
+#demo-reel-surtitre{
+    color: var(--vert);
+    margin-bottom: 10px;
+}
+
 /* Flex aligne les éléments de l'en-tête et laisse de l'espace entre eux. */
 .entete-section {
     display: flex;
@@ -157,6 +186,8 @@
 
 .pied-page {
     background: var(--vert);
+    color: var(--blanc);
+    font-size: 1.25rem;
 }
 
 /* Aligne le nom, le copyright et le lien de retour en haut. */

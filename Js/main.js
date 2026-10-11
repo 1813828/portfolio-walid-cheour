@@ -1,4 +1,23 @@
 // Le premier projet est mis en avant. Les suivants partagent la même grille.
+function choisirVideoDemoReel() {
+    const video = document.getElementById('demo-reel-video');
+    const source = video ? video.querySelector('source') : null;
+
+    if (!video || !source) return;
+
+    const videoMobile = 'assets/videos/demo_reel_walid_1080x1920.mp4';
+    const videoWeb = 'assets/videos/demo_reel_walid_1920x1080.mp4';
+    const sourceActuelle = window.matchMedia('(max-width: 720px)').matches ? videoMobile : videoWeb;
+
+    if (source.getAttribute('src') !== sourceActuelle) {
+        source.setAttribute('src', sourceActuelle);
+        video.load();
+    }
+}
+
+choisirVideoDemoReel();
+window.addEventListener('resize', choisirVideoDemoReel);
+
 async function displayProjects() {
     // On retrouve les zones du HTML grâce à leurs attributs id.
     const message = document.getElementById('projets-message');

@@ -259,6 +259,30 @@ utilisation de copilot.
 
 
 
+- **Date :** 2026-10-11
+- **Prompt :** peux-tu faire une animation très simple du bandeau de mes domaines de création. Fais en sorte que les mots bougent à la gauche un à la suite de l'autre puis revient vers droite une fois qu'elle sont sortis de l'écran? Fais une animation infinite en continue.
+
+Peux-tu aussi créer une petite séction pour la demo reel que je vais mettre les videos de formats 1920 x 1080  et 1080 x 1920 je ne veux pas quelque chose de complexe. Un section assez simple.
+
+réponse:
+La section Demo Reel est ajoutée localement, sans publication sur GitHub.
+
+Elle se trouve juste avant la section Projets.
+
+Fonctionnement
+Sur ordinateur : vidéo 1920x1080.
+Sur mobile : vidéo 1080x1920.
+Les contrôles vidéo sont disponibles.
+preload="none" évite de télécharger les vidéos avant que le visiteur clique sur lecture.
+La vidéo s’adapte à la largeur de l’écran.
+La hauteur est limitée pour éviter qu’elle prenne toute la page.
+
+utilisation de copilot.
+
+
+
+
+
 
 
 

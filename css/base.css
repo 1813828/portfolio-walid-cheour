@@ -82,7 +82,7 @@ button {
 /* Petit texte en majuscules placé au-dessus des titres de section. */
 .surtitre {
     margin-bottom: 18px;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     font-weight: bold;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -135,7 +135,15 @@ button {
         transition: none;
     }
 
-    .bandeau__piste {
+    .bandeau__texte {
+        animation: none;
+    }
+
+    .texte-couleur {
+        animation: none;
+    }
+
+    .accueil-portrait img {
         animation: none;
     }
 }

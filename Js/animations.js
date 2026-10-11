@@ -19,7 +19,7 @@ function initialiserAnimations() {
     });
 
     // Une seule boucle anime les cartes, les compétences, la présentation et le contact.
-    const elements = document.querySelectorAll('.carte-projet, #competences .entete-section, .grille-competences, .apropos-contenu > div, .apropos figure, #contact .conteneur');
+    const elements = document.querySelectorAll('.carte-projet, #competences .entete-section, .grille-competences,  #contact .conteneur');
     elements.forEach((element) => {
         gsap.from(element, {
             opacity: 0,
@@ -35,6 +35,50 @@ function initialiserAnimations() {
         });
     });
 
+    // Les deux éléments de la section À propos apparaissent depuis la droite vers leur place.
+    const elementsapropos = document.querySelectorAll('.apropos-contenu > div, .apropos-contenu > figure');
+    gsap.from(elementsapropos, {
+        opacity: 0,
+        x: 40,
+        duration: 0.8,
+        ease: 'power2.out',
+        stagger: 0.15,
+        clearProps: 'opacity,transform',
+        scrollTrigger: {
+            trigger: '.apropos', // La section déclenche l'animation.
+            start: 'top 90%',    // Quand son haut atteint 90% de la hauteur de l'écran.
+            once: true            // Joue l'animation une seule fois.
+        }
+    });
+
+     // Les deux éléments de la section Demo Reel apparaissent depuis le bas vers leur place.
+    const elementsdemoreel = document.querySelectorAll('#demo-reel-titre, #demo-reel-video');
+    gsap.from(elementsdemoreel, {
+        opacity: 0,
+        x: -40,
+        duration: 0.8,
+        ease: 'power2.out',
+        stagger: 0.15,
+        clearProps: 'opacity,transform',
+        scrollTrigger: {
+            trigger: '.demo-reel', // La section déclenche l'animation.
+            start: 'top 15%',    // Quand son haut atteint 90% de la hauteur de l'écran.
+            once: true            // Joue l'animation une seule fois.
+        }
+    });
+
+
+
+
+
+
+
+
+
+
     // Recalcule les positions après l'ajout des projets dans la page.
     ScrollTrigger.refresh();
 }
+
+
+

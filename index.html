@@ -26,6 +26,7 @@
             </a>
             <nav aria-label="Navigation principale">
                 <a href="#projets">Projets</a>
+                <a href="#demo-reel">Demo Reel</a>
                 <a href="#competences">Compétences</a>
                 <a href="#apropos">À propos</a>
                 <a href="#contact">Contact</a>
@@ -38,8 +39,8 @@
         <section class="accueil conteneur" aria-labelledby="accueil-titre">
             <div>
                 <p class="surtitre">Intégration multimédia — Portfolio 2026</p>
-                <h1 id="accueil-titre">Walid<br><span>Cheour</span></h1>
-                <p class="accueil-description">Création immersion</p>
+                <h1 id="accueil-titre"><span class="texte-couleur texte-couleur--walid">Walid</span><br><span class="texte-couleur texte-couleur--cheour">Cheour</span></h1>
+                <p class="accueil-description"><span class="texte-couleur texte-couleur--creation">Création immersion</span></p>
             </div>
             <figure class="accueil-portrait">
                 <img src="assets/images/walid.webp" alt="Walid devant un mur aux motifs verts et mauves" width="1122" height="1402">
@@ -47,14 +48,28 @@
         </section>
 
         <div class="bandeau" aria-label="Mes domaines de création">
-            <!-- Deux séquences identiques assurent une boucle continue sans saut visible. -->
+            <!-- Toute la ligne défile ensemble, avec un point blanc entre chaque domaine. -->
             <div class="bandeau__fenetre">
-                <div class="bandeau__piste">
-                    <p aria-hidden="true">Intégrateur sonore <span aria-hidden="true">•</span> Vidéaste <span aria-hidden="true">•</span> Designer <span aria-hidden="true">•</span> Monteur sonore</p>
-                    <p aria-hidden="true">Intégrateur sonore <span aria-hidden="true">•</span> Vidéaste <span aria-hidden="true">•</span> Designer <span aria-hidden="true">•</span> Monteur sonore</p>
-                </div>
+                <p class="bandeau__texte" aria-hidden="true">
+                    Intégrateur sonore <span>•</span> Vidéaste <span>•</span> Designer <span>•</span> Monteur sonore
+                </p>
             </div>
         </div>
+
+        <section id="demo-reel" class="demo-reel section" aria-labelledby="demo-reel-titre">
+            <div class="conteneur">
+                <header class="entete-section">
+                    <div>
+                        <p class="surtitre demo-reel__surtitre">Présentation vidéo</p>
+                        <h2 id="demo-reel-titre">Demo Reel</h2>
+                    </div>
+                </header>
+                <video id="demo-reel-video" class="demo-reel__video" poster="assets/images/portfolio.webp" controls preload="none" playsinline>
+                    <source src="assets/videos/demo_reel_walid_1920x1080.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la lecture vidéo.
+                </video>
+            </div>
+        </section>
 
         <!-- L'id relie cette section au lien href="#projets" de la navigation. -->
         <!-- aria-labelledby indique quel titre décrit la section aux lecteurs d'écran. -->
@@ -212,7 +227,7 @@
     <!-- Le pied de page contient la signature, le copyright et le retour en haut. -->
     <footer class="pied-page">
         <div class="conteneur">
-            <p class="pied-page-nom">Walid</p>
+            <p class="pied-page-nom">W/C</p>
             <p>© 2026 Walid Cheour — Intégration multimédia</p>
             <a href="#haut">Retour en haut <span aria-hidden="true">↑</span></a>
         </div>

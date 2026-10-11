@@ -18,20 +18,81 @@
     text-transform: uppercase;
 }
 
-/* Le span du titre contient seulement le nom « Cheour ». */
-.accueil h1 span {
-    color: var(--vert);
+/* Les trois titres font tourner leurs couleurs sans fondu. */
+.texte-couleur {
+    animation-duration: 6s;
+    animation-timing-function: steps(3, end);
+    animation-iteration-count: infinite;
 }
 
-/* La phrase sous le nom reprend la police des titres et la couleur mauve. */
+.texte-couleur--walid {
+    color: var(--texte);
+    animation-name: couleur-walid;
+}
+
+.texte-couleur--cheour {
+    color: var(--vert);
+    animation-name: couleur-cheour;
+}
+
+.texte-couleur--creation {
+    color: var(--mauve);
+    animation-name: couleur-creation;
+}
+
+/* La phrase sous le nom reprend la police des titres. */
 .accueil-description {
     margin-block: 28px;
-    color: var(--mauve);
     font-family: "Barlow Condensed", Arial, sans-serif;
     font-weight: 800;
     font-size: clamp(2.5rem, 6vw, 5rem);
     line-height: 1;
     text-transform: uppercase;
+}
+
+/* Walid prend la couleur de Création immersion, puis la suivante. */
+@keyframes couleur-walid {
+    0%, 100% {
+        color: var(--texte);
+    }
+
+    33.33% {
+        color: var(--mauve);
+    }
+
+    66.66% {
+        color: var(--vert);
+    }
+}
+
+/* Cheour prend la couleur de Walid, puis la suivante. */
+@keyframes couleur-cheour {
+    0%, 100% {
+        color: var(--vert);
+    }
+
+    33.33% {
+        color: var(--texte);
+    }
+
+    66.66% {
+        color: var(--mauve);
+    }
+}
+
+/* Création immersion prend la couleur de Cheour, puis la suivante. */
+@keyframes couleur-creation {
+    0%, 100% {
+        color: var(--mauve);
+    }
+
+    33.33% {
+        color: var(--vert);
+    }
+
+    66.66% {
+        color: var(--texte);
+    }
 }
 
 .accueil-portrait img {
@@ -41,53 +102,63 @@
     object-fit: cover;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
+    animation: mouvement-portrait 5s ease-in-out infinite;
+}
+
+/* Le portrait monte et descend doucement sans changer de place dans la page. */
+@keyframes mouvement-portrait {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
+    }
+
+    50% {
+        transform: translateY(-8px);
+        box-shadow: 0 14px 24px rgb(0 0 0 / 25%);
+    }
 }
 
 /* Le bandeau masque la piste qui sort de l'écran. */
 .bandeau {
     overflow: hidden;
-    padding: 16px 5%;
+    padding: 30px 5%;
     border-top: 2px solid var(--vert);
+    border-bottom: 2px solid var(--vert);
     background: var(--texte);
     color: var(--vert);
 }
 
 .bandeau__fenetre {
+    height: clamp(2.1rem, 4vw, 3.5rem);
     overflow: hidden;
 }
 
-/* La piste contient deux copies pour faire revenir les mots par la droite. */
-.bandeau__piste {
-    display: flex;
+/* Une seule ligne défile simplement de droite à gauche. */
+.bandeau__texte {
     width: max-content;
-    animation: defilement-domaines 22s linear infinite;
-}
-
-.bandeau__piste p {
-    flex: 0 0 auto;
-    min-width: 100vw;
-    padding-right: 5vw;
+    margin: 0;
     font-family: "Barlow Condensed", Arial, sans-serif;
     font-size: clamp(1.3rem, 3vw, 2.5rem);
     font-weight: 800;
-    text-align: center;
+    line-height: 1.4;
     text-transform: uppercase;
+    white-space: nowrap;
+    animation: defilement-bandeau 18s linear infinite;
+    will-change: transform;
 }
 
-/* Les span du bandeau sont les points qui séparent les métiers. */
-.bandeau__piste span {
+.bandeau__texte span {
     margin-inline: 24px;
-    color: var(--fond);
+    color: #ffffff;
 }
 
-/* La deuxième copie prend la place de la première après son défilement. */
-@keyframes defilement-domaines {
+@keyframes defilement-bandeau {
     from {
-        transform: translateX(0);
+        transform: translateX(100vw);
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -110,7 +181,4 @@
         justify-self: center;
     }
 
-    .bandeau__piste span {
-        margin-inline: 8px;
-    }
 }
