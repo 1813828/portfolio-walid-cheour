@@ -117,6 +117,47 @@ Ma prochaine étape est de revérifier tout mon code. Essayer de mieux rendre le
 Oui, j’ai utilisé l’intelligence artificielle, notamment GitHub Copilot, pour m’aider à structurer et à concevoir certains éléments de mon portfolio en html et css. Je l’ai également utilisée comme outil d’aide pour mieux comprendre et améliorer mon code.Je l'ai utilisé aussi pour du Javascipt.
 
 
+
+
+# Bilan de progression 3
+
+**Date :** 2026-10-13
+
+## Question 1 : Qu’est-ce que j’ai accompli depuis le dernier bloc ?
+
+**Réponse :**
+
+J’ai finalisé mon portfolio, ajouté les liens vers mes projets et vérifié le bon fonctionnement du JavaScript et du CSS. J’ai également réussi à générer dynamiquement les projets à l’aide de la fonction `fetch()`.
+
+## Question 2 : Quelle est ma principale difficulté et comment l’ai-je surmontée ?
+
+**Réponse :**
+
+Ma principale difficulté a été de restructurer du code qui n’était pas suffisamment clair pour moi, et ce, dans un délai très court. Pour surmonter cette difficulté, j’ai pris le temps de mieux comprendre la structure du code et le fonctionnement des différentes parties.
+
+## Question 3 : Qu’est-ce que j’ai appris que je ne savais pas avant ?
+
+**Réponse :**
+
+J’ai appris à utiliser de nouvelles fonctions JavaScript et à mieux comprendre certaines balises sémantiques HTML que je devais intégrer régulièrement dans mon portfolio.
+
+## Question 4 : Quelle est ma prochaine étape ?
+
+**Réponse :**
+
+Ma prochaine étape consiste à présenter mon projet et à partager mon portfolio sur mes réseaux sociaux afin de le rendre accessible à un plus grand nombre de personnes, notamment aux recruteurs et aux employeurs potentiels.
+
+## Question 5 : Est-ce que j’ai utilisé l’IA ?
+
+**Réponse :**
+
+Oui, j’ai utilisé l’intelligence artificielle principalement pour m’aider à structurer mon code JavaScript et HTML. Elle m’a également permis de mieux comprendre le fonctionnement des différentes balises et la manière dont elles s’intègrent dans mon projet.
+
+
+
+
+
+
 # Utilisation de l'IA
 
 - **Date :** 2026-09-07
