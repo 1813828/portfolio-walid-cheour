@@ -1,4 +1,4 @@
-/* La police est déjà dans assets : aucun service externe à charger. */
+/* police mise à disposition pour la page  */
 @font-face {
     font-family: "Barlow Condensed";
     src: url("../assets/fonts/BarlowCondensed-ExtraBold.woff2") format("woff2");
@@ -86,6 +86,7 @@ button {
     font-weight: bold;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+    
 }
 
 /* Cette classe donne à un lien l'apparence d'un bouton. */

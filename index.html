@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Walid Cheour, étudiant en intégration multimédia : vidéo, design graphique et création sonore.">
     <title>Walid Cheour — Portfolio multimédia</title>
-    <!-- Les styles gardent la même organisation que le projet original. -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -18,7 +17,7 @@
     <!-- #haut sert de destination au logo et au lien « Retour en haut ». -->
     <a class="lien-rapide" href="#contenu">Aller au contenu</a>
 
-    <!-- Les liens restent visibles sur mobile pour éviter un menu en JavaScript. -->
+    <!-- section de navigation. ------- css dans la page navigation.css --------------------------------------------------------------------------------------------------------------------------------------------------->
     <header class="navigation">
         <div class="conteneur">
             <a class="logo" href="#haut" aria-label="Walid Cheour, accueil">
@@ -35,7 +34,7 @@
     </header>
 
     <main id="contenu">
-        <!-- Accueil : le CSS place le texte et la photo côte à côte sur ordinateur. -->
+        <!-- Section d'accueil header   dans layout.css et accueil.css et base.css------------------------------------------------------------------------------------------------------------------------------------- -->
         <section class="accueil conteneur" aria-labelledby="accueil-titre">
             <div>
                 <p class="surtitre">Intégration multimédia — Portfolio 2026</p>
@@ -47,6 +46,7 @@
             </figure>
         </section>
 
+        <!-- Section bandeau de domaines de création.------------------Accueil.css----------------------------------------------------------------------------------------------------------------------------------------- -->
         <div class="bandeau" aria-label="Mes domaines de création">
             <!-- Toute la ligne défile ensemble, avec un point blanc entre chaque domaine. -->
             <div class="bandeau__fenetre">
@@ -56,6 +56,7 @@
             </div>
         </div>
 
+        <!-- Section Demo Reel.-----layout.css-------------------------------------------------------------------------------------------------------------------------------------- -->
         <section id="demo-reel" class="demo-reel section" aria-labelledby="demo-reel-titre">
             <div class="conteneur">
                 <header class="entete-section">
@@ -71,8 +72,8 @@
             </div>
         </section>
 
-        <!-- L'id relie cette section au lien href="#projets" de la navigation. -->
-        <!-- aria-labelledby indique quel titre décrit la section aux lecteurs d'écran. -->
+         <!-- Section des projets.---------carte-projet.css---------------------------------------------------------------------------------------------------------------------------------- -->
+
         <section id="projets" class="projets section" aria-labelledby="projets-titre">
             <div class="conteneur">
                 <header class="entete-section">
@@ -89,7 +90,7 @@
             </div>
         </section>
 
-        <!-- Chaque article présente une compétence ; ul et li forment sa liste d'outils ou de techniques. -->
+        <!-- section des compétences.---------layout.css---------------------------------------------------------------------------------------------------------------------------------- -->
         <section id="competences" class="competences section" aria-labelledby="competences-titre">
             <div class="conteneur">
                 <header class="entete-section">
@@ -177,7 +178,7 @@
             </div>
         </section>
 
-        <!-- Présentation personnelle. Le conteneur limite la largeur, le fond sombre couvre toute la section. -->
+         <!-- section à propos.-------------------------------layout.css------------------------------------------------------------------------------------------------------------ -->
         <section id="apropos" class="apropos section" aria-labelledby="apropos-titre">
             <div class="apropos-contenu conteneur">
                 <div>
@@ -185,7 +186,6 @@
                     <h2 id="apropos-titre">À propos</h2>
                     <p>Je suis <strong>Walid Cheour</strong>, étudiant en intégration multimédia avec une passion pour la création visuelle et sonore. Mon travail réunit le montage vidéo, le design graphique et la production audio.</p>
                     <p>Je recherche un poste permanent à temps plein en création visuelle, identité de marque ou production audiovisuelle.</p>
-                    <!-- Une liste de définitions associe chaque information à sa valeur. -->
                     <dl class="infos">
                         <div>
                             <dt>Disponibilité</dt>
@@ -212,6 +212,7 @@
             </div>
         </section>
 
+        <!-- Section de contact. ---------------------------------------------------------------------------------------------------------------------------------------------------->
         <!-- Les liens mailto ouvrent l'application de courriel avec l'adresse du destinataire. -->
         <section id="contact" class="contact section" aria-labelledby="contact-titre">
             <div class="conteneur">
@@ -224,7 +225,7 @@
         </section>
     </main>
 
-    <!-- Le pied de page contient la signature, le copyright et le retour en haut. -->
+    <!-- section du pied de page. ------------------------------------------------------------------------------------------------------------------------------------------------------>
     <footer class="pied-page">
         <div class="conteneur">
             <p class="pied-page-nom">W/C</p>
@@ -233,7 +234,7 @@
         </div>
     </footer>
 
-    <!-- Un modèle commun évite de répéter les sept cartes dans le HTML. -->
+    <!-- Un modèle commun évite de répéter les sept cartes dans le HTML. -------------------------------------------------------------------------------------------->
     <!-- template n'est pas affiché directement : carte-projet.js en crée une copie pour chaque projet. -->
     <template id="modele-carte-projet">
         <article class="carte-projet">
@@ -269,8 +270,8 @@
         <button class="bouton fermer-modale-bas" type="button" commandfor="modale-processus" command="close">Fermer</button>
     </dialog>
 
-    <!-- defer attend que le HTML soit prêt et conserve l'ordre des scripts. -->
-    <!-- GSAP anime les éléments ; ScrollTrigger déclenche les effets au défilement. -->
+    
+    <!-- section des scripts js. -------------------------------------------------------------------------------------------------------------------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
     <script src="Js/animations.js" defer></script>

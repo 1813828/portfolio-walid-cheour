@@ -1,4 +1,4 @@
-/* Le fond noir s'étend sur toute la largeur de la page. */
+/* pour mettre la navigation en place avec la couleur noire et le texte vert. */
 .navigation {
     background: var(--texte);
     color: var(--vert);
@@ -7,7 +7,7 @@
 /* Le conteneur centre le contenu ; Flex sépare le logo et les liens. */
 .navigation .conteneur {
     display: flex;
-    align-items: center;
+    align-items: center; /*centre verticalement le logo et les liens.*/
     justify-content: space-between;
     gap: 24px;
     min-height: 58px;
@@ -32,6 +32,7 @@
     gap: 8px 28px;
 }
 
+/*liens de navigation*/
 .navigation nav a {
     padding-block: 6px;
     font-size: 0.85rem;

@@ -1,16 +1,25 @@
 /* L'accueil place le nom à gauche et le portrait à droite sur ordinateur. */
 .accueil {
-    /* 100vh représente la hauteur de l'écran ; on retire la hauteur de la navigation. */
+    /* La section occupe au moins la hauteur de l'écran, sans la navigation. */
     min-height: calc(100vh - 58px);
+
+    /* La grille place le texte à gauche et la photo à droite. */
     display: grid;
-    /* Le texte reçoit plus d'espace. minmax(0, ...) autorise les colonnes à rétrécir. */
-    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+
+    /* Le texte reçoit deux parts d'espace et la photo une seule. */
+    grid-template-columns: 2fr 1fr;
+
+    /* Les éléments commencent en haut de leurs colonnes. */
     align-items: start;
+
+    /* Espace entre le texte et la photo. */
     gap: 48px;
+
+    /* Espace intérieur : 80px en haut et 100px en bas. */
     padding-block: 80px 100px;
 }
 
-/* Le grand titre s'adapte à la largeur de l'écran grâce à clamp(). */
+/* Le texte Walid Cheour de l'acceuil du header */
 .accueil h1 {
     font-size: clamp(5rem, 14vw, 12rem);
     line-height: 0.88;
@@ -18,29 +27,32 @@
     text-transform: uppercase;
 }
 
-/* Les trois titres font tourner leurs couleurs sans fondu. */
+/* L'animation change la couleur du texte Walid Cheour, puis Création immersion, puis la suivante. */
 .texte-couleur {
     animation-duration: 6s;
     animation-timing-function: steps(3, end);
     animation-iteration-count: infinite;
 }
 
+/* Le texte Walid Cheour prend la couleur de Création immersion, puis la suivante. */
 .texte-couleur--walid {
     color: var(--texte);
     animation-name: couleur-walid;
 }
 
+/* Le texte Cheour prend la couleur de Walid, puis la suivante. */
 .texte-couleur--cheour {
     color: var(--vert);
     animation-name: couleur-cheour;
 }
 
+/* Le texte Création immersion prend la couleur de Cheour, puis la suivante. */
 .texte-couleur--creation {
     color: var(--mauve);
     animation-name: couleur-creation;
 }
 
-/* La phrase sous le nom reprend la police des titres. */
+/* Le texte Création immersion   */
 .accueil-description {
     margin-block: 28px;
     font-family: "Barlow Condensed", Arial, sans-serif;
@@ -49,6 +61,58 @@
     line-height: 1;
     text-transform: uppercase;
 }
+
+
+/* l'image de Walid sur le dos du portrait */
+.accueil-portrait img {
+    width: 100%;
+    
+    aspect-ratio: 0.72;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
+    animation: mouvement-portrait 5s ease-in-out infinite;
+}
+
+
+
+/* SECTION BANDEAU */
+/* Le bandeau défile de droite à gauche sur toute la largeur de l'écran. */
+.bandeau {
+    overflow: hidden;
+    padding: 30px 5%;
+    border-top: 2px solid var(--vert);
+    border-bottom: 2px solid var(--vert);
+    background: var(--texte);
+    color: var(--vert);
+}
+
+.bandeau__fenetre {
+    height: 3rem;
+    overflow: hidden;
+}
+
+/* Une seule ligne défile simplement de droite à gauche. */
+.bandeau__texte {
+    width: max-content;
+    margin: 0;
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    font-size: clamp(1.3rem, 3vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    animation: defilement-bandeau 18s linear infinite;
+   
+}
+/*les points qui séparent les mots du bandeau*/
+.bandeau__texte span {
+    margin-inline: 24px;
+    color: #ffffff;
+}
+
+
+
+/*ANIMATIONS DE COULEUR ET DE MOUVEMENT POUR LE TEXTE ET LE PORTRAIT DE L'ACCUEIL.*/
 
 /* Walid prend la couleur de Création immersion, puis la suivante. */
 @keyframes couleur-walid {
@@ -94,18 +158,11 @@
         color: var(--texte);
     }
 }
+  
 
-.accueil-portrait img {
-    width: 100%;
-    /* Fixe la forme du cadre. cover remplit ce cadre sans étirer l'image. */
-    aspect-ratio: 0.72;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
-    animation: mouvement-portrait 5s ease-in-out infinite;
-}
 
-/* Le portrait monte et descend doucement sans changer de place dans la page. */
+
+/* L'image de walid au dos animation de hauteur en fonction du mouvement */
 @keyframes mouvement-portrait {
     0%, 100% {
         transform: translateY(0);
@@ -118,39 +175,7 @@
     }
 }
 
-/* Le bandeau masque la piste qui sort de l'écran. */
-.bandeau {
-    overflow: hidden;
-    padding: 30px 5%;
-    border-top: 2px solid var(--vert);
-    border-bottom: 2px solid var(--vert);
-    background: var(--texte);
-    color: var(--vert);
-}
-
-.bandeau__fenetre {
-    height: clamp(2.1rem, 4vw, 3.5rem);
-    overflow: hidden;
-}
-
-/* Une seule ligne défile simplement de droite à gauche. */
-.bandeau__texte {
-    width: max-content;
-    margin: 0;
-    font-family: "Barlow Condensed", Arial, sans-serif;
-    font-size: clamp(1.3rem, 3vw, 2.5rem);
-    font-weight: 800;
-    line-height: 1.4;
-    text-transform: uppercase;
-    white-space: nowrap;
-    animation: defilement-bandeau 18s linear infinite;
-    will-change: transform;
-}
-
-.bandeau__texte span {
-    margin-inline: 24px;
-    color: #ffffff;
-}
+/*l'animation du bandeau qui défile de droite à gauche sur toute la largeur de l'écran*/
 
 @keyframes defilement-bandeau {
     from {
@@ -171,8 +196,15 @@
         padding-block: 40px 60px;
     }
 
+    /* Le texte Walid Cheour est centré et plus petit. en format mobile */
     .accueil h1 {
         font-size: clamp(4.5rem, 22vw, 8rem);
+        text-align: center;
+    }
+
+    /* Centre le texte « Création immersion » sur les petits écrans. */
+    .accueil-description {
+        text-align: center;
     }
 
     .accueil-portrait {

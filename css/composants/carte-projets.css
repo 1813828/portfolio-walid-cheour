@@ -1,3 +1,6 @@
+
+
+/*SECTION POUR LES PROJETS*/
 /* Le fond vert couvre toute la section ; le conteneur HTML centre les cartes. */
 .projets {
     background: var(--vert);
@@ -11,7 +14,7 @@
     margin-top: 24px;
 }
 
-/* Flex empile l'image et le texte à l'intérieur de chaque carte. */
+/* Flex empile l'image et le texte à l'intérieur de chaque carte. le design des cartes en quelque sorte */
 .carte-projet {
     display: flex;
     flex-direction: column;
@@ -44,7 +47,7 @@
     padding: 24px;
 }
 
-/* Le petit cadre affiche la catégorie et l'année provenant du JSON. */
+/* Le petit cadre affiche la catégorie et l'année provenant du JSON. Dans le fond, le design du petit carde dans la crte. */
 .carte-meta {
     /* La largeur suit le texte au lieu d'occuper toute la carte. */
     width: fit-content;

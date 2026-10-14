@@ -1,8 +1,9 @@
 /* Une largeur commune aligne toutes les sections, avec une marge sur mobile. */
+/* La largeur maximale de  la page */
 .conteneur {
-    /* Choisit la plus petite largeur : 1200px ou 90% du parent. */
+   
     width: min(1200px, 90%);
-    /* Les marges automatiques à gauche et à droite centrent le contenu. */
+  
     margin-inline: auto;
 }
 
@@ -11,7 +12,7 @@
     padding-block: 90px;
 }
 
-/* La vidéo reste légère et s'adapte à la largeur de son conteneur. */
+/* SECTION POUR LA DEMO RÉEL. */
 .demo-reel {
     background: var(--fond);
 }
@@ -20,6 +21,7 @@
     color: var(--vert);
 }
 
+/*mettre la vidéo en plein écran et responsive*/
 .demo-reel__video {
     display: block;
     width: 100%;
@@ -47,6 +49,7 @@
     align-items: end;
     gap: 24px;
     margin-bottom: 40px;
+    
 }
 
 /* > sélectionne seulement les paragraphes directement dans l'en-tête. */
@@ -58,10 +61,11 @@
     background: var(--fond);
 }
 
+/*Sextion compétences */
 /* Grid répartit les compétences sur quatre colonnes de même largeur. */
 .grille-competences {
     display: grid;
-    /* repeat(4, 1fr) crée quatre colonnes qui partagent l'espace disponible. */
+    /*  crée quatre colonnes qui partagent l'espace disponible. */
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
 }
@@ -88,7 +92,8 @@
     margin-bottom: 6px;
 }
 
-/* Fond sombre et texte à gauche, comme dans la version originale. */
+/* SECTION À PROPOS DE MOI.
+/* Fond sombre et texte à gauche  */
 .apropos {
     background: var(--sombre);
     color: var(--blanc);
@@ -159,6 +164,8 @@
     font-weight: bold;
 }
 
+
+/* SECTION DE CONTACT.*/
 /* La section contact reprend le fond crème du site original. */
 .contact {
     background: var(--fond);
@@ -183,6 +190,7 @@
     /* Autorise une coupure dans l'adresse si elle dépasse la largeur disponible. */
     overflow-wrap: anywhere;
 }
+
 
 .pied-page {
     background: var(--vert);
