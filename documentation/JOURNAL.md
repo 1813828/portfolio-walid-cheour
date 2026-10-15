@@ -160,198 +160,247 @@ Oui, j’ai utilisé l’intelligence artificielle principalement pour m’aider
 
 # Utilisation de l'IA
 
-- **Date :** 2026-09-07
-- **Prompt :** "Je veux faire un design de portfolio pour mettre des projets de montage video, de graphisme design et de montage de sons voici à quoi s'attendre : 1. Quel type de poste ou de stage je vise en sortant du programme? Je recherche un poste permanent et à temps pleins dans le milieu vidéaste, gestion, création visuelle et identité visuelle. En résumé, un poste qui utilise mes compétences en montage sonore et vidéo, en gestion de projet ou en graphique désigne.
+# Historique des prompts et des modifications du portfolio
 
-- **Date :** 2026-09-16
-- **Prompt :** "peux-tu rendre tous mon menu nav responsive! 
-Utilisation de copilot.
-réponse : Alignement de la navigation avec l’image de Walid 
-Liens du menu vers les sections 
-Correction du débordement horizontal de la navigation.
+## Date : 2026-09-07
 
+### Prompt
 
-- **Date :** 2026-09-18
-- **Prompt :** "tu vois ma carte que j'ai fais avec l'image de walid_power peux-tu faire en sorte que la carte sois moins haute que ca puis la mettre une deuxième fois en bas. fais en sorte que ca sois  responsive. Réponse :
-la carte est maintenant plus large, avec une largeur maximale de 49rem, tout en restant responsive sur mobile.
+Je veux faire un design de portfolio pour mettre des projets de montage video, de graphisme design et de montage de sons voici à quoi s'attendre : 1. Quel type de poste ou de stage je vise en sortant du programme? Je recherche un poste permanent et à temps pleins dans le milieu vidéaste, gestion, création visuelle et identité visuelle. En résumé, un poste qui utilise mes compétences en montage sonore et vidéo, en gestion de projet ou en graphique désigne.
+
+---
+
+## Date : 2026-09-16
+
+### Prompt
+
+peux-tu rendre tous mon menu nav responsive!
+
+### Réponse
+
+- Alignement de la navigation avec l’image de Walid
+- Liens du menu vers les sections
+- Correction du débordement horizontal de la navigation.
+
+**Outil utilisé :** Copilot.
+
+---
+
+## Date : 2026-09-18
+
+### Prompt
+
+tu vois ma carte que j'ai fais avec l'image de walid_power peux-tu faire en sorte que la carte sois moins haute que ca puis la mettre une deuxième fois en bas. fais en sorte que ca sois responsive.
+
+### Réponse
+
+La carte est maintenant plus large, avec une largeur maximale de 49rem, tout en restant responsive sur mobile.
+
+### Prompt complémentaire
 
 peux-tu rendre la carte plus large aussi pour qu'on voit bien le contenu car là elle est trop petite.
 
+### Réponse
+
 Les deux cartes POWER sont empilées proprement et conservent la même taille. Vérifications effectuées : aucun erreur HTML/CSS et aucun débordement en affichage mobile.
 
-Utilisation de copilot.
+**Outil utilisé :** Copilot.
 
+---
 
+## Date : 2026-09-21
 
+### Prompt
 
-- **Date :** 2026-09-21
-- **Prompt :** "dans la section des compétences que j'ai créer sur html,j'ai créer une class catégorie qui contient tous les informations selon le type de groupe d'aptitudes. peux-tu faire en sorte que cette classe contient la couleur, ainsi que la disposition des informations que sur mon portfolio fais en sorte aussi qu'elle soit responsif.
+Dans la section des compétences que j’ai créée en HTML, j’ai créé une classe appelée categorie, qui contient toutes les informations relatives à chaque groupe d’aptitudes.
 
-réponse : La section « compétences » est maintenant stylée dans layout.css :
+Peux-tu faire en sorte que cette classe gère les couleurs ainsi que la disposition des informations, afin qu’elles correspondent au design de mon portfolio ? Assure-toi également que la mise en page soit responsive et s’adapte correctement aux différentes tailles d’écran.
 
-fond crème et typographie alignés avec la maquette ;
-grille de 4 cartes.
-cartes blanches et listes compactes ;
-responsive en 2 colonnes puis 1 colonne sur mobile.
-Vérification effectuée : aucune erreur CSS détectée. 
-Utilisation de copilot.
+### Réponse
 
+La section « compétences » est maintenant stylée dans layout.css :
 
-- **Date :** 2026-09-22
-- **Prompt :**
-j'ai terminé de faire la section à propos. Peux tu rendre cette section responsive et rajouter un block vert avec les lettrage en dessous de la photos ? 
+- Fond crème et typographie alignés avec la maquette.
+- Grille de 4 cartes.
+- Cartes blanches et listes compactes.
+- Responsive en 2 colonnes puis 1 colonne sur mobile.
 
-réponse :La section « À propos » est maintenant responsive.
+Vérification effectuée : aucune erreur CSS détectée.
 
-Modifications :
+**Outil utilisé :** Copilot.
 
-ajout du bloc vert WC sous la photo ;
-empilement des colonnes sur mobile ;
-texte et titre adaptés aux petits écrans ;
-informations affichées sur une seule colonne mobile ;
-espacement amélioré entre les éléments.
+---
 
-pour le footer peux-tu l'arranger un peu pour afin qu'il ressemble à ma maquette. fais en sorte de mettre les éléments espacés à l'extrémité: 
+## Date : 2026-09-22
 
-réponse :Le footer a été corrigé dans base.css :
+### Prompt
 
-bandeau vert pleine largeur ;
-WALID à gauche ;
-copyright à droite ;
-espacement naturel sans gap: 1500px ;
-affichage en colonne sur mobile.
-Aucune erreur CSS détectée.`
+J’ai terminé la section « À propos ». Peux-tu la rendre responsive et ajouter un bloc vert avec du lettrage sous la photo ?
 
-utilisation de copilot.
+### Réponse
 
-- **Date :** 2026-09-26
-- **Prompt :**
-À partir du menu de la bare nav que j'ai fais en haut. Peux-tu me montrer comment faire en sorte que lorsque je clique sur un des choix, ca m'ammene à la section que je veux en bas de la page.
+La section « À propos » est maintenant responsive.
 
-réponse: Oui. Il faut relier chaque lien du menu à un id placé sur la section correspondante.
-Dans index.html, remplace les liens de navigation :C’est fait.
+**Modifications :**
 
-Les liens du menu dirigent maintenant vers les sections correspondantes dans index.html:30-33, et les sections possèdent leurs identifiants dans index.html:63, index.html:153, index.html:205 et index.html:252.
+- Ajout du bloc vert WC sous la photo.
+- Empilement des colonnes sur mobile.
+- Texte et titre adaptés aux petits écrans.
+- Informations affichées sur une seule colonne mobile.
+- Espacement amélioré entre les éléments.
+
+### Prompt complémentaire
+
+pour le footer peux-tu l'arranger un peu pour afin qu'il ressemble à ma maquette. fais en sorte de mettre les éléments espacés à l'extrémité:
+
+### Réponse
+
+Le footer a été corrigé dans base.css :
+
+- Bandeau vert pleine largeur.
+- WALID à gauche.
+- Copyright à droite.
+- Espacement naturel sans gap: 1500px.
+- Affichage en colonne sur mobile.
+
+Aucune erreur CSS détectée.
+
+**Outil utilisé :** Copilot.
+
+---
+
+## Date : 2026-09-26
+
+### Prompt
+
+À partir de la barre de navigation que j’ai créée en haut de la page, peux-tu me montrer comment faire pour que, lorsque je clique sur un des choix du menu, je sois automatiquement redirigé vers la section correspondante plus bas sur la page ?
+
+### Réponse
+
+Oui. Il faut relier chaque lien du menu à un id placé sur la section correspondante.
+
+Dans index.html, remplace les liens de navigation : C’est fait. Les liens du menu dirigent maintenant vers les sections correspondantes dans index.html:30-33, et les sections possèdent leurs identifiants dans index.html:63, index.html:153, index.html:205 et index.html:252.
 
 Le défilement fluide a aussi été ajouté dans base.css:1-3. Aucune erreur détectée.
 
-utilisation de copilot.
+**Outil utilisé :** Copilot.
 
+---
 
-- **Date :** 2026-09-28
-- **Prompt :**
-J'ai créer une fiche sur chacun de mes projets qui sont basés sur ma base de données Json pour les réutiliser plus tard.Peux-tu m'aider à utiliser la fonction async function loadProjects() sur data.js? Je dois les chercher pour arriver à les afficher.
+## Date : 2026-09-28
 
-réponse: Les cartes sont maintenant créées automatiquement par main.js à partir de projects.json. C’est justement la méthode demandée pour ne plus répéter manuellement chaque projet dans le HTML.
+### Prompt
 
-utilisation de copilot.
+J’ai créé une fiche pour chacun de mes projets à partir d’une base de données JSON, afin de pouvoir réutiliser ces informations plus tard. Peux-tu m’aider à comprendre comment utiliser la fonction async function loadProjects() dans mon fichier data.js pour récupérer les données de mes projets et les afficher correctement sur mon portfolio ?
 
+### Réponse
 
+Les cartes sont maintenant créées automatiquement par main.js à partir de projects.json. C’est justement la méthode demandée pour ne plus répéter manuellement chaque projet dans le HTML.
 
-- **Date :** 2026-09-30
-- **Prompt :**peux-tu faire en sorte que le processur du projet power soit un modal et qu'il y a un bouton dans la carte du projet qui permet de l'ouvrir.
+**Outil utilisé :** Copilot.
 
-réponse : Le modal POWER est maintenant relié de bout en bout : les données viennent du JSON, le bouton n’apparaît que sur la carte qui possède steps, et le contenu est injecté dans le <dialog> à l’ouverture. Je vérifie maintenant les erreurs de syntaxe et les références HTML/JavaScript des fichiers touchés.
+---
 
-utilisation de copilot.
+## Date : 2026-09-30
 
+### Prompt
 
-- **Date :** 2026-10-05
-- **Prompt :** l'animation de mon scroll triger rendu aux séctions compétences, à propos et contact ne veut plus apparaître peux-tu faire en sorte qu'il n'y a pas ce blocage?
+peux-tu faire en sorte que le processur du projet power soit un modal et qu'il y a un bouton dans la carte du projet qui permet de l'ouvrir.
 
+### Réponse
 
-réponse : Le problème venait du moment d’initialisation: les animations ScrollTrigger des sections compétences, à propos et contact étaient montées avant que les projets aient fini de se charger, ce qui faussait les positions de déclenchement. J’ai déplacé cette initialisation après le rendu des projets et ajouté un refresh explicite de ScrollTrigger pour recalculer la mise en page. La correction est dans main.js:109 et la fonction regroupée commence ici: main.js:137.
+Le modal POWER est maintenant relié de bout en bout : les données viennent du JSON, le bouton n’apparaît que sur la carte qui possède steps, et le contenu est injecté dans le `<dialog>` à l’ouverture. Je vérifie maintenant les erreurs de syntaxe et les références HTML/JavaScript des fichiers touchés.
 
-utilisation de copilot.
+**Outil utilisé :** Copilot.
 
+---
 
+## Date : 2026-10-05
 
-- **Date :** 2026-10-06
-- **Prompt :** je veux parcourir le portfolio avec les touches de claviers comme celui de tab.Peux-tu faire en sorte que ca marche ?
+### Prompt
 
-réponse: J’ai ajouté les points qui manquaient pour que le parcours au clavier soit plus propre :
+L’animation déclenchée lors du défilement (scroll-trigger) ne fonctionne plus lorsque j’arrive aux sections « Compétences », « À propos » et « Contact ». Peux-tu m’aider à identifier la cause du problème et à corriger le code afin que les animations se déclenchent correctement, sans blocage, dans toutes les sections concernées ?
 
-les images de la galerie peuvent maintenant être focusées avec Tab
-la touche Entrée ou Espace les ouvre
-les éléments interactifs ont un focus visible plus lisible
-la fermeture de la lightbox reste accessible au clavier.
+### Réponse
 
-peux-tu  faire aussi en sorte qu'on peut voir mieux les images des étapes de conceptions en cliquant dessus ?
+Le problème venait du moment d’initialisation: les animations ScrollTrigger des sections compétences, à propos et contact étaient montées avant que les projets aient fini de se charger, ce qui faussait les positions de déclenchement. J’ai déplacé cette initialisation après le rendu des projets et ajouté un refresh explicite de ScrollTrigger pour recalculer la mise en page. La correction est dans main.js:109 et la fonction regroupée commence ici: main.js:137.
 
-réponse: Tu peux maintenant cliquer sur n’importe quelle image de la galerie du modal pour la voir en grand, avec :
+**Outil utilisé :** Copilot.
 
-un overlay sombre
-une image plus lisible
-fermeture via le bouton ×
-fermeture aussi en cliquant en dehors ou en appuyant sur Échap
+---
 
-utilisation de copilot.
+## Date : 2026-10-06
 
+### Prompt
 
-- **Date :** 2026-10-07
-- **Prompt :** Convertis les images en WebP, optimise la police pour accélérer le chargement et améliore la structure du dossier. Réduis aussi davantage le poids des images. À la fin, résume les changements en Markdown en indiquant le poids initial et final des images.
+Je souhaite pouvoir naviguer dans mon portfolio à l’aide du clavier, notamment avec la touche Tab. Peux-tu m’aider à rendre la navigation accessible au clavier, afin que je puisse parcourir les différentes sections et interagir avec les éléments de la page sans utiliser la souris ?
 
-réponse:
+### Réponse
+
+J’ai ajouté les points qui manquaient pour que le parcours au clavier soit plus propre :
+
+- Les images de la galerie peuvent maintenant être focusées avec Tab.
+- La touche Entrée ou Espace les ouvre.
+- Les éléments interactifs ont un focus visible plus lisible.
+- La fermeture de la lightbox reste accessible au clavier.
+
+### Prompt complémentaire
+
+Peux-tu également permettre d’agrandir les images des différentes étapes de conception lorsqu’on clique dessus, afin de mieux les visualiser et d’en examiner les détails ?
+
+### Réponse
+
+Tu peux maintenant cliquer sur n’importe quelle image de la galerie du modal pour la voir en grand, avec :
+
+- Un overlay sombre.
+- Une image plus lisible.
+- Fermeture via le bouton ×.
+- Fermeture aussi en cliquant en dehors ou en appuyant sur Échap.
+
+**Outil utilisé :** Copilot.
+
+---
+
+## Date : 2026-10-07
+
+### Prompt
+
+Peux-tu optimiser les ressources de mon portfolio en convertissant les images au format WebP et en réduisant davantage leur poids, tout en conservant une bonne qualité visuelle ? J’aimerais également optimiser le chargement des polices et améliorer la structure des dossiers afin de rendre le projet plus organisé et facile à maintenir.
+
+### Réponse
+
 Les 13 images ont été optimisées en WebP : **16,63 Mo au départ, 1,06 Mo à la fin**, soit une réduction d’environ **93,6 %**. La police a été convertie en WOFF2 et allégée de **105 Ko à 29 Ko**. Les ressources sont organisées dans les dossiers `images`, `icones` et `fonts`. Les WebP précédents sont conservés dans `sources/previous-webp`.
 
-utilisation de copilot.
+**Outil utilisé :** Copilot.
 
+---
 
+## Date : 2026-10-11
 
+### Prompt
 
+Peux-tu ajouter une animation simple et continue au bandeau de mes domaines de création ? J’aimerais que les mots défilent de gauche à droite, l’un après l’autre, puis reviennent au début une fois sortis de l’écran. L’animation doit se répéter en boucle de manière fluide, sans interruption.
 
-- **Date :** 2026-10-11
-- **Prompt :** peux-tu faire une animation très simple du bandeau de mes domaines de création. Fais en sorte que les mots bougent à la gauche un à la suite de l'autre puis revient vers droite une fois qu'elle sont sortis de l'écran? Fais une animation infinite en continue.
+### Prompt complémentaire
 
-Peux-tu aussi créer une petite séction pour la demo reel que je vais mettre les videos de formats 1920 x 1080  et 1080 x 1920 je ne veux pas quelque chose de complexe. Un section assez simple.
+Peux-tu ajouter une petite section simple à mon portfolio pour présenter ma démo reel ? Je voudrais pouvoir y intégrer des vidéos aux formats horizontal (1920 × 1080) et vertical (1080 × 1920). Je souhaite un design épuré et facile à comprendre, sans animation ni éléments trop complexes.
 
-réponse:
+### Réponse
+
 La section Demo Reel est ajoutée localement, sans publication sur GitHub.
 
 Elle se trouve juste avant la section Projets.
 
-Fonctionnement
-Sur ordinateur : vidéo 1920x1080.
-Sur mobile : vidéo 1080x1920.
-Les contrôles vidéo sont disponibles.
-preload="none" évite de télécharger les vidéos avant que le visiteur clique sur lecture.
-La vidéo s’adapte à la largeur de l’écran.
-La hauteur est limitée pour éviter qu’elle prenne toute la page.
+**Fonctionnement :**
 
-utilisation de copilot.
+- Sur ordinateur : vidéo 1920x1080.
+- Sur mobile : vidéo 1080x1920.
+- Les contrôles vidéo sont disponibles.
+- `preload="none"` évite de télécharger les vidéos avant que le visiteur clique sur lecture.
+- La vidéo s’adapte à la largeur de l’écran.
+- La hauteur est limitée pour éviter qu’elle prenne toute la page.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Outil utilisé :** Copilot.
 
 
 Qui va probablement regarder mon portfolio? Potentiellement, des futurs recruteurs, des clients et des employeurs.

@@ -84,12 +84,13 @@
 /* Le padding à gauche laisse de la place pour les puces de la liste. */
 .grille-competences ul {
     padding-left: 18px;
-    color: var(--gris);
+    color: var(--vert);
     font-size: 0.9rem;
 }
 
 .grille-competences li {
     margin-bottom: 6px;
+    color: var(--texte);
 }
 
 /* SECTION À PROPOS DE MOI.
