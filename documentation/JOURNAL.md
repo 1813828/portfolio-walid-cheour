@@ -178,11 +178,11 @@ peux-tu rendre tous mon menu nav responsive!
 
 ### Réponse
 
-- Alignement de la navigation avec l’image de Walid
-- Liens du menu vers les sections
-- Correction du débordement horizontal de la navigation.
+- *Alignement de la navigation avec l’image de Walid*
+- *Liens du menu vers les sections*
+- *Correction du débordement horizontal de la navigation.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 ---
 
@@ -194,7 +194,7 @@ tu vois ma carte que j'ai fais avec l'image de walid_power peux-tu faire en sort
 
 ### Réponse
 
-La carte est maintenant plus large, avec une largeur maximale de 49rem, tout en restant responsive sur mobile.
+*La carte est maintenant plus large, avec une largeur maximale de 49rem, tout en restant responsive sur mobile.*
 
 ### Prompt complémentaire
 
@@ -202,9 +202,9 @@ peux-tu rendre la carte plus large aussi pour qu'on voit bien le contenu car là
 
 ### Réponse
 
-Les deux cartes POWER sont empilées proprement et conservent la même taille. Vérifications effectuées : aucun erreur HTML/CSS et aucun débordement en affichage mobile.
+*Les deux cartes POWER sont empilées proprement et conservent la même taille. Vérifications effectuées : aucun erreur HTML/CSS et aucun débordement en affichage mobile.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 ---
 
@@ -218,16 +218,16 @@ Peux-tu faire en sorte que cette classe gère les couleurs ainsi que la disposit
 
 ### Réponse
 
-La section « compétences » est maintenant stylée dans layout.css :
+*La section « compétences » est maintenant stylée dans layout.css :*
 
-- Fond crème et typographie alignés avec la maquette.
-- Grille de 4 cartes.
-- Cartes blanches et listes compactes.
-- Responsive en 2 colonnes puis 1 colonne sur mobile.
+- *Fond crème et typographie alignés avec la maquette.*
+- *Grille de 4 cartes.*
+- *Cartes blanches et listes compactes.*
+- *Responsive en 2 colonnes puis 1 colonne sur mobile.*
 
-Vérification effectuée : aucune erreur CSS détectée.
+*Vérification effectuée : aucune erreur CSS détectée.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 ---
 
@@ -239,15 +239,15 @@ J’ai terminé la section « À propos ». Peux-tu la rendre responsive et ajou
 
 ### Réponse
 
-La section « À propos » est maintenant responsive.
+*La section « À propos » est maintenant responsive.*
 
-**Modifications :**
+***Modifications :***
 
-- Ajout du bloc vert WC sous la photo.
-- Empilement des colonnes sur mobile.
-- Texte et titre adaptés aux petits écrans.
-- Informations affichées sur une seule colonne mobile.
-- Espacement amélioré entre les éléments.
+- *Ajout du bloc vert WC sous la photo.*
+- *Empilement des colonnes sur mobile.*
+- *Texte et titre adaptés aux petits écrans.*
+- *Informations affichées sur une seule colonne mobile.*
+- *Espacement amélioré entre les éléments.*
 
 ### Prompt complémentaire
 
@@ -255,17 +255,17 @@ pour le footer peux-tu l'arranger un peu pour afin qu'il ressemble à ma maquett
 
 ### Réponse
 
-Le footer a été corrigé dans base.css :
+*Le footer a été corrigé dans base.css :*
 
-- Bandeau vert pleine largeur.
-- WALID à gauche.
-- Copyright à droite.
-- Espacement naturel sans gap: 1500px.
-- Affichage en colonne sur mobile.
+- *Bandeau vert pleine largeur.*
+- *WALID à gauche.*
+- *Copyright à droite.*
+- *Espacement naturel sans gap: 1500px.*
+- *Affichage en colonne sur mobile.*
 
-Aucune erreur CSS détectée.
+*Aucune erreur CSS détectée.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 ---
 
@@ -277,13 +277,13 @@ Aucune erreur CSS détectée.
 
 ### Réponse
 
-Oui. Il faut relier chaque lien du menu à un id placé sur la section correspondante.
+*Oui. Il faut relier chaque lien du menu à un id placé sur la section correspondante.*
 
-Dans index.html, remplace les liens de navigation : C’est fait. Les liens du menu dirigent maintenant vers les sections correspondantes dans index.html:30-33, et les sections possèdent leurs identifiants dans index.html:63, index.html:153, index.html:205 et index.html:252.
+*Dans index.html, remplace les liens de navigation : C’est fait. Les liens du menu dirigent maintenant vers les sections correspondantes dans index.html:30-33, et les sections possèdent leurs identifiants dans index.html:63, index.html:153, index.html:205 et index.html:252.*
 
-Le défilement fluide a aussi été ajouté dans base.css:1-3. Aucune erreur détectée.
+*Le défilement fluide a aussi été ajouté dans base.css:1-3. Aucune erreur détectée.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 ---
 
@@ -295,9 +295,9 @@ J’ai créé une fiche pour chacun de mes projets à partir d’une base de don
 
 ### Réponse
 
-Les cartes sont maintenant créées automatiquement par main.js à partir de projects.json. C’est justement la méthode demandée pour ne plus répéter manuellement chaque projet dans le HTML.
+*Les cartes sont maintenant créées automatiquement par main.js à partir de projects.json. C’est justement la méthode demandée pour ne plus répéter manuellement chaque projet dans le HTML.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 ---
 
@@ -309,9 +309,9 @@ peux-tu faire en sorte que le processur du projet power soit un modal et qu'il y
 
 ### Réponse
 
-Le modal POWER est maintenant relié de bout en bout : les données viennent du JSON, le bouton n’apparaît que sur la carte qui possède steps, et le contenu est injecté dans le `<dialog>` à l’ouverture. Je vérifie maintenant les erreurs de syntaxe et les références HTML/JavaScript des fichiers touchés.
+*Le modal POWER est maintenant relié de bout en bout : les données viennent du JSON, le bouton n’apparaît que sur la carte qui possède steps, et le contenu est injecté dans le `<dialog>` à l’ouverture. Je vérifie maintenant les erreurs de syntaxe et les références HTML/JavaScript des fichiers touchés.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 ---
 
@@ -323,9 +323,9 @@ L’animation déclenchée lors du défilement (scroll-trigger) ne fonctionne pl
 
 ### Réponse
 
-Le problème venait du moment d’initialisation: les animations ScrollTrigger des sections compétences, à propos et contact étaient montées avant que les projets aient fini de se charger, ce qui faussait les positions de déclenchement. J’ai déplacé cette initialisation après le rendu des projets et ajouté un refresh explicite de ScrollTrigger pour recalculer la mise en page. La correction est dans main.js:109 et la fonction regroupée commence ici: main.js:137.
+*Le problème venait du moment d’initialisation: les animations ScrollTrigger des sections compétences, à propos et contact étaient montées avant que les projets aient fini de se charger, ce qui faussait les positions de déclenchement. J’ai déplacé cette initialisation après le rendu des projets et ajouté un refresh explicite de ScrollTrigger pour recalculer la mise en page. La correction est dans main.js:109 et la fonction regroupée commence ici: main.js:137.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 ---
 
@@ -337,12 +337,12 @@ Je souhaite pouvoir naviguer dans mon portfolio à l’aide du clavier, notammen
 
 ### Réponse
 
-J’ai ajouté les points qui manquaient pour que le parcours au clavier soit plus propre :
+*J’ai ajouté les points qui manquaient pour que le parcours au clavier soit plus propre :*
 
-- Les images de la galerie peuvent maintenant être focusées avec Tab.
-- La touche Entrée ou Espace les ouvre.
-- Les éléments interactifs ont un focus visible plus lisible.
-- La fermeture de la lightbox reste accessible au clavier.
+- *Les images de la galerie peuvent maintenant être focusées avec Tab.*
+- *La touche Entrée ou Espace les ouvre.*
+- *Les éléments interactifs ont un focus visible plus lisible.*
+- *La fermeture de la lightbox reste accessible au clavier.*
 
 ### Prompt complémentaire
 
@@ -350,14 +350,14 @@ Peux-tu également permettre d’agrandir les images des différentes étapes de
 
 ### Réponse
 
-Tu peux maintenant cliquer sur n’importe quelle image de la galerie du modal pour la voir en grand, avec :
+*Tu peux maintenant cliquer sur n’importe quelle image de la galerie du modal pour la voir en grand, avec :*
 
-- Un overlay sombre.
-- Une image plus lisible.
-- Fermeture via le bouton ×.
-- Fermeture aussi en cliquant en dehors ou en appuyant sur Échap.
+- *Un overlay sombre.*
+- *Une image plus lisible.*
+- *Fermeture via le bouton ×.*
+- *Fermeture aussi en cliquant en dehors ou en appuyant sur Échap.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 ---
 
@@ -369,9 +369,9 @@ Peux-tu optimiser les ressources de mon portfolio en convertissant les images au
 
 ### Réponse
 
-Les 13 images ont été optimisées en WebP : **16,63 Mo au départ, 1,06 Mo à la fin**, soit une réduction d’environ **93,6 %**. La police a été convertie en WOFF2 et allégée de **105 Ko à 29 Ko**. Les ressources sont organisées dans les dossiers `images`, `icones` et `fonts`. Les WebP précédents sont conservés dans `sources/previous-webp`.
+*Les 13 images ont été optimisées en WebP : **16,63 Mo au départ, 1,06 Mo à la fin**, soit une réduction d’environ **93,6 %**. La police a été convertie en WOFF2 et allégée de **105 Ko à 29 Ko**. Les ressources sont organisées dans les dossiers `images`, `icones` et `fonts`. Les WebP précédents sont conservés dans `sources/previous-webp`.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 ---
 
@@ -387,20 +387,20 @@ Peux-tu ajouter une petite section simple à mon portfolio pour présenter ma d�
 
 ### Réponse
 
-La section Demo Reel est ajoutée localement, sans publication sur GitHub.
+*La section Demo Reel est ajoutée localement, sans publication sur GitHub.*
 
-Elle se trouve juste avant la section Projets.
+*Elle se trouve juste avant la section Projets.*
 
-**Fonctionnement :**
+***Fonctionnement :***
 
-- Sur ordinateur : vidéo 1920x1080.
-- Sur mobile : vidéo 1080x1920.
-- Les contrôles vidéo sont disponibles.
-- `preload="none"` évite de télécharger les vidéos avant que le visiteur clique sur lecture.
-- La vidéo s’adapte à la largeur de l’écran.
-- La hauteur est limitée pour éviter qu’elle prenne toute la page.
+- *Sur ordinateur : vidéo 1920x1080.*
+- *Sur mobile : vidéo 1080x1920.*
+- *Les contrôles vidéo sont disponibles.*
+- *`preload="none"` évite de télécharger les vidéos avant que le visiteur clique sur lecture.*
+- *La vidéo s’adapte à la largeur de l’écran.*
+- *La hauteur est limitée pour éviter qu’elle prenne toute la page.*
 
-**Outil utilisé :** Copilot.
+***Outil utilisé : Copilot.***
 
 
 Qui va probablement regarder mon portfolio? Potentiellement, des futurs recruteurs, des clients et des employeurs.
