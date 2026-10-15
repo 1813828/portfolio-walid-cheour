@@ -84,7 +84,7 @@
     border-top: 2px solid var(--vert);
     border-bottom: 2px solid var(--vert);
     background: var(--texte);
-    color: var(--vert);
+    color: var(--vert-clair);
 }
 
 .bandeau__fenetre {

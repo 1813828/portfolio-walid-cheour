@@ -24,10 +24,10 @@
     height: 44px;
     /* La marge automatique à gauche pousse le bouton vers la droite. */
     margin: 0 0 12px auto;
-    border: 1px solid var(--vert);
+    border: 1px solid var(--vert-clair);
     border-radius: 6px;
     background: var(--texte);
-    color: var(--vert);
+    color: var(--vert-clair);
     font-size: 1.8rem;
     line-height: 1;
 }
@@ -39,7 +39,7 @@
 }
 
 .modale .surtitre {
-    color: var(--vert);
+    color: var(--vert-clair);
 }
 
 .modale h2, .modale p {

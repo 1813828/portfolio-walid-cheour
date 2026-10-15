@@ -1,7 +1,7 @@
 /* pour mettre la navigation en place avec la couleur noire et le texte vert. */
 .navigation {
     background: var(--texte);
-    color: var(--vert);
+    color: var(--vert-clair);
 }
 
 /* Le conteneur centre le contenu ; Flex sépare le logo et les liens. */

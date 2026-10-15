@@ -4,7 +4,12 @@
     /* On réutilise une couleur avec var(--fond), par exemple. */
     --fond: #f2f0e9;
     --texte: #09090b;
-    --vert: #07966d;
+    /* Vert foncé lisible sur les fonds clairs selon le contraste AA. */
+    --vert: #006b4f;
+    /* Vert clair réservé aux éléments placés sur un fond sombre. */
+    --vert-clair: #55d9b0;
+    /* Contour visible sur les fonds verts et noirs. */
+    --focus-sombre: #ffffff;
     --mauve: #856084;
     --gris: #60605c;
     /* Fond et texte des sections sombres : à propos, cartes et modale. */

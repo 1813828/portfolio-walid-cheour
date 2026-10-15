@@ -44,3 +44,27 @@ function remplirModale(projet) {
         galerie.append(lien);
     });
 }
+
+// Repli pour les navigateurs qui ne prennent pas encore en charge commandfor.
+document.addEventListener('click', (evenement) => {
+    const cible = evenement.target instanceof Element
+        ? evenement.target.closest('button[command][commandfor]')
+        : null;
+
+    if (!cible) return;
+
+    const modale = document.getElementById(cible.getAttribute('commandfor'));
+    if (!(modale instanceof HTMLDialogElement)) return;
+
+    if (cible.getAttribute('command') === 'show-modal') {
+        if (!modale.open) {
+            evenement.preventDefault();
+            modale.showModal();
+            const boutonFermer = document.getElementById('fermer-modale');
+            if (boutonFermer) boutonFermer.focus();
+        }
+    } else if (cible.getAttribute('command') === 'close' && modale.open) {
+        evenement.preventDefault();
+        modale.close();
+    }
+});

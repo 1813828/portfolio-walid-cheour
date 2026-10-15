@@ -52,11 +52,11 @@
     /* La largeur suit le texte au lieu d'occuper toute la carte. */
     width: fit-content;
     margin-bottom: 12px;
-    color: var(--vert);
+    color: var(--vert-clair);
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
-    border: 1px solid var(--vert);
+    border: 1px solid var(--vert-clair);
     padding: 5px 8px;
 }
 
@@ -77,9 +77,9 @@
     margin-top: 20px;
     padding: 0 0 6px;
     border: 0;
-    border-bottom: 1px solid var(--vert);
+    border-bottom: 1px solid var(--vert-clair);
     background: transparent;
-    color: var(--vert);
+    color: var(--vert-clair);
     font-size: 0.9rem;
     font-weight: bold;
     text-decoration: none;
@@ -92,7 +92,7 @@
 
 /* Le bouton du processus a un contour complet pour le distinguer du lien. */
 .carte-bouton {
-    border: 1px solid var(--vert);
+    border: 1px solid var(--vert-clair);
     padding: 8px 12px;
 }
 

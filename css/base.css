@@ -79,6 +79,15 @@ button {
     outline-offset: 5px;
 }
 
+/* Le contour blanc reste visible sur les fonds sombres et verts. */
+.navigation :focus-visible,
+.bandeau :focus-visible,
+.projets :focus-visible,
+.apropos :focus-visible,
+.modale :focus-visible {
+    outline-color: var(--focus-sombre);
+}
+
 /* Petit texte en majuscules placé au-dessus des titres de section. */
 .surtitre {
     margin-bottom: 18px;
@@ -97,7 +106,7 @@ button {
     padding: 14px 22px;
     border: 1px solid var(--vert);
     background: var(--vert);
-    color: var(--texte);
+    color: var(--blanc);
     text-decoration: none;
     /* Rend le changement de couleur progressif au survol. */
     transition: background 0.2s;

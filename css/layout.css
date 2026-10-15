@@ -128,14 +128,14 @@
     bottom: 0;
     padding: 22px 28px;
     background: var(--vert);
-    color: var(--texte);
+    color: var(--blanc);
     font-size: 2rem;
     font-weight: bold;
 }
 
 .apropos h2 {
     margin-bottom: 24px;
-    color: var(--vert);
+    color: var(--vert-clair);
 }
 
 /* + vise un paragraphe placé juste après un autre paragraphe. */
@@ -155,7 +155,7 @@
 
 /* dt est le libellé, par exemple « Disponibilité ». */
 .infos dt {
-    color: var(--vert);
+    color: var(--vert-clair);
     font-size: 0.8rem;
 }
 
