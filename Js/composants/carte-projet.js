@@ -1,3 +1,33 @@
+// Affiche les logiciels indiqués dans projects.json sous forme de badges.
+function afficherLogiciels(logiciels, conteneur) {
+    if (!logiciels || logiciels.length === 0) {
+        conteneur.closest('.carte-logiciels').remove();
+        return;
+    }
+
+    logiciels.forEach((logiciel) => {
+        const badge = document.createElement('span');
+        badge.className = 'carte-logiciel';
+        badge.textContent = logiciel;
+        conteneur.append(badge);
+    });
+}
+
+// Affiche les techniques indiquées dans projects.json sous forme de badges.
+function afficherTechniques(techniques, conteneur) {
+    if (!techniques || techniques.length === 0) {
+        conteneur.closest('.carte-techniques').remove();
+        return;
+    }
+
+    techniques.forEach((technique) => {
+        const badge = document.createElement('span');
+        badge.className = 'carte-logiciel';
+        badge.textContent = technique;
+        conteneur.append(badge);
+    });
+}
+
 // Copie le modèle HTML, puis remplit les informations du projet.
 function createProjectCard(project) {
     const template = document.getElementById('modele-carte-projet');
@@ -12,25 +42,27 @@ function createProjectCard(project) {
     card.querySelector('.carte-titre').textContent = project.title;
     card.querySelector('.carte-categorie').textContent = project.category;
     card.querySelector('.carte-annee').textContent = project.year;
+    afficherLogiciels(project.logiciels, card.querySelector('.carte-logiciels-liste'));
+    afficherTechniques(project.techniques, card.querySelector('.carte-techniques-liste'));
     card.querySelector('.carte-description').textContent = project.description;
 
-    // Chaque carte affiche seulement les actions disponibles dans le JSON.
-    const link = card.querySelector('.carte-lien');
-    if (project.link) {
-        // href indique la page externe à ouvrir quand on clique sur le lien.
-        link.href = project.link;
-    } else {
-        // Retire le lien du modèle si ce projet n'a pas d'adresse externe.
-        link.remove();
+    // Ouvre la vidéo ou le processus lorsque la carte est cliquée.
+    const carte = card.querySelector('.carte-projet');
+    if (project.link || project.processus) {
+        carte.classList.add('carte-projet-cliquable');
+        carte.addEventListener('click', (evenement) => {
+            if (evenement.target.closest('a, button')) return;
+            if (project.processus) {
+                document.getElementById('modale-processus').showModal();
+            } else {
+                window.open(project.link, '_blank', 'noopener,noreferrer');
+            }
+        });
     }
 
-    const button = card.querySelector('.carte-bouton');
     if (project.processus) {
         // POWER possède le processus : on prépare son contenu dès la création de sa carte.
-        // Le bouton l'ouvrira ensuite avec ses attributs HTML commandfor et command.
         remplirModale(project);
-    } else {
-        button.remove();
     }
     // Retourne la copie remplie ; main.js l'ajoutera au bon endroit avec append().
     return card;

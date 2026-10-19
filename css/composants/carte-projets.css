@@ -34,6 +34,10 @@
     box-shadow: 0 0 16px var(--mauve);
 }
 
+.carte-projet-cliquable {
+    cursor: pointer;
+}
+
 /* Toutes les vignettes ont le même format, même si les images sources diffèrent. */
 .carte-image {
     width: 100%;
@@ -71,29 +75,48 @@
     font-size: 0.9rem;
 }
 
-/* Styles communs au lien externe et au bouton qui ouvre le processus. */
-.carte-lien, .carte-bouton {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 0 0 6px;
-    border: 0;
-    border-bottom: 1px solid var(--vert-clair);
-    background: transparent;
-    color: var(--vert-clair);
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.carte-lien:hover, .carte-bouton:hover {
+.carte-logiciels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 14px;
     color: var(--blanc);
-    border-color: var(--blanc);
+    font-size: 0.8rem;
 }
 
-/* Le bouton du processus a un contour complet pour le distinguer du lien. */
-.carte-bouton {
-    border: 1px solid var(--vert-clair);
-    padding: 8px 12px;
+.carte-techniques {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 14px;
+    color: var(--blanc);
+    font-size: 0.8rem;
+}
+
+.carte-logiciels-liste {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.carte-techniques-liste {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+/* Les logiciels sont affichés sous forme de badges faciles à repérer. */
+.carte-logiciel {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 2px 6px;
+    border: 1px solid var(--mauve);
+    border-radius: 4px;
+    color: var(--blanc);
+    background: rgb(184 134 255 / 18%);
+    font-weight: 700;
 }
 
 /* Une fois les projets chargés, le message vide ne prend plus de place. */

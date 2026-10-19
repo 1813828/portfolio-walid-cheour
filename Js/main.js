@@ -23,14 +23,6 @@ window.addEventListener('resize', choisirVideoDemoReel);
 
 
 
-
-
-
-
-
-
-
-
 async function displayProjects() {
     // On retrouve les zones du HTML grâce à leurs attributs id.
     const message = document.getElementById('projets-message');

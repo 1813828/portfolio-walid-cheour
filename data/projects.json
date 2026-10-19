@@ -3,6 +3,7 @@
     "id": "projet graphique walid",
     "title": "POWER",
     "description": "Composition numérique avancée - Photoshop, effets volumétriques et atmosphère post-apocalyptique.  Utilisation de la colorisation, du découpage et des options de fusion.",
+    "logiciels": ["Photoshop"],
     "category": "Graphisme",
     "year": "2025",
     "image": "assets/images/walid_power.webp",
@@ -45,10 +46,11 @@
   {
     "id": "MBH_Stars",
     "title": "Stars",
-    "description": "Filmé par moi-même — utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. Projet  de video clip pour l’artsite M.B.H. Un rappeur de montréal. Projet Perosneelle.",
+    "description": "Filmé par moi-même — utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. Projet  de video clip pour l’artiste M.B.H. Un rappeur de montréal. Projet personnel.",
+    "techniques": ["Suivi de mouvement", "Stabilisation"],
     "category": "Production vidéo",
     "year": "2025",
-    "image": "assets/images/star.webp",
+    "image": "assets/images/star2.webp",
     
     "link": "https://www.youtube.com/watch?v=c0bYvQd4vpM"
   },
@@ -57,7 +59,8 @@
   {
     "id": "MBH_Cuban",
     "title": "Cuban",
-    "description": "Filmé par moi-même — utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. vidéo clip fait pour le rapeur mbh. un artiste de montréal. projet personnelle.",
+    "description": "Filmé par moi-même — utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. Video clip fait pour le rapeur M.B.H. Un artiste de montréal. Projet personnel.",
+    "techniques": ["Suivi de mouvement", "Stabilisation"],
     "category": "Production vidéo",
     "year": "2025",
     "image": "assets/images/cuban.webp",
@@ -67,7 +70,8 @@
 {
     "id": "kronix_Addiction",
     "title": "Addiction",
-    "description": "Montage video/sonore pour l'artiste KRØNIX. Visualiser de la musique addiction.",
+    "description": "Montage video/sonore pour l'artiste KRØNIX. Visualiser de la musique addiction sous le rythme de drum and bass. Projet personnel. Utilisation des logiciels DaVinci Resolve et Capcut pour le montage et l'étalonnage des couleurs.",
+    "logiciels": ["DaVinci Resolve", "Capcut"],
     "category": "montage vidéo",
     "year": "2025",
     "image": "assets/images/addiction.webp",
@@ -78,7 +82,8 @@
   {
     "id": "kronix_Forget all",
     "title": "Forget all",
-    "description": "Montage video/sonore pour l'artiste KRØNIX. Visualiser de la musique forget all.",
+    "description": "Montage video/sonore pour l'artiste KRØNIX. Visualiser de la musique forget all sous l'ambiance et thème animé de la chanson.Rythme avec des transitions rapides et des effets visuels immersifs accompagnés de sous-titres. Projet personnel. Utilisation des logiciels DaVinci Resolve et Capcut pour le montage et l'étalonnage des couleurs.",
+    "logiciels": ["DaVinci Resolve", "Capcut"],
     "category": "montage vidéo",
     "year": "2025",
     "image": "assets/images/memories.webp",
@@ -89,7 +94,8 @@
   {
     "id": "kronix_No new friends",
     "title": "No new friends",
-    "description": "Visualiser réalisé pour un artiste de musique électronique — synchronisation des visuels sur les drops, transitions rythmées et ambiance visuelle immersive propre à l'univers G-House. projet  personelle.",
+    "description": "Visualiser réalisé pour un artiste de musique électronique — synchronisation des visuels sur les drops, transitions rythmées et ambiance visuelle immersive propre à l'univers G-House. Utilisation du cutting pour coordonner les mouvements de la tête de l'individu ainsi que sa position dans l'espace. Projet personnel. Utilisation des logiciels DaVinci Resolve et Capcut pour le montage et l'étalonnage des couleurs.",
+    "logiciels": ["DaVinci Resolve", "Capcut"],
     "category": "montage vidéo",
     "year": "2025",
     "image": "assets/images/nonewfriends.webp",
@@ -99,7 +105,8 @@
     {
     "id": "kronix_Sleppover",
     "title": "Sleppover",
-    "description": "Montage video/sonore pour deux artistes en collaboration sur TikTok.",
+    "description": "Montage video/sonore pour deux artistes en collaboration sur les réseaux sociaux. Utilisation des logiciels DaVinci Resolve et Capcut pour le montage et l'étalonnage des couleurs. Projet personnel. cadence rythmique et transitions rapides pour un rendu d'ambiance.",
+    "logiciels": ["DaVinci Resolve", "Capcut"],
     "category": "montage vidéo",
     "year": "2025",
     "image": "assets/images/collab.webp",
@@ -118,6 +125,4 @@
 
 
 ]
-
-
 

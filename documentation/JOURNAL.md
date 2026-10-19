@@ -413,4 +413,23 @@ Quel style visuel (couleurs, typographie, ambiance générale) représenterait l
 
 
 
- 
+ ## Date : 2026-10-18
+
+ ### Prompt
+
+Pour les projets, dans les descriptions, je mentionne les types de logiciels que j'utilise. Est-ce que tu peux mieux les mettre en évidence ?
+Peux-tu faire en sorte que lorsqu'on clique sur la carte du projet des vidéos, ça affiche la vidéo au click? 
+
+### Réponse
+*la mise en évidence est ajoutée dans les cartes, en restant sûre pour le contenu JSON : les descriptions ne sont pas interprétées comme du HTML. Je vérifie maintenant la syntaxe et les erreurs de format.*
+
+*C’est fait simplement.*
+
+*Maintenant :*
+
+*- Les cartes **Stars**, **Cuban** et les autres projets avec un lien sont cliquables.*
+*- Quand tu cliques sur une partie vide de la carte, la vidéo s’ouvre dans un nouvel onglet.*
+*- Le curseur change pour montrer que la carte est cliquable.*
+
+
+***Outil utilisé : Copilot.***
