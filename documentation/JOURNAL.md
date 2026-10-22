@@ -415,9 +415,9 @@ Quel style visuel (couleurs, typographie, ambiance générale) représenterait l
 
  ## Date : 2026-10-18
 
- ### Prompt
+  ### Prompt
 
-Pour les projets, dans les descriptions, je mentionne les types de logiciels que j'utilise. Est-ce que tu peux mieux les mettre en évidence ?
+ Pour les projets, dans les descriptions, je mentionne les types de logiciels que j'utilise. Est-ce que tu peux mieux les mettre en évidence ?
 Peux-tu faire en sorte que lorsqu'on clique sur la carte du projet des vidéos, ça affiche la vidéo au click? 
 
 ### Réponse
@@ -430,6 +430,44 @@ Peux-tu faire en sorte que lorsqu'on clique sur la carte du projet des vidéos, 
 *- Les cartes **Stars**, **Cuban** et les autres projets avec un lien sont cliquables.*
 *- Quand tu cliques sur une partie vide de la carte, la vidéo s’ouvre dans un nouvel onglet.*
 *- Le curseur change pour montrer que la carte est cliquable.*
+
+
+***Outil utilisé : Copilot.***
+
+
+## Date : 2026-10-22
+
+ ### Prompt
+
+Peux-tu faire le menu hamburger quand le projet passe en mobile.
+
+ ### Prompt
+
+Peux-tu améliorer la description des projets.
+
+### Réponse
+*la mise en évidence est ajoutée dans les cartes, en restant sûre pour le contenu JSON : les descriptions ne sont pas interprétées comme du HTML. Je vérifie maintenant la syntaxe et les erreurs de format.*
+
+
+*C’est fait simplement.*
+
+*Maintenant :*
+*Le menu hamburger mobile est maintenant fonctionnel.*
+
+*Modifications effectuées :*
+
+*Ajout d’un bouton hamburger accessible dans index.html.*
+*Affichage du bouton uniquement sous 600px.*
+*Navigation masquée par défaut sur mobile.*
+*Ouverture/fermeture du menu au clic.*
+*Fermeture automatique après avoir sélectionné un lien.*
+*Ajout de aria-expanded et d’un texte accessible pour les lecteurs d’écran.*
+*JavaScript ajouté dans main.js, comme demandé.*
+*Styles ajoutés dans navigation.css.*
+*Classe d’accessibilité ajoutée dans base.css.*
+*La vérification git diff --check passe sans erreur.*
+
+*La structure et les textes sont en place. Je vérifie maintenant que le JSON reste valide et que les changements n’introduisent pas d’erreur de formatage.*
 
 
 ***Outil utilisé : Copilot.***
