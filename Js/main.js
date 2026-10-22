@@ -1,4 +1,4 @@
-// Le premier projet est mis en avant. Les suivants partagent la même grille.
+// Menu hamburger : ouvre et ferme la navigation sur mobile.
 function initialiserMenuMobile() {
     const bouton = document.querySelector('.menu-bouton');
     const menu = document.getElementById('menu-principal');
@@ -22,6 +22,7 @@ function initialiserMenuMobile() {
 
 initialiserMenuMobile();
 
+// Sélectionne la vidéo du demo reel adaptée à l'orientation de l'écran.
 function choisirVideoDemoReel() {
     const video = document.getElementById('demo-reel-video');
     const source = video ? video.querySelector('source') : null;
