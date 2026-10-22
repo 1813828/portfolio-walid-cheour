@@ -44,7 +44,12 @@ function createProjectCard(project) {
     card.querySelector('.carte-annee').textContent = project.year;
     afficherLogiciels(project.logiciels, card.querySelector('.carte-logiciels-liste'));
     afficherTechniques(project.techniques, card.querySelector('.carte-techniques-liste'));
+    card.querySelector('.carte-role').textContent = project.role;
     card.querySelector('.carte-description').textContent = project.description;
+    card.querySelector('.carte-contexte').textContent = project.contexte;
+    card.querySelector('.carte-action').textContent = project.processus
+        ? 'Cliquez sur la carte pour voir le projet et le processus de création.'
+        : 'Cliquez sur la carte pour voir le projet.';
 
     // Ouvre la vidéo ou le processus lorsque la carte est cliquée.
     const carte = card.querySelector('.carte-projet');

@@ -1,4 +1,27 @@
 // Le premier projet est mis en avant. Les suivants partagent la même grille.
+function initialiserMenuMobile() {
+    const bouton = document.querySelector('.menu-bouton');
+    const menu = document.getElementById('menu-principal');
+
+    if (!bouton || !menu) return;
+
+    bouton.addEventListener('click', () => {
+        const menuOuvert = menu.classList.toggle('menu-ouvert');
+        bouton.setAttribute('aria-expanded', String(menuOuvert));
+        bouton.querySelector('.visuellement-cache').textContent = menuOuvert ? 'Fermer le menu' : 'Ouvrir le menu';
+    });
+
+    menu.querySelectorAll('a').forEach((lien) => {
+        lien.addEventListener('click', () => {
+            menu.classList.remove('menu-ouvert');
+            bouton.setAttribute('aria-expanded', 'false');
+            bouton.querySelector('.visuellement-cache').textContent = 'Ouvrir le menu';
+        });
+    });
+}
+
+initialiserMenuMobile();
+
 function choisirVideoDemoReel() {
     const video = document.getElementById('demo-reel-video');
     const source = video ? video.querySelector('source') : null;

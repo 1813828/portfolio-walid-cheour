@@ -75,6 +75,38 @@
     font-size: 0.9rem;
 }
 
+.carte-details {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+}
+
+.carte-detail {
+    padding-left: 12px;
+    border-left: 2px solid var(--mauve);
+}
+
+.carte-detail dt {
+    margin-bottom: 2px;
+    color: var(--vert-clair);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.carte-detail dd {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.carte-action {
+    margin-top: 18px;
+    color: var(--vert-clair);
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
 .carte-logiciels {
     display: flex;
     flex-wrap: wrap;

@@ -25,6 +25,23 @@
     height: 28px;
 }
 
+.menu-bouton {
+    display: none;
+    width: 44px;
+    min-height: 44px;
+    padding: 8px;
+    border: 1px solid var(--vert-clair);
+    background: transparent;
+    color: var(--vert-clair);
+}
+
+.menu-bouton span:not(.visuellement-cache) {
+    display: block;
+    height: 2px;
+    margin: 5px 0;
+    background: currentColor;
+}
+
 .navigation nav {
     display: flex;
     /* Les liens peuvent passer à la ligne si l'espace manque. */
@@ -50,14 +67,38 @@
 /* Un seul menu pour tous les écrans : aucun lien à dupliquer. */
 @media (max-width: 600px) {
     .navigation .conteneur {
-        flex-direction: column;
-        align-items: start;
+        position: relative;
+        flex-wrap: wrap;
         gap: 14px;
     }
 
+    .menu-bouton {
+        display: block;
+    }
+
     .navigation nav {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding-top: 8px;
+        border-top: 1px solid var(--vert-clair);
+    }
+
+    .navigation nav.menu-ouvert {
+        display: flex;
+    }
+
+    .navigation nav a {
+        padding-block: 10px;
+    }
+
+    .navigation nav a:hover {
+        background: var(--vert-clair);
+        color: var(--texte);
+    }
+
+    .navigation .conteneur > nav {
         width: 100%;
-        justify-content: space-between;
-        gap: 6px 12px;
     }
 }

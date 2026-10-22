@@ -24,7 +24,13 @@
             <a class="logo" href="#haut" aria-label="Walid Cheour, accueil">
                 <img src="assets/icones/logo.webp" alt="Logo de Walid Cheour">
             </a>
-            <nav aria-label="Navigation principale">
+            <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="visuellement-cache">Ouvrir le menu</span>
+            </button>
+            <nav id="menu-principal" aria-label="Navigation principale">
                 <a href="#projets">Projets</a>
                 <a href="#demo-reel">Demo Reel</a>
                 <a href="#competences">Compétences</a>
@@ -251,7 +257,21 @@
                     <strong>Techniques utilisées :</strong>
                     <span class="carte-techniques-liste"></span>
                 </p>
-                <p class="carte-description"></p>
+                <dl class="carte-details">
+                    <div class="carte-detail">
+                        <dt>Mon rôle</dt>
+                        <dd class="carte-role"></dd>
+                    </div>
+                    <div class="carte-detail">
+                        <dt>Le projet</dt>
+                        <dd class="carte-description"></dd>
+                    </div>
+                    <div class="carte-detail">
+                        <dt>Contexte</dt>
+                        <dd class="carte-contexte"></dd>
+                    </div>
+                </dl>
+                <p class="carte-action" aria-hidden="true"></p>
             </div>
         </article>
     </template>

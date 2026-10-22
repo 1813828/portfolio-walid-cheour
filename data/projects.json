@@ -2,7 +2,9 @@
   {
     "id": "projet graphique walid",
     "title": "POWER",
-    "description": "Composition numérique avancée - Photoshop, effets volumétriques et atmosphère post-apocalyptique.  Utilisation de la colorisation, du découpage et des options de fusion.",
+    "role": "J’ai assuré la direction artistique du projet. J’ai également réalisé la retouche et le compositing numérique de l’image.",
+    "description": "POWER est une affiche numérique centrée sur un portrait plongé dans un univers post-apocalyptique. Le personnage occupe le premier plan, tandis que les contrastes lumineux, les teintes sombres et les effets de profondeur créent une atmosphère dramatique et immersive.",
+    "contexte": "Projet personnel réalisé avec Photoshop dans le cadre de l’exploration de la création graphique et des ambiances post-apocalyptiques.",
     "logiciels": ["Photoshop"],
     "category": "Graphisme",
     "year": "2025",
@@ -25,16 +27,8 @@
       ],
       "gallery": [
         {
-          "image": "assets/images/beta.webp",
-          "alt": "Photo utilisée pour la composition"
-        },
-        {
-          "image": "assets/icones/options.webp",
-          "alt": "Réglages utilisés pour les effets"
-        },
-        {
-          "image": "assets/icones/lueurexterne.webp",
-          "alt": "Réglage de lumière externe"
+          "image": "assets/images/creation.webp",
+          "alt": "Création finale du projet POWER"
         }
       ]
     }
@@ -46,7 +40,9 @@
   {
     "id": "MBH_Stars",
     "title": "Stars",
-    "description": "Filmé par moi-même — utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. Projet  de video clip pour l’artiste M.B.H. Un rappeur de montréal. Projet personnel.",
+    "role": "J’ai filmé le projet et pris en charge la captation vidéo. J’ai ensuite utilisé le suivi de mouvement et la stabilisation pour améliorer la fluidité des images.",
+    "description": "Stars est un vidéoclip de musique trap construit autour de la performance de l’artiste. Les plans mettent en valeur sa présence et son énergie, avec une mise en scène dynamique et un rendu cinématique qui accompagne le rythme de la chanson.",
+    "contexte": "Projet personnel réalisé pour M.B.H., un artiste rap montréalais, afin de mettre en images son univers musical.",
     "techniques": ["Suivi de mouvement", "Stabilisation"],
     "category": "Production vidéo",
     "year": "2025",
@@ -59,7 +55,9 @@
   {
     "id": "MBH_Cuban",
     "title": "Cuban",
-    "description": "Filmé par moi-même — utilisation du tracking de caméra et de la stabilisation pour un rendu fluide et cinématique. Video clip fait pour le rapeur M.B.H. Un artiste de montréal. Projet personnel.",
+    "role": "J’ai réalisé la captation vidéo du projet. J’ai aussi travaillé le suivi de mouvement et la stabilisation afin d’obtenir un rendu plus fluide et cinématique.",
+    "description": "Cuban est un vidéoclip de musique trap qui présente l’artiste dans une ambiance urbaine et énergique. Le projet alterne des plans de performance et des mouvements de caméra fluides afin de créer une vidéo rythmée et cohérente avec l’identité du morceau.",
+    "contexte": "Projet personnel réalisé pour M.B.H., un artiste montréalais, dans le but de créer une vidéo correspondant à son identité musicale.",
     "techniques": ["Suivi de mouvement", "Stabilisation"],
     "category": "Production vidéo",
     "year": "2025",
@@ -70,7 +68,9 @@
 {
     "id": "kronix_Addiction",
     "title": "Addiction",
-    "description": "Montage video/sonore pour l'artiste KRØNIX. Visualiser de la musique addiction sous le rythme de drum and bass. Projet personnel. Utilisation des logiciels DaVinci Resolve et Capcut pour le montage et l'étalonnage des couleurs.",
+    "role": "J’ai réalisé le montage vidéo et le montage sonore. J’ai ensuite effectué l’étalonnage des couleurs pour harmoniser l’ensemble de la vidéo.",
+    "description": "Addiction est un visuel musical inspiré par l’énergie de la drum and bass. Le montage suit les variations du morceau à l’aide de coupes rapides, de changements de rythme et d’une atmosphère visuelle intense qui accompagne la musique.",
+    "contexte": "Projet personnel réalisé pour accompagner le titre « Addiction » de l’artiste KRØNIX sur les réseaux sociaux.",
     "logiciels": ["DaVinci Resolve", "Capcut"],
     "category": "montage vidéo",
     "year": "2025",
@@ -82,7 +82,9 @@
   {
     "id": "kronix_Forget all",
     "title": "Forget all",
-    "description": "Montage video/sonore pour l'artiste KRØNIX. Visualiser de la musique forget all sous l'ambiance et thème animé de la chanson.Rythme avec des transitions rapides et des effets visuels immersifs accompagnés de sous-titres. Projet personnel. Utilisation des logiciels DaVinci Resolve et Capcut pour le montage et l'étalonnage des couleurs.",
+    "role": "J’ai réalisé le montage vidéo et sonore du projet. J’ai aussi créé les effets visuels et ajouté les sous-titres pour renforcer la compréhension et l’immersion.",
+    "description": "Forget All est un visuel musical à l’esthétique animée et immersive. Les images, les transitions rapides et les effets visuels suivent l’ambiance du morceau, tandis que les sous-titres rendent certains passages plus faciles à suivre.",
+    "contexte": "Projet personnel réalisé pour accompagner le titre « Forget All » de l’artiste KRØNIX sur les réseaux sociaux.",
     "logiciels": ["DaVinci Resolve", "Capcut"],
     "category": "montage vidéo",
     "year": "2025",
@@ -94,7 +96,9 @@
   {
     "id": "kronix_No new friends",
     "title": "No new friends",
-    "description": "Visualiser réalisé pour un artiste de musique électronique — synchronisation des visuels sur les drops, transitions rythmées et ambiance visuelle immersive propre à l'univers G-House. Utilisation du cutting pour coordonner les mouvements de la tête de l'individu ainsi que sa position dans l'espace. Projet personnel. Utilisation des logiciels DaVinci Resolve et Capcut pour le montage et l'étalonnage des couleurs.",
+    "role": "J’ai réalisé le montage vidéo et synchronisé les images avec la musique. J’ai également créé les transitions afin de renforcer le rythme et l’énergie du projet.",
+    "description": "No New Friends est un visuel musical créé pour accompagner un morceau électronique aux influences G-House. La vidéo met en scène un personnage en mouvement et synchronise les changements d’image avec les drops pour créer une expérience rythmée et immersive.",
+    "contexte": "Projet personnel réalisé pour un artiste de musique électronique, avec une direction inspirée de l’esthétique G-House.",
     "logiciels": ["DaVinci Resolve", "Capcut"],
     "category": "montage vidéo",
     "year": "2025",
@@ -105,7 +109,9 @@
     {
     "id": "kronix_Sleppover",
     "title": "Sleppover",
-    "description": "Montage video/sonore pour deux artistes en collaboration sur les réseaux sociaux. Utilisation des logiciels DaVinci Resolve et Capcut pour le montage et l'étalonnage des couleurs. Projet personnel. cadence rythmique et transitions rapides pour un rendu d'ambiance.",
+    "role": "J’ai réalisé le montage vidéo et sonore à partir des images fournies. J’ai ensuite travaillé l’étalonnage des couleurs pour créer une ambiance cohérente.",
+    "description": "Sleppover est une vidéo collaborative qui met en scène deux artistes dans une même ambiance musicale. Le montage alterne leurs images avec des transitions rapides et une cadence soutenue pour produire un contenu court, dynamique et adapté aux réseaux sociaux.",
+    "contexte": "Projet personnel réalisé pour une collaboration entre deux artistes et destiné à être publié sur les réseaux sociaux.",
     "logiciels": ["DaVinci Resolve", "Capcut"],
     "category": "montage vidéo",
     "year": "2025",
@@ -125,4 +131,3 @@
 
 
 ]
-
