@@ -1,6 +1,6 @@
 
 
-/*SECTION POUR LES PROJETS*/
+/* Section des projets */
 /* Le fond vert couvre toute la section ; le conteneur HTML centre les cartes. */
 .projets {
     background: var(--vert);
@@ -14,7 +14,7 @@
     margin-top: 24px;
 }
 
-/* Flex empile l'image et le texte à l'intérieur de chaque carte. le design des cartes en quelque sorte */
+/* Structure générale de chaque carte */
 .carte-projet {
     display: flex;
     flex-direction: column;
@@ -34,11 +34,12 @@
     box-shadow: 0 0 16px var(--mauve);
 }
 
+/* Indique visuellement que la carte ouvre un projet au clic. */
 .carte-projet-cliquable {
     cursor: pointer;
 }
 
-/* Toutes les vignettes ont le même format, même si les images sources diffèrent. */
+/* Image principale de la carte */
 .carte-image {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -51,9 +52,9 @@
     padding: 24px;
 }
 
-/* Le petit cadre affiche la catégorie et l'année provenant du JSON. Dans le fond, le design du petit carde dans la crte. */
+/* Catégorie et année du projet */
 .carte-meta {
-    /* La largeur suit le texte au lieu d'occuper toute la carte. */
+    /* Le cadre suit la largeur du texte. */
     width: fit-content;
     margin-bottom: 12px;
     color: var(--vert-clair);
@@ -70,22 +71,26 @@
     color: var(--mauve);
 }
 
+/* Description générale du projet */
 .carte-description {
     color: var(--blanc);
     font-size: 0.9rem;
 }
 
+/* Sections « Mon rôle », « Le projet » et « Contexte » */
 .carte-details {
     display: grid;
     gap: 12px;
     margin: 0;
 }
 
+/* Séparation visuelle de chaque information */
 .carte-detail {
     padding-left: 12px;
     border-left: 2px solid var(--mauve);
 }
 
+/* Titre de chaque section descriptive */
 .carte-detail dt {
     margin-bottom: 2px;
     color: var(--vert-clair);
@@ -95,11 +100,13 @@
     text-transform: uppercase;
 }
 
+/* Texte de chaque section descriptive */
 .carte-detail dd {
     margin: 0;
     font-size: 0.9rem;
 }
 
+/* Invitation à cliquer sur la carte */
 .carte-action {
     margin-top: 18px;
     color: var(--vert-clair);
@@ -107,6 +114,7 @@
     font-weight: bold;
 }
 
+/* Logiciels et techniques utilisés */
 .carte-logiciels {
     display: flex;
     flex-wrap: wrap;
@@ -127,6 +135,7 @@
     font-size: 0.8rem;
 }
 
+/* Listes de badges */
 .carte-logiciels-liste {
     display: flex;
     flex-wrap: wrap;
@@ -139,6 +148,7 @@
     gap: 6px;
 }
 
+/* Apparence des badges de logiciels et de techniques */
 /* Les logiciels sont affichés sous forme de badges faciles à repérer. */
 .carte-logiciel {
     display: inline-block;
@@ -160,7 +170,7 @@
     margin-bottom: 24px;
 }
 
-/* Sur mobile, les cartes s'affichent les unes sous les autres. */
+/* Adaptation de la grille sur mobile */
 @media (max-width: 600px) {
     .grille-projets {
         grid-template-columns: 1fr;

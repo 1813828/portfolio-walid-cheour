@@ -1,18 +1,16 @@
 /* Une largeur commune aligne toutes les sections, avec une marge sur mobile. */
 /* La largeur maximale de  la page */
 .conteneur {
-   
     width: min(1200px, 90%);
-  
     margin-inline: auto;
 }
 
-/* padding-block ajoute de l'espace en haut et en bas de chaque section. */
+/* Espacement vertical commun aux sections. */
 .section {
     padding-block: 90px;
 }
 
-/* SECTION POUR LA DEMO RÉEL. */
+/* Section de présentation vidéo */
 .demo-reel {
     background: var(--fond);
 }
@@ -21,7 +19,7 @@
     color: var(--vert);
 }
 
-/*mettre la vidéo en plein écran et responsive*/
+/* Vidéo responsive avec une hauteur limitée */
 .demo-reel__video {
     display: block;
     width: 100%;
@@ -32,6 +30,7 @@
     object-fit: contain;
 }
 
+/* Titre et surtitre de la section vidéo */
 #demo-reel-titre{
     color: var(--noir);
     margin-bottom: 24px;
@@ -42,7 +41,7 @@
     margin-bottom: 10px;
 }
 
-/* Flex aligne les éléments de l'en-tête et laisse de l'espace entre eux. */
+/* En-tête des sections : titre et contenu alignés horizontalement. */
 .entete-section {
     display: flex;
     justify-content: space-between;
@@ -57,12 +56,12 @@
     color: var(--gris);
 }
 
+/* Section des compétences */
 .competences {
     background: var(--fond);
 }
 
-/*Sextion compétences */
-/* Grid répartit les compétences sur quatre colonnes de même largeur. */
+/* Grille des compétences sur grand écran */
 .grille-competences {
     display: grid;
     /*  crée quatre colonnes qui partagent l'espace disponible. */
@@ -93,8 +92,7 @@
     color: var(--texte);
 }
 
-/* SECTION À PROPOS DE MOI.
-/* Fond sombre et texte à gauche  */
+/* Section À propos : fond sombre et texte clair. */
 .apropos {
     background: var(--sombre);
     color: var(--blanc);
@@ -166,25 +164,29 @@
 }
 
 
-/* SECTION DE CONTACT.*/
+/* Section de contact */
 /* La section contact reprend le fond crème du site original. */
 .contact {
     background: var(--fond);
     color: var(--texte);
 }
 
+/* Taille responsive du titre de contact. */
 .contact h2 {
     font-size: clamp(2.6rem, 5vw, 4.5rem);
 }
 
+/* Espacement sous le texte d'introduction. */
 .contact p {
     margin-bottom: 24px;
 }
 
+/* Sépare le paragraphe placé après le titre. */
 .contact h2 + p {
     margin-top: 24px;
 }
 
+/* Met en évidence l'adresse courriel et autorise sa coupure. */
 .courriel {
     display: inline-block;
     margin: 16px 0 0 24px;
@@ -192,14 +194,14 @@
     overflow-wrap: anywhere;
 }
 
-
+/* Pied de page avec le nom, le copyright et le lien de retour. */
 .pied-page {
     background: var(--vert);
     color: var(--blanc);
     font-size: 1.25rem;
 }
 
-/* Aligne le nom, le copyright et le lien de retour en haut. */
+/* Organisation du nom, du copyright et du lien de retour. */
 .pied-page .conteneur {
     display: flex;
     justify-content: space-between;
@@ -208,13 +210,14 @@
     font-size: 0.8rem;
 }
 
+/* Style du nom affiché dans le pied de page. */
 .pied-page-nom {
     font-weight: bold;
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
-/* Sur tablette, les quatre colonnes deviennent deux colonnes. */
+/* Adaptation tablette : les compétences passent à deux colonnes. */
 @media (max-width: 900px) {
     .grille-competences {
         grid-template-columns: repeat(2, 1fr);
@@ -225,7 +228,7 @@
     }
 }
 
-/* Sur mobile, les grandes sections s'empilent pour garder un texte lisible. */
+/* Adaptation mobile : les sections et leurs contenus s'empilent. */
 @media (max-width: 600px) {
     .section {
         padding-block: 56px;

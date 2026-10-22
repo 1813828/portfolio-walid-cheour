@@ -1,30 +1,31 @@
-/* pour mettre la navigation en place avec la couleur noire et le texte vert. */
+/* Barre de navigation : fond sombre et texte vert. */
 .navigation {
     background: var(--texte);
     color: var(--vert-clair);
 }
 
-/* Le conteneur centre le contenu ; Flex sépare le logo et les liens. */
+/* Organisation horizontale du logo et des liens sur grand écran. */
 .navigation .conteneur {
     display: flex;
-    align-items: center; /*centre verticalement le logo et les liens.*/
+    align-items: center;
     justify-content: space-between;
     gap: 24px;
     min-height: 58px;
     padding-block: 12px;
 }
 
-/* Empêche Flex de réduire le logo pour faire de la place aux liens. */
+/* Le logo conserve sa taille dans la barre de navigation. */
 .logo {
     flex-shrink: 0;
 }
 
-/* La hauteur est fixe ; la largeur automatique conserve la forme du logo. */
+/* Dimensions du logo */
 .logo img {
     width: auto;
     height: 28px;
 }
 
+/* Bouton hamburger masqué sur grand écran. */
 .menu-bouton {
     display: none;
     width: 44px;
@@ -35,6 +36,7 @@
     color: var(--vert-clair);
 }
 
+/* Les trois lignes visibles du bouton hamburger. */
 .menu-bouton span:not(.visuellement-cache) {
     display: block;
     height: 2px;
@@ -42,6 +44,7 @@
     background: currentColor;
 }
 
+/* Liens alignés horizontalement sur grand écran. */
 .navigation nav {
     display: flex;
     /* Les liens peuvent passer à la ligne si l'espace manque. */
@@ -49,7 +52,7 @@
     gap: 8px 28px;
 }
 
-/*liens de navigation*/
+/* Apparence des liens de navigation */
 .navigation nav a {
     padding-block: 6px;
     font-size: 0.85rem;
@@ -64,7 +67,7 @@
     text-decoration: underline;
 }
 
-/* Un seul menu pour tous les écrans : aucun lien à dupliquer. */
+/* Version mobile : le logo et le bouton restent sur la même ligne. */
 @media (max-width: 600px) {
     .navigation .conteneur {
         position: relative;
@@ -72,10 +75,12 @@
         gap: 14px;
     }
 
+    /* Affiche le bouton hamburger sur petit écran. */
     .menu-bouton {
         display: block;
     }
 
+    /* Le menu est fermé par défaut sur mobile. */
     .navigation nav {
         display: none;
         flex-direction: column;
@@ -85,10 +90,12 @@
         border-top: 1px solid var(--vert-clair);
     }
 
+    /* JavaScript ajoute cette classe lorsque le menu est ouvert. */
     .navigation nav.menu-ouvert {
         display: flex;
     }
 
+    /* Espace tactile plus confortable pour les liens mobiles. */
     .navigation nav a {
         padding-block: 10px;
     }
